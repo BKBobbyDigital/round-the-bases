@@ -1,0 +1,52 @@
+name: Daily puzzle
+
+on:
+  schedule:
+    # 09:00 UTC every day = 4 a.m. ET. Plenty of buffer before US morning play.
+    - cron: '0 9 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pybaseball data
+        uses: actions/cache@v4
+        with:
+          path: ~/.pybaseball-cache
+          key: pybaseball-${{ runner.os }}
+
+      - name: Install dependencies
+        run: pip install pybaseball
+
+      - name: Determine target date
+        id: target
+        run: |
+          # Generate tomorrow's puzzle so it's ready when players load the site.
+          TARGET=$(date -u -d "tomorrow" +%Y-%m-%d)
+          echo "date=$TARGET" >> "$GITHUB_OUTPUT"
+          echo "Generating puzzle for $TARGET"
+
+      - name: Generate puzzle
+        run: python scripts/generate_puzzle.py ${{ steps.target.outputs.date }}
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "round-the-bases-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add puzzles/
+          if git diff --cached --quiet; then
+            echo "No new puzzle to commit."
+          else
+            git commit -m "Daily puzzle: ${{ steps.target.outputs.date }}"
+            git push
+          fi

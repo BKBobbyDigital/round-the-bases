@@ -277,7 +277,9 @@
   }
   .bs-row.today { background: rgba(178,42,43,0.06); margin: 0 -6px; padding: 4px 6px; border-bottom-color: var(--line); }
   .bs-row.today .bs-day, .bs-row.today .bs-runs { color: var(--red); }
-  .bs-row.missed, .bs-row.future { opacity: 0.4; }
+  .bs-row.missed { opacity: 0.4; }
+  .bs-row.future { opacity: 0.55; }
+  .bs-row.future .bs-grid { letter-spacing: 2px; }
   .bs-day { font-family: 'Alfa Slab One', serif; font-size: 11px; letter-spacing: 0.1em; }
   .bs-date { text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px; }
   .bs-grid { font-size: 14px; letter-spacing: 0.02em; }
@@ -1010,8 +1012,9 @@
         if (isToday) cls += " today";
       } else if (isFuture) {
         cls += " future";
+        grid = "⬜⬜⬜⬜";       // "to come" — visually waiting
       } else {
-        cls += " missed";
+        cls += " missed";        // dash for "didn't bat"
       }
       box.insertAdjacentHTML("beforeend",
         `<div class="${cls}">

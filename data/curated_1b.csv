@@ -6,4 +6,16 @@ prompt,choices,answer
 "Who holds the all-time strikeout record?","Nolan Ryan|Randy Johnson|Roger Clemens|Steve Carlton",Nolan Ryan
 "What position is known as 'the hot corner'?","Third base|Shortstop|Catcher|Second base",Third base
 "How many innings are in a regulation MLB game?","9|7|10|11",9
-"Which league adopted the DH first?","American League|National League|Both at once|Neither uses it",American League
+"Which jersey number is retired across all of MLB?","42|7|3|24",42
+"Whose number is that — retired league-wide?","Jackie Robinson|Babe Ruth|Lou Gehrig|Ted Williams",Jackie Robinson
+"Which team has won the most World Series titles?","Yankees|Cardinals|Athletics|Red Sox",Yankees
+"How many bases are there on a baseball diamond?","4|3|5|2",4
+"Who holds the all-time hits record?","Pete Rose|Ty Cobb|Hank Aaron|Derek Jeter",Pete Rose
+"Which team plays at Wrigley Field?","Cubs|White Sox|Brewers|Cardinals",Cubs
+"Which team plays at Camden Yards?","Orioles|Nationals|Phillies|Pirates",Orioles
+"Whose consecutive-games-played streak did Cal Ripken break in 1995?","Lou Gehrig|Pete Rose|Hank Aaron|Babe Ruth",Lou Gehrig
+"What does ERA stand for?","Earned Run Average|Earned Runs Allowed|Effective Run Average|Even Run Average",Earned Run Average
+"How many feet between bases?","90|80|100|85",90
+"Which team plays at Dodger Stadium?","Dodgers|Angels|Giants|Padres",Dodgers
+"How many runs does a grand slam score?","4|3|5|2",4
+"Which league adopted the designated hitter first?","American League|National League|Both at once|Neither uses it",American League
