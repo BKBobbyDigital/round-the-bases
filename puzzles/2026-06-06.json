@@ -18,13 +18,13 @@
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Won Cy Young in both leagues. Pitched into his 40s.",
+      "prompt": "7-time Cy Young winner \u2014 the most ever.",
       "answer": "Roger Clemens",
       "choices": [
         "Roger Clemens",
-        "Pedro Martinez",
+        "Greg Maddux",
         "Randy Johnson",
-        "Greg Maddux"
+        "Steve Carlton"
       ]
     },
     {
@@ -46,27 +46,39 @@
       "prompt": {
         "pitches": [
           {
-            "emoji": "\ud83e\udd8b",
-            "name": "Knuckleball",
-            "speed": 77.8,
-            "usage": 85
-          },
-          {
             "emoji": "\ud83d\udd25",
             "name": "4-Seam Fastball",
-            "speed": 84.0,
-            "usage": 13
+            "speed": 92.8,
+            "usage": 44
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.6,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 76.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.4,
+            "usage": 7
           }
         ]
       },
-      "answer": "R.A. Dickey",
-      "openingHint": "RHP, knuckleballer",
+      "answer": "Madison Bumgarner",
+      "openingHint": "LHP, active 2009\u20132024",
       "progressiveHints": [
-        "2012 NL Cy Young",
-        "Played for the Mets",
-        "Wrote a memoir titled 'Wherever I Wind Up'"
+        "3-time WS champion",
+        "Wrote himself into postseason lore",
+        "Was a Giant at the time"
       ],
-      "answerSeason": 2012
+      "answerSeason": 2014
     }
   ]
 }
