@@ -23,6 +23,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Round the Bases" />
+
+<!-- Plausible Analytics — privacy-first, no cookies, custom events enabled. -->
+<script defer data-domain="playroundthebases.com" src="https://plausible.io/js/script.tagged-events.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); };</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Old+Standard+TT:wght@400;700&family=Special+Elite&family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
@@ -269,6 +273,43 @@
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--red);
   }
 
+  /* Onboarding modal — first visit only */
+  .onboard-mask {
+    position: fixed; inset: 0; z-index: 50;
+    background: rgba(26, 22, 18, 0.55);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .onboard {
+    background: var(--cream-2); border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink); max-width: 420px; width: 100%;
+    padding: 24px 22px; position: relative;
+  }
+  .onboard::before {
+    content: ""; position: absolute; top: -2px; left: 8px; right: 8px; height: 2px;
+    background-image: radial-gradient(circle, var(--cream) 2px, transparent 2.5px);
+    background-size: 12px 4px; background-repeat: repeat-x; background-position: 0 -1px;
+  }
+  .onboard h2 {
+    font-family: 'Alfa Slab One', serif; font-size: 24px; line-height: 1;
+    margin: 0 0 14px; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .onboard .ob-steps { font-family: 'Old Standard TT', serif; font-size: 16px; line-height: 1.5; margin-bottom: 16px; }
+  .onboard .ob-steps b { font-family: 'Alfa Slab One', serif; color: var(--red); font-size: 14px; letter-spacing: 0.1em; }
+  .onboard .ob-step { display: grid; grid-template-columns: 28px 1fr; gap: 10px; margin-bottom: 8px; align-items: baseline; }
+  .onboard .ob-num {
+    font-family: 'Alfa Slab One', serif; font-size: 13px; color: var(--red);
+    background: var(--cream); border: 2px solid var(--ink);
+    width: 24px; height: 24px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; line-height: 1;
+  }
+  .onboard-go {
+    width: 100%; background: var(--red); color: var(--cream); border: 2px solid var(--ink);
+    font-family: 'Alfa Slab One', serif; font-size: 16px; letter-spacing: 0.15em;
+    padding: 12px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink); text-transform: uppercase;
+  }
+  .onboard-go:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+
   /* A2HS card — shown after first completed game */
   .a2hs {
     margin-top: 18px;
@@ -385,20 +426,20 @@
       </div>
     </header>
 
-    <div class="scoreboard">
+    <div class="scoreboard" role="status" aria-live="polite" aria-label="Scoreboard">
       <div class="sb-runs">
         <div class="sb-label">Runs</div>
-        <div class="sb-val" id="sb-runs">0</div>
+        <div class="sb-val" id="sb-runs" aria-live="polite">0</div>
       </div>
-      <div class="sb-strikes">
+      <div class="sb-strikes" aria-label="Strikes">
         <div class="sb-label">Strikes</div>
-        <div class="dots" id="sb-strike-dots">
+        <div class="dots" id="sb-strike-dots" aria-hidden="true">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
         </div>
       </div>
-      <div class="sb-outs">
+      <div class="sb-outs" aria-label="Outs">
         <div class="sb-label">Outs</div>
-        <div class="dots dots-r" id="sb-out-dots">
+        <div class="dots dots-r" id="sb-out-dots" aria-hidden="true">
           <span class="dot"></span><span class="dot"></span><span class="dot"></span>
         </div>
       </div>
@@ -410,7 +451,7 @@
 
     <div class="diamond-wrap">
       <div class="diamond">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Baseball diamond showing runners on base">
           <!-- Outfield grass: triangle from home (100,160), capped by back arc -->
           <path d="M 100 160 L 195 65 Q 100 -30 5 65 Z"
             fill="#3D5B3B" fill-opacity="0.12" stroke="none"/>
@@ -449,7 +490,7 @@
       </div>
     </div>
 
-    <section id="game-area"></section>
+    <main id="game-area" aria-live="polite" aria-atomic="false"></main>
 
     <div class="dev-reset"><a id="reset-link">↻ reset (dev)</a></div>
 
@@ -544,6 +585,8 @@
       if (!storage.history[date]) {
         storage.history[date] = snapshotGame();
         updateStreakOnce(date);
+        // Telemetry: one event per puzzle, not per render.
+        try { window.plausible?.("Game Completed", { props: { runs: state.runs, outs: state.outs, swings: state.swingsTotal } }); } catch {}
       }
       delete storage.inProgress;
     } else {
@@ -554,6 +597,36 @@
 
   function norm(s) {
     return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+  }
+
+  // ---------- ONBOARDING (first visit only) ----------
+  function maybeShowOnboarding() {
+    if (storage.onboarded) return;
+    if (Object.keys(storage.history || {}).length > 0) return;  // returning user
+    const mask = document.createElement("div");
+    mask.className = "onboard-mask";
+    mask.setAttribute("role", "dialog");
+    mask.setAttribute("aria-modal", "true");
+    mask.setAttribute("aria-labelledby", "ob-title");
+    mask.innerHTML = `
+      <div class="onboard">
+        <h2 id="ob-title">How to play</h2>
+        <div class="ob-steps">
+          <div class="ob-step"><span class="ob-num">1</span><span>Face <b>four pitches</b> — single, double, triple, home run.</span></div>
+          <div class="ob-step"><span class="ob-num">2</span><span>Right answer = <b>hit</b>. Three wrong on one = <b>strikeout</b>.</span></div>
+          <div class="ob-step"><span class="ob-num">3</span><span>Runners advance per real baseball. Score <b>runs</b>.</span></div>
+        </div>
+        <button class="onboard-go" type="button" autofocus>Play Ball</button>
+      </div>
+    `;
+    mask.querySelector(".onboard-go").addEventListener("click", () => {
+      storage.onboarded = true; saveStorage();
+      mask.remove();
+    });
+    // Escape key closes too.
+    mask.addEventListener("keydown", e => { if (e.key === "Escape") mask.querySelector(".onboard-go").click(); });
+    document.body.appendChild(mask);
+    setTimeout(() => mask.querySelector(".onboard-go").focus(), 30);
   }
 
   // ---------- A2HS (Add to Home Screen) ----------
@@ -591,6 +664,7 @@
       <button class="a2hs-dismiss" aria-label="Dismiss">×</button>
     `;
     card.querySelector(".a2hs-dismiss").addEventListener("click", () => {
+      try { window.plausible?.("A2HS Dismissed"); } catch {}
       storage.a2hsDismissed = true; saveStorage();
       card.remove();
     });
@@ -606,6 +680,7 @@
         _deferredInstallPrompt.prompt();
         const choice = await _deferredInstallPrompt.userChoice;
         _deferredInstallPrompt = null;
+        try { window.plausible?.("A2HS Action", { props: { outcome: choice?.outcome || "unknown" } }); } catch {}
         if (choice && choice.outcome === "accepted") {
           storage.a2hsDismissed = true; saveStorage();
           card.remove();
@@ -770,6 +845,7 @@
     }
     render();
     updateStreakHeader();
+    maybeShowOnboarding();
 
     document.getElementById("reset-link").addEventListener("click", () => {
       delete storage.history[puzzle.date];
@@ -951,16 +1027,25 @@
     if (pitch.type === "trivia" || pitch.type === "career_arc") {
       const choices = document.createElement("div");
       choices.className = "choices";
+      choices.setAttribute("role", "group");
+      choices.setAttribute("aria-label", "Choose an answer");
+      let firstEnabled = null;
       pitch.choices.forEach(choice => {
         const btn = document.createElement("button");
         btn.className = "choice";
         btn.textContent = choice;
+        btn.setAttribute("type", "button");
         const alreadyWrong = guesses.some(g => norm(g) === norm(choice));
-        if (alreadyWrong) { btn.classList.add("wrong"); btn.disabled = true; }
+        if (alreadyWrong) {
+          btn.classList.add("wrong"); btn.disabled = true;
+          btn.setAttribute("aria-label", `${choice} — incorrect`);
+        }
         btn.addEventListener("click", () => submitGuess(choice));
         choices.appendChild(btn);
+        if (!alreadyWrong && !firstEnabled) firstEnabled = btn;
       });
       card.appendChild(choices);
+      if (firstEnabled) setTimeout(() => firstEnabled.focus(), 30);
     } else {
       card.appendChild(renderFreeText(pitch));
     }
@@ -1000,6 +1085,8 @@
     const input = document.createElement("input");
     input.type = "text"; input.className = "text-input";
     input.placeholder = "Type a player name…"; input.autocomplete = "off";
+    input.setAttribute("aria-label", "Guess the player");
+    input.setAttribute("aria-autocomplete", "list");
 
     const btn = document.createElement("button");
     btn.className = "swing-btn"; btn.textContent = "SWING";
@@ -1105,6 +1192,7 @@
     const btn = document.createElement("button");
     btn.className = "share-btn"; btn.textContent = "SHARE";
     btn.addEventListener("click", async () => {
+      try { window.plausible?.("Share Clicked", { props: { runs: state.runs } }); } catch {}
       btn.textContent = "RENDERING…";
       try {
         const blob = await renderShareImage();
