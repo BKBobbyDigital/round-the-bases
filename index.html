@@ -485,10 +485,19 @@
       swingsTotal: 0, gameOver: false,
     });
   }
+  function todayISO() {
+    const d = new Date();
+    const off = d.getTimezoneOffset();
+    return new Date(d.getTime() - off * 60000).toISOString().slice(0, 10);
+  }
+
   async function init() {
     loadStorage();
-    const path = "puzzles/2026-06-05.json";
-    puzzle = await fetch(path).then(r => r.json());
+    const today = todayISO();
+    // Try today first, then fall back to the seeded sample so dev/demo still works.
+    let resp = await fetch(`puzzles/${today}.json`);
+    if (!resp.ok) resp = await fetch("puzzles/2026-06-05.json");
+    puzzle = await resp.json();
     freshState();
     document.getElementById("day-no").textContent = "Day No. " + puzzle.puzzleNumber;
     document.getElementById("day-date").textContent = formatDate(puzzle.date);

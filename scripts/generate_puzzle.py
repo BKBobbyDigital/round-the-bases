@@ -91,30 +91,103 @@ class Puzzle:
 
 # --- STATCAST HELPERS (stubs) ------------------------------------------------
 
-def fetch_pitcher_arsenal(player: str, season: int) -> list[dict]:
-    """
-    Returns the pitcher's arsenal as a list of {emoji, name, speed, usage}.
+def _split_name(player: str) -> tuple[str, str]:
+    """'Clayton Kershaw' -> ('Clayton', 'Kershaw'); 'R.A. Dickey' -> ('R.A.', 'Dickey')."""
+    parts = player.strip().split(" ", 1)
+    if len(parts) == 1:
+        return parts[0], ""
+    return parts[0], parts[1]
 
-    Real impl: use pybaseball.statcast_pitcher to pull pitch-level data,
-    group by pitch_type, compute usage % and avg release_speed.
-    """
-    # TODO: replace with real pybaseball call.
-    # from pybaseball import statcast_pitcher, playerid_lookup
-    # ...
-    raise NotImplementedError(
-        f"fetch_pitcher_arsenal({player!r}, {season}) — wire up pybaseball"
-    )
+
+def _normalize_for_match(s: str) -> str:
+    """Lowercase, drop punctuation and whitespace — for fuzzy first-name compares."""
+    import re
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+def _mlbam_id(player: str) -> int:
+    """Look up an MLBAM id. pybaseball stores names with quirky punctuation/spacing
+    (e.g. 'r. a.' for R.A. Dickey), so we look up by last name and filter first
+    via a normalized compare."""
+    from pybaseball import playerid_lookup
+    first, last = _split_name(player)
+    rows = playerid_lookup(last)
+    if rows is None or rows.empty:
+        raise ValueError(f"player not found: {player!r}")
+    needle = _normalize_for_match(first)
+    matches = rows[rows["name_first"].fillna("").apply(_normalize_for_match) == needle]
+    if matches.empty:
+        # Last-resort: contains-match (e.g. 'Junior' against 'jr').
+        matches = rows[rows["name_first"].fillna("").apply(_normalize_for_match).str.contains(needle, na=False)]
+    if matches.empty:
+        raise ValueError(f"player not found: {player!r}")
+    if "mlb_played_last" in matches.columns:
+        matches = matches.sort_values("mlb_played_last", ascending=False)
+    return int(matches.iloc[0]["key_mlbam"])
+
+
+def fetch_pitcher_arsenal(player: str, season: int) -> list[dict]:
+    """Group pitch-level Statcast data into a usage/velo arsenal."""
+    from pybaseball import statcast_pitcher
+    pid = _mlbam_id(player)
+    df = statcast_pitcher(f"{season}-03-01", f"{season}-11-15", pid)
+    if df is None or df.empty:
+        raise ValueError(f"no Statcast data: {player!r} {season}")
+    df = df.dropna(subset=["pitch_type"])
+    total = len(df)
+    arsenal: list[dict] = []
+    for pt, grp in df.groupby("pitch_type"):
+        usage = round(len(grp) / total * 100)
+        if usage < 2:                     # drop trace pitches
+            continue
+        name = grp["pitch_name"].dropna().iloc[0] if "pitch_name" in grp.columns and not grp["pitch_name"].dropna().empty else pt
+        speed = round(float(grp["release_speed"].mean()), 1)
+        arsenal.append({
+            "emoji": PITCH_EMOJI.get(pt, "⚾"),
+            "name": str(name),
+            "speed": speed,
+            "usage": usage,
+        })
+    arsenal.sort(key=lambda x: -x["usage"])
+    return arsenal
 
 
 def fetch_batter_stat_line(player: str, season: int) -> str:
-    """
-    Returns a short stat line string like '.346 / 24 HR / 81 RBI / 32 SB'.
+    """Pull AVG / HR / RBI / SB for a player-season.
 
-    Real impl: pybaseball.batting_stats(season) filtered by player.
+    Fangraphs blocks scrapers, so we try Baseball-Reference first,
+    then fall back to the offline Lahman dataset.
     """
-    raise NotImplementedError(
-        f"fetch_batter_stat_line({player!r}, {season}) — wire up pybaseball"
-    )
+    needle = player.lower().strip()
+
+    # Try Baseball-Reference.
+    try:
+        from pybaseball import batting_stats_bref
+        df = batting_stats_bref(season)
+        rows = df[df["Name"].str.lower().str.contains(needle, na=False)]
+        if not rows.empty:
+            r = rows.iloc[0]
+            avg = f"{float(r['BA']):.3f}".lstrip("0")
+            return f"{avg} / {int(r['HR'])} HR / {int(r['RBI'])} RBI / {int(r['SB'])} SB"
+    except Exception:
+        pass
+
+    # Fall back to Lahman (offline, ships with pybaseball).
+    from pybaseball.lahman import batting, people
+    p = people()
+    bat = batting()
+    pid_rows = p[(p["nameFirst"] + " " + p["nameLast"]).str.lower() == needle]
+    if pid_rows.empty:
+        raise ValueError(f"batter not found in Lahman: {player!r}")
+    pid = pid_rows.iloc[0]["playerID"]
+    season_rows = bat[(bat["playerID"] == pid) & (bat["yearID"] == season)]
+    if season_rows.empty:
+        raise ValueError(f"no {season} season for {player!r} in Lahman")
+    # Combine stints if traded mid-season.
+    agg = season_rows[["AB", "H", "HR", "RBI", "SB"]].sum()
+    avg_val = (agg["H"] / agg["AB"]) if agg["AB"] else 0.0
+    avg = f"{avg_val:.3f}".lstrip("0")
+    return f"{avg} / {int(agg['HR'])} HR / {int(agg['RBI'])} RBI / {int(agg['SB'])} SB"
 
 
 # --- CURATED CSV LOADERS ------------------------------------------------------

@@ -1,0 +1,72 @@
+{
+  "date": "2026-06-06",
+  "puzzleNumber": 89,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won Cy Young in both leagues. Pitched into his 40s.",
+      "answer": "Roger Clemens",
+      "choices": [
+        "Roger Clemens",
+        "Pedro Martinez",
+        "Randy Johnson",
+        "Greg Maddux"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".346 / 24 HR / 81 RBI / 32 SB",
+      "answer": "Jose Altuve",
+      "openingHint": "2017 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Listed at 5'6\"",
+        "Won AL MVP"
+      ],
+      "answerSeason": 2017
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\udd8b",
+            "name": "Knuckleball",
+            "speed": 77.8,
+            "usage": 85
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 84.0,
+            "usage": 13
+          }
+        ]
+      },
+      "answer": "R.A. Dickey",
+      "openingHint": "RHP, knuckleballer",
+      "progressiveHints": [
+        "2012 NL Cy Young",
+        "Played for the Mets",
+        "Wrote a memoir titled 'Wherever I Wind Up'"
+      ],
+      "answerSeason": 2012
+    }
+  ]
+}
