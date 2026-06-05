@@ -499,15 +499,51 @@
 
 <script>
   // ---------- PLAYER DICTIONARY (autocomplete pool) ----------
+  // Every answer in data/curated_{3b,hr}.csv plus common distractors players
+  // might guess. If you add a 3B or HR row to the CSV, add the name here too.
   const PLAYERS = [
-    "Jose Altuve","Todd Helton","Aaron Judge","Bryce Harper","Tony Gwynn",
-    "Mike Trout","Mookie Betts","Manny Machado","Vladimir Guerrero Jr.",
-    "Ronald Acuña Jr.","Juan Soto","Freddie Freeman","Cody Bellinger",
-    "Joey Votto","Albert Pujols","Miguel Cabrera","Alex Rodriguez","Derek Jeter",
+    // Batters — current/recent
+    "Jose Altuve","Aaron Judge","Bryce Harper","Mike Trout","Mookie Betts",
+    "Cody Bellinger","Christian Yelich","Manny Machado","Vladimir Guerrero Jr.",
+    "Ronald Acuña Jr.","Juan Soto","Freddie Freeman","Pete Alonso","Yordan Alvarez",
+    "Shohei Ohtani","Corey Seager","Trea Turner","Jose Ramirez","Rafael Devers",
+    "Bobby Witt Jr.","Gunnar Henderson","Elly De La Cruz","Julio Rodriguez",
+    "Fernando Tatis Jr.","Adley Rutschman","Matt Olson","Kyle Tucker",
+    // Batters — '90s / '00s / '10s
+    "Todd Helton","Tony Gwynn","Ichiro Suzuki","Albert Pujols","Chipper Jones",
+    "Larry Walker","Adrian Beltre","Barry Bonds","Alex Rodriguez","Vladimir Guerrero",
+    "Manny Ramirez","Sammy Sosa","Mark McGwire","Albert Belle","Frank Thomas",
+    "Ken Griffey Jr.","Miguel Cabrera","Jeff Bagwell","Joey Votto","Robinson Cano",
+    "David Ortiz","Jim Thome","Carlos Beltran","Ivan Rodriguez","Mike Piazza",
+    "Edgar Martinez","Craig Biggio","Roberto Alomar","Gary Sheffield",
+    "Andruw Jones","Bernie Williams","Jorge Posada","Derek Jeter",
+    // Batters — classic
+    "Hank Aaron","Ted Williams","Babe Ruth","Lou Gehrig","Joe DiMaggio",
+    "Willie Mays","Mickey Mantle","Stan Musial","Jackie Robinson","Bobby Thomson",
+    "Pete Rose","Wade Boggs","Rod Carew","George Brett","Cal Ripken Jr.",
+    "Rickey Henderson","Vince Coleman","Lou Brock","Tim Raines","Yogi Berra",
+    "Roy Campanella","Larry Doby","Roger Maris","Frank Robinson","Hank Thompson",
+    // Pitchers — current
     "Clayton Kershaw","Corbin Burnes","Spencer Strider","Jacob deGrom",
-    "R.A. Dickey","Pedro Martinez","Greg Maddux","Randy Johnson","Mariano Rivera",
-    "Justin Verlander","Max Scherzer","Roger Clemens","Madison Bumgarner",
-    "Felix Hernandez","Chris Sale","Gerrit Cole","Tarik Skubal","Dylan Cease"
+    "Justin Verlander","Max Scherzer","Gerrit Cole","Chris Sale","Tarik Skubal",
+    "Dylan Cease","Shane Bieber","Blake Snell","Charlie Morton","Walker Buehler",
+    "Lance Lynn","Patrick Corbin","Yu Darvish","Yoshinobu Yamamoto","Paul Skenes",
+    "Trevor Bauer","Sonny Gray","Hyun Jin Ryu","Yusei Kikuchi","Stephen Strasburg",
+    "Kenta Maeda","Aaron Nola","Zack Wheeler","Logan Webb","Tyler Glasnow",
+    "Carlos Carrasco","Kevin Gausman","Luis Castillo","Pablo Lopez",
+    // Pitchers — closers / relievers
+    "Mariano Rivera","Trevor Hoffman","Lee Smith","Dennis Eckersley","Kenley Jansen",
+    "Craig Kimbrel","Aroldis Chapman","Edwin Diaz","Josh Hader","Eric Gagne",
+    // Pitchers — '90s / '00s / '10s
+    "R.A. Dickey","Roy Halladay","Felix Hernandez","Tim Lincecum","Jose Fernandez",
+    "Adam Wainwright","Madison Bumgarner","Pedro Martinez","Greg Maddux",
+    "Randy Johnson","Roger Clemens","Tom Glavine","John Smoltz","Steve Avery",
+    "CC Sabathia","David Price","Cliff Lee","Tim Hudson","Mark Buehrle",
+    "Curt Schilling","Mike Mussina","Andy Pettitte","Bartolo Colon",
+    "Johan Santana","Brandon Webb",
+    // Pitchers — classic
+    "Nolan Ryan","Sandy Koufax","Warren Spahn","Don Drysdale","Whitey Ford",
+    "Bob Gibson","Steve Carlton","Don Larsen","Tim Salmon","Garret Anderson"
   ];
 
   // ---------- STATE ----------
