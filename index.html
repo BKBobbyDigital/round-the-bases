@@ -4,6 +4,17 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Round the Bases — Daily Baseball Puzzle</title>
+<meta name="description" content="One at-bat per day. Four pitches of escalating difficulty. Real baseball scoring." />
+<meta property="og:title" content="Round the Bases" />
+<meta property="og:description" content="Daily baseball puzzle. One at-bat, four pitches, real baseball scoring." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Round the Bases" />
+<meta name="twitter:description" content="Daily baseball puzzle. One at-bat, four pitches, real baseball scoring." />
+<meta name="twitter:image" content="og.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Old+Standard+TT:wght@400;700&family=Special+Elite&family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
@@ -474,6 +485,93 @@
     return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
   }
 
+  // ---------- SHARE IMAGE (canvas → PNG) ----------
+  async function renderShareImage() {
+    // Ensure web fonts are loaded before drawing — Canvas falls back silently otherwise.
+    if (document.fonts && document.fonts.ready) {
+      try { await document.fonts.ready; } catch {}
+    }
+    const W = 1200, H = 630;       // OG / Twitter-card friendly ratio
+    const canvas = document.createElement("canvas");
+    canvas.width = W; canvas.height = H;
+    const ctx = canvas.getContext("2d");
+
+    // Background
+    ctx.fillStyle = "#F1E4C8";
+    ctx.fillRect(0, 0, W, H);
+
+    // Halftone stipple
+    ctx.fillStyle = "rgba(26, 22, 18, 0.05)";
+    for (let y = 4; y < H; y += 8) {
+      for (let x = 4; x < W; x += 8) {
+        ctx.beginPath(); ctx.arc(x, y, 1, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+
+    // Outer dashed ticket-stub border
+    ctx.strokeStyle = "#1A1612";
+    ctx.lineWidth = 4;
+    ctx.setLineDash([18, 12]);
+    ctx.strokeRect(36, 36, W - 72, H - 72);
+    ctx.setLineDash([]);
+
+    // Header — eyebrow
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#B22A2B";
+    ctx.font = "20px 'Special Elite', monospace";
+    ctx.fillText("★  DAILY  ★", W / 2, 100);
+
+    // Title
+    ctx.fillStyle = "#1A1612";
+    ctx.font = "78px 'Alfa Slab One', serif";
+    ctx.fillText("ROUND THE BASES", W / 2, 175);
+
+    // Double underline
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(W / 2 - 360, 200); ctx.lineTo(W / 2 + 360, 200);
+    ctx.moveTo(W / 2 - 360, 208); ctx.lineTo(W / 2 + 360, 208);
+    ctx.stroke();
+
+    // Subhead — day + date
+    ctx.fillStyle = "#1A1612";
+    ctx.font = "22px 'Special Elite', monospace";
+    ctx.fillText(`DAY NO. ${puzzle.puzzleNumber}   |   ${formatDate(puzzle.date).toUpperCase()}`, W / 2, 248);
+
+    // Big number — runs
+    const runs = state.runs;
+    const headline = runs === 0 ? "HELD SCORELESS" : String(runs);
+    ctx.fillStyle = "#1A1612";
+    if (runs === 0) {
+      ctx.font = "82px 'Alfa Slab One', serif";
+      ctx.fillText(headline, W / 2, 380);
+    } else {
+      ctx.font = "200px 'Alfa Slab One', serif";
+      ctx.fillText(headline, W / 2, 420);
+      ctx.font = "52px 'Alfa Slab One', serif";
+      ctx.fillText(runs === 1 ? "RUN" : "RUNS", W / 2, 475);
+    }
+
+    // Grid of outcomes
+    const grid = ["⬜","⬜","⬜","⬜"];
+    state.pitchOutcomes.forEach((o, i) => grid[i] = o === "hit" ? "⚾" : "✗");
+    ctx.font = "64px 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif";
+    ctx.fillText(grid.join("  "), W / 2, 540);
+
+    // Streak + footer
+    ctx.fillStyle = "#1A1612";
+    ctx.font = "18px 'Special Elite', monospace";
+    const lob = ["1B","2B","3B"].filter(b => state.bases[b]).length;
+    const meta = [
+      storage.streak > 0 ? `🔥 STREAK ${storage.streak}` : null,
+      lob ? `${lob} LOB` : null,
+      "play.roundthebases.com"
+    ].filter(Boolean).join("    ·    ");
+    ctx.fillText(meta, W / 2, 590);
+
+    return new Promise(resolve => canvas.toBlob(resolve, "image/png"));
+  }
+
   // ---------- INIT ----------
   function freshState() {
     Object.assign(state, {
@@ -843,10 +941,31 @@
     card.appendChild(share);
 
     const btn = document.createElement("button");
-    btn.className = "share-btn"; btn.textContent = "COPY SHARE";
+    btn.className = "share-btn"; btn.textContent = "SHARE";
     btn.addEventListener("click", async () => {
-      try { await navigator.clipboard.writeText(shareText); btn.textContent = "COPIED ✓"; setTimeout(() => btn.textContent = "COPY SHARE", 1500); }
-      catch { btn.textContent = "COPY FAILED"; }
+      btn.textContent = "RENDERING…";
+      try {
+        const blob = await renderShareImage();
+        const file = new File([blob], `round-the-bases-${puzzle.date}.png`, { type: "image/png" });
+        const shareData = { files: [file], text: shareText, title: "Round the Bases" };
+        if (navigator.canShare && navigator.canShare(shareData)) {
+          await navigator.share(shareData);
+          btn.textContent = "SHARED ✓";
+        } else {
+          // Desktop fallback: download PNG + copy text.
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = `round-the-bases-${puzzle.date}.png`;
+          document.body.appendChild(a); a.click(); a.remove();
+          try { await navigator.clipboard.writeText(shareText); } catch {}
+          btn.textContent = "DOWNLOADED ✓";
+        }
+      } catch (err) {
+        // User cancelled or share failed — fall back to clipboard
+        try { await navigator.clipboard.writeText(shareText); btn.textContent = "COPIED ✓"; }
+        catch { btn.textContent = "SHARE FAILED"; }
+      }
+      setTimeout(() => btn.textContent = "SHARE", 1800);
     });
     card.appendChild(btn);
 
