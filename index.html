@@ -24,9 +24,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <meta name="apple-mobile-web-app-title" content="Round the Bases" />
 
-<!-- Plausible Analytics — privacy-first, no cookies, custom events enabled. -->
-<script defer data-domain="playroundthebases.com" src="https://plausible.io/js/script.tagged-events.js"></script>
-<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); };</script>
+<!-- GoatCounter Analytics — privacy-first, no cookies, custom events supported.
+     Replace YOUR_CODE below with your goatcounter site code (e.g. "playroundthebases"
+     after creating the site at https://www.goatcounter.com/signup). -->
+<script data-goatcounter="https://YOUR_CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Old+Standard+TT:wght@400;700&family=Special+Elite&family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
@@ -579,14 +580,19 @@
     else storage.streak = 1;
     storage.lastPlayedDate = date;
   }
+  // Lightweight wrapper — GoatCounter custom events. No-op if the script
+  // hasn't loaded (preview / offline / blocked).
+  function track(path, title) {
+    try { window.goatcounter?.count?.({ path: `event-${path}`, title, event: true }); } catch {}
+  }
+
   function persist() {
     const date = puzzle.date;
     if (state.gameOver) {
       if (!storage.history[date]) {
         storage.history[date] = snapshotGame();
         updateStreakOnce(date);
-        // Telemetry: one event per puzzle, not per render.
-        try { window.plausible?.("Game Completed", { props: { runs: state.runs, outs: state.outs, swings: state.swingsTotal } }); } catch {}
+        track(`game-completed-${state.runs}r`, `Game Completed: ${state.runs} runs`);
       }
       delete storage.inProgress;
     } else {
@@ -664,7 +670,7 @@
       <button class="a2hs-dismiss" aria-label="Dismiss">×</button>
     `;
     card.querySelector(".a2hs-dismiss").addEventListener("click", () => {
-      try { window.plausible?.("A2HS Dismissed"); } catch {}
+      track("a2hs-dismissed", "A2HS Dismissed");
       storage.a2hsDismissed = true; saveStorage();
       card.remove();
     });
@@ -680,7 +686,7 @@
         _deferredInstallPrompt.prompt();
         const choice = await _deferredInstallPrompt.userChoice;
         _deferredInstallPrompt = null;
-        try { window.plausible?.("A2HS Action", { props: { outcome: choice?.outcome || "unknown" } }); } catch {}
+        track(`a2hs-${choice?.outcome || "unknown"}`, `A2HS: ${choice?.outcome || "unknown"}`);
         if (choice && choice.outcome === "accepted") {
           storage.a2hsDismissed = true; saveStorage();
           card.remove();
@@ -829,9 +835,11 @@
   async function init() {
     loadStorage();
     const today = todayISO();
-    // Try today first, then fall back to the seeded sample so dev/demo still works.
-    let resp = await fetch(`puzzles/${today}.json`);
-    if (!resp.ok) resp = await fetch("puzzles/2026-06-05.json");
+    // Always revalidate — puzzle JSON is small and the cron may have just
+    // pushed today's file; we don't want a stale cached response.
+    const opts = { cache: "no-cache" };
+    let resp = await fetch(`puzzles/${today}.json`, opts);
+    if (!resp.ok) resp = await fetch("puzzles/2026-06-05.json", opts);
     puzzle = await resp.json();
     freshState();
     document.getElementById("day-no").textContent = "Day No. " + puzzle.puzzleNumber;
@@ -1192,7 +1200,7 @@
     const btn = document.createElement("button");
     btn.className = "share-btn"; btn.textContent = "SHARE";
     btn.addEventListener("click", async () => {
-      try { window.plausible?.("Share Clicked", { props: { runs: state.runs } }); } catch {}
+      track("share-clicked", "Share Clicked");
       btn.textContent = "RENDERING…";
       try {
         const blob = await renderShareImage();

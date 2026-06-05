@@ -285,7 +285,7 @@ def generate(date_str: str) -> Puzzle:
     if row: pitches.append(build_hr(row))
 
     # Puzzle number = days since launch.
-    launch = dt.date(2026, 3, 10)
+    launch = dt.date(2026, 6, 5)
     puzzle_no = (d - launch).days + 1
 
     return Puzzle(date_str, puzzle_no, theme, pitches)
