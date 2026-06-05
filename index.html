@@ -156,11 +156,23 @@
   }
 
   /* ARSENAL */
-  .arsenal { display: grid; grid-template-columns: auto 1fr auto auto; gap: 6px 12px; align-items: center; margin-bottom: 14px; font-family: 'Special Elite', monospace; font-size: 13px; }
-  .arsenal .ars-emoji { font-size: 20px; }
-  .arsenal .ars-name { font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.05em; }
-  .arsenal .ars-speed { text-align: right; }
-  .arsenal .ars-usage { text-align: right; font-weight: 700; }
+  .arsenal { display: grid; grid-template-columns: auto 1fr auto auto; gap: 8px 14px; align-items: center; margin-bottom: 14px; }
+  .arsenal .ars-emoji { font-size: 22px; }
+  .arsenal .ars-name {
+    font-family: 'Oswald', sans-serif; font-weight: 600;
+    font-size: 16px; letter-spacing: 0.05em;
+  }
+  /* Numerals use Oswald (clear, condensed) with tabular nums so the columns
+     line up regardless of digit width. Special Elite is gorgeous for prose
+     but its '%' and decimals get cramped at small sizes. */
+  .arsenal .ars-speed,
+  .arsenal .ars-usage {
+    font-family: 'Oswald', sans-serif; font-size: 17px;
+    font-feature-settings: "tnum";
+    text-align: right; letter-spacing: 0.02em;
+  }
+  .arsenal .ars-speed { font-weight: 500; }
+  .arsenal .ars-usage { font-weight: 700; color: var(--red); min-width: 46px; }
 
   /* CHOICES */
   .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
