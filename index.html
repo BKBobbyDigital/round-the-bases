@@ -499,9 +499,11 @@
 
 <script>
   // ---------- PLAYER DICTIONARY (autocomplete pool) ----------
-  // Every answer in data/curated_{3b,hr}.csv plus common distractors players
-  // might guess. If you add a 3B or HR row to the CSV, add the name here too.
-  const PLAYERS = [
+  // The inline list seeds autocomplete for instant feedback on first load.
+  // After the page renders we lazy-fetch players.json — the full Chadwick
+  // Register (~22k names) — and concat it. Curated names stay first so they
+  // surface before any deep-cut name a fuzzy match might also hit.
+  let PLAYERS = [
     // Batters — current/recent
     "Jose Altuve","Aaron Judge","Bryce Harper","Mike Trout","Mookie Betts",
     "Cody Bellinger","Christian Yelich","Manny Machado","Vladimir Guerrero Jr.",
@@ -545,6 +547,18 @@
     "Nolan Ryan","Sandy Koufax","Warren Spahn","Don Drysdale","Whitey Ford",
     "Bob Gibson","Steve Carlton","Don Larsen","Tim Salmon","Garret Anderson"
   ];
+  // Pre-normalized parallel array — avoids recomputing norm() on every keystroke.
+  let PLAYER_NORM = PLAYERS.map(norm);
+
+  async function loadFullPlayers() {
+    try {
+      const list = await fetch("players.json", { cache: "force-cache" }).then(r => r.ok ? r.json() : null);
+      if (!Array.isArray(list)) return;
+      const seen = new Set(PLAYERS);
+      for (const p of list) if (!seen.has(p)) PLAYERS.push(p);
+      PLAYER_NORM = PLAYERS.map(norm);
+    } catch {}
+  }
 
   // ---------- STATE ----------
   let puzzle = null;
@@ -889,6 +903,8 @@
     render();
     updateStreakHeader();
     maybeShowOnboarding();
+    // Lazy — doesn't block first paint; autocomplete just expands once it lands.
+    loadFullPlayers();
 
     document.getElementById("reset-link").addEventListener("click", () => {
       delete storage.history[puzzle.date];
@@ -1143,7 +1159,12 @@
     function update() {
       const q = norm(input.value);
       if (!q) { ac.style.display = "none"; btn.disabled = true; return; }
-      suggestions = PLAYERS.filter(p => norm(p).includes(q)).slice(0, 6);
+      // Linear scan with early termination — much faster than filter()/slice()
+      // when PLAYERS contains the full ~22k Chadwick register.
+      suggestions = [];
+      for (let i = 0; i < PLAYERS.length && suggestions.length < 6; i++) {
+        if (PLAYER_NORM[i].includes(q)) suggestions.push(PLAYERS[i]);
+      }
       ac.innerHTML = "";
       suggestions.forEach((s, i) => {
         const d = document.createElement("div");
