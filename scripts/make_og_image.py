@@ -48,6 +48,51 @@ MONO_PATHS = [
 ]
 
 
+def draw_baseball(d: ImageDraw.ImageDraw, bx: int, by: int, r: int,
+                  ball_fill=(252, 247, 235), seam_color=RED,
+                  ball_stroke=INK, ball_stroke_width: int = 4,
+                  seam_width: int = 4, tick_count: int = 7) -> None:
+    """Draw a baseball: cream ball + two red curved seams + perpendicular stitch ticks.
+
+    Stitches form the classic horseshoe pattern by placing two large arcs
+    whose centers are offset to either side of the ball — only the arc
+    segment that falls inside the ball is drawn.
+    """
+    import math
+    d.ellipse((bx - r, by - r, bx + r, by + r),
+              fill=ball_fill, outline=ball_stroke, width=ball_stroke_width)
+    seam_r = int(r * 1.15)
+    offset = int(r * 0.55)
+
+    # Left seam — center to the right of the ball, draw the leftmost arc.
+    cx_l, cy_l = bx + offset, by
+    d.arc((cx_l - seam_r, cy_l - seam_r, cx_l + seam_r, cy_l + seam_r),
+          start=135, end=225, fill=seam_color, width=seam_width)
+
+    # Right seam — mirrored.
+    cx_r, cy_r = bx - offset, by
+    d.arc((cx_r - seam_r, cy_r - seam_r, cx_r + seam_r, cy_r + seam_r),
+          start=-45, end=45, fill=seam_color, width=seam_width)
+
+    # Perpendicular stitch ticks along each seam.
+    tick_len = max(2, int(r * 0.10))
+    for cx, cy, angle_start, angle_end in (
+        (cx_l, cy_l, 135, 225),
+        (cx_r, cy_r, -45, 45),
+    ):
+        for i in range(tick_count):
+            t = (i + 0.5) / tick_count
+            theta = math.radians(angle_start + t * (angle_end - angle_start))
+            # Point on seam circle.
+            px = cx + seam_r * math.cos(theta)
+            py = cy + seam_r * math.sin(theta)
+            # Outward normal (away from seam-circle center) is the tick direction.
+            nx, ny = math.cos(theta), math.sin(theta)
+            d.line([(px - nx * tick_len, py - ny * tick_len),
+                    (px + nx * tick_len, py + ny * tick_len)],
+                   fill=seam_color, width=max(1, seam_width // 2))
+
+
 def load_font(size: int, paths: list[str]) -> ImageFont.FreeTypeFont:
     for p in paths:
         if os.path.exists(p):
@@ -111,15 +156,7 @@ def main() -> None:
     d.text(((W - (bbox[2] - bbox[0])) / 2, 320), tagline, font=small, fill=INK)
 
     # A central baseball icon — drawn from primitives so we don't depend on emoji fonts.
-    bx, by, br = W // 2, 450, 70
-    d.ellipse((bx - br, by - br, bx + br, by + br), fill=(252, 247, 235), outline=INK, width=4)
-    # Stitches
-    for offset in (-30, 30):
-        d.arc((bx - br + 10 + offset, by - br + 10,
-               bx + br + offset, by + br - 10),
-              start=240 if offset < 0 else 60,
-              end=300 if offset < 0 else 120,
-              fill=RED, width=4)
+    draw_baseball(d, W // 2, 450, 70)
 
     # Footer URL
     url = "playroundthebases.com"

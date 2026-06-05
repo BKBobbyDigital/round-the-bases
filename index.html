@@ -15,6 +15,14 @@
 <meta name="twitter:title" content="Round the Bases" />
 <meta name="twitter:description" content="Daily baseball puzzle. One at-bat, four pitches, real baseball scoring." />
 <meta name="twitter:image" content="og.png" />
+
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#355A3A" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Round the Bases" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Old+Standard+TT:wght@400;700&family=Special+Elite&family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
@@ -261,6 +269,52 @@
     letter-spacing: 0.2em; text-transform: uppercase; color: var(--red);
   }
 
+  /* A2HS card — shown after first completed game */
+  .a2hs {
+    margin-top: 18px;
+    background: var(--cream); border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    padding: 14px 16px;
+    display: grid; grid-template-columns: auto 1fr auto; gap: 12px;
+    align-items: center; position: relative;
+  }
+  .a2hs-icon {
+    width: 44px; height: 44px;
+    background: var(--green); color: var(--cream);
+    border: 2px solid var(--ink); border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .a2hs-body { line-height: 1.25; }
+  .a2hs-title {
+    font-family: 'Alfa Slab One', serif; font-size: 14px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .a2hs-text {
+    font-family: 'Special Elite', monospace; font-size: 11px;
+    letter-spacing: 0.05em; color: var(--ink); opacity: 0.85; margin-top: 2px;
+  }
+  .a2hs-action {
+    background: var(--red); color: var(--cream);
+    border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink);
+    font-family: 'Alfa Slab One', serif; font-size: 11px;
+    letter-spacing: 0.12em; padding: 8px 12px; cursor: pointer;
+    text-transform: uppercase;
+  }
+  .a2hs-action:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ink); }
+  .a2hs-dismiss {
+    position: absolute; top: 4px; right: 6px;
+    background: none; border: none; padding: 0; font-size: 16px;
+    cursor: pointer; color: var(--ink); opacity: 0.5; line-height: 1;
+  }
+  .a2hs-dismiss:hover { opacity: 1; }
+  .a2hs-ios-steps {
+    grid-column: 1 / -1;
+    font-family: 'Special Elite', monospace; font-size: 11px;
+    letter-spacing: 0.05em; margin-top: 4px; line-height: 1.5;
+  }
+  .a2hs-ios-steps b { color: var(--red); }
+
   .boxscore {
     margin-top: 22px; border-top: 3px double var(--ink); padding-top: 12px;
   }
@@ -500,6 +554,65 @@
 
   function norm(s) {
     return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+  }
+
+  // ---------- A2HS (Add to Home Screen) ----------
+  // Chrome / Android: capture beforeinstallprompt so we can trigger natively later.
+  let _deferredInstallPrompt = null;
+  window.addEventListener("beforeinstallprompt", e => {
+    e.preventDefault();
+    _deferredInstallPrompt = e;
+  });
+
+  function isStandalone() {
+    return window.matchMedia("(display-mode: standalone)").matches
+        || window.navigator.standalone === true;
+  }
+  function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  }
+  function shouldOfferA2HS() {
+    if (isStandalone()) return false;            // already installed
+    if (storage.a2hsDismissed) return false;     // user said no thanks
+    if (Object.keys(storage.history).length < 1) return false;  // earn it first
+    return isIOS() || _deferredInstallPrompt !== null;
+  }
+
+  function renderA2HS() {
+    const card = document.createElement("div");
+    card.className = "a2hs";
+    card.innerHTML = `
+      <div class="a2hs-icon">⚾</div>
+      <div class="a2hs-body">
+        <div class="a2hs-title">Play daily?</div>
+        <div class="a2hs-text">Add Round the Bases to your home screen.</div>
+      </div>
+      <button class="a2hs-action">${isIOS() ? "How" : "Install"}</button>
+      <button class="a2hs-dismiss" aria-label="Dismiss">×</button>
+    `;
+    card.querySelector(".a2hs-dismiss").addEventListener("click", () => {
+      storage.a2hsDismissed = true; saveStorage();
+      card.remove();
+    });
+    card.querySelector(".a2hs-action").addEventListener("click", async () => {
+      if (isIOS()) {
+        // No programmatic install on iOS — show explicit steps inline.
+        const steps = document.createElement("div");
+        steps.className = "a2hs-ios-steps";
+        steps.innerHTML = "Tap <b>Share</b> ↑ in Safari, then <b>Add to Home Screen</b>.";
+        card.appendChild(steps);
+        card.querySelector(".a2hs-action").remove();
+      } else if (_deferredInstallPrompt) {
+        _deferredInstallPrompt.prompt();
+        const choice = await _deferredInstallPrompt.userChoice;
+        _deferredInstallPrompt = null;
+        if (choice && choice.outcome === "accepted") {
+          storage.a2hsDismissed = true; saveStorage();
+          card.remove();
+        }
+      }
+    });
+    return card;
   }
 
   // ---------- COUNTDOWN ----------
@@ -1024,6 +1137,7 @@
     startCountdown(tomorrow);
 
     card.appendChild(renderBoxScore());
+    if (shouldOfferA2HS()) card.appendChild(renderA2HS());
     return card;
   }
 
