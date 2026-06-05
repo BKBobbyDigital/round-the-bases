@@ -582,7 +582,7 @@
     const meta = [
       storage.streak > 0 ? `🔥 STREAK ${storage.streak}` : null,
       lob ? `${lob} LOB` : null,
-      "play.roundthebases.com"
+      "playroundthebases.com"
     ].filter(Boolean).join("    ·    ");
     ctx.fillText(meta, W / 2, 590);
 
@@ -951,7 +951,7 @@
       `${headline}${lob ? ` · ${lob} LOB` : ""}\n` +
       `${grid.join("")}\n` +
       streakLine +
-      `play.roundthebases.com`;
+      `playroundthebases.com`;
 
     const share = document.createElement("div");
     share.className = "share-card"; share.textContent = shareText;

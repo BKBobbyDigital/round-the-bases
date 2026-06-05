@@ -111,7 +111,7 @@ def main() -> None:
               fill=RED, width=4)
 
     # Footer URL
-    url = "play.roundthebases.com"
+    url = "playroundthebases.com"
     bbox = d.textbbox((0, 0), url, font=small)
     d.text(((W - (bbox[2] - bbox[0])) / 2, 560), url, font=small, fill=INK)
 
