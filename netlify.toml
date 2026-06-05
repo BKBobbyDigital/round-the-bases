@@ -1,0 +1,10 @@
+# Round the Bases — static-site deploy.
+# Single index.html, no build step, no SPA routing.
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/puzzles/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

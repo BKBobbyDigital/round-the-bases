@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Round the Bases — Daily Baseball Puzzle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Old+Standard+TT:wght@400;700&family=Special+Elite&family=Oswald:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream:   #F1E4C8;
+    --cream-2: #E8D7B4;
+    --ink:     #1A1612;
+    --red:     #B22A2B;
+    --green:   #355A3A;
+    --dirt:    #8B6A3F;
+    --gold:    #C9A14C;
+    --line:    rgba(26, 22, 18, 0.18);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; background: var(--cream); color: var(--ink);
+    font-family: 'Old Standard TT', Georgia, serif; min-height: 100%;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0;
+    background-image:
+      radial-gradient(rgba(26,22,18,0.05) 1px, transparent 1px),
+      radial-gradient(rgba(178,42,43,0.04) 1px, transparent 1px);
+    background-size: 4px 4px, 7px 7px;
+    background-position: 0 0, 2px 3px;
+    pointer-events: none; z-index: 0;
+  }
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 460px; margin: 0 auto; padding: 24px 20px 40px;
+  }
+
+  /* HEADER */
+  header { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; margin-bottom: 18px; }
+  .eyebrow {
+    font-family: 'Special Elite', monospace;
+    text-transform: uppercase; letter-spacing: 0.3em; font-size: 11px; color: var(--red);
+  }
+  h1 {
+    font-family: 'Alfa Slab One', serif; font-weight: 400;
+    font-size: 38px; line-height: 0.95; letter-spacing: 0.01em;
+    margin: 8px 0 4px; text-transform: uppercase;
+  }
+  .subhead {
+    font-family: 'Special Elite', monospace;
+    font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .subhead .pipe { color: var(--red); margin: 0 6px; }
+
+  /* SCOREBOARD */
+  .scoreboard {
+    background: var(--green); color: var(--cream);
+    border: 2px solid var(--ink); border-radius: 2px;
+    padding: 14px 16px;
+    display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px;
+    align-items: center; margin-bottom: 18px;
+    box-shadow: 0 4px 0 var(--ink); position: relative;
+  }
+  .scoreboard::before, .scoreboard::after {
+    content: ""; position: absolute; top: -2px; bottom: -2px; width: 14px;
+    background: repeating-linear-gradient(0deg, var(--ink) 0 4px, transparent 4px 8px);
+  }
+  .scoreboard::before { left: -2px; } .scoreboard::after { right: -2px; }
+  .sb-label {
+    font-family: 'Special Elite', monospace;
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.85;
+  }
+  .sb-val {
+    font-family: 'Alfa Slab One', serif; font-size: 28px; line-height: 1; margin-top: 2px;
+  }
+  .sb-strikes { text-align: center; }
+  .sb-outs    { text-align: right; }
+
+  .weekly {
+    background: var(--cream-2);
+    border: 2px solid var(--ink); border-top: none;
+    padding: 6px 14px; margin: -2px 0 18px;
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: 'Special Elite', monospace; font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    box-shadow: 0 4px 0 var(--ink);
+  }
+  .weekly .wk-val { font-family: 'Alfa Slab One', serif; font-size: 16px; color: var(--red); margin-right: 4px; }
+  .weekly .wk-dots { display: flex; gap: 3px; }
+  .weekly .wk-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    border: 1.5px solid var(--ink); background: var(--cream);
+  }
+  .weekly .wk-dot.played { background: var(--red); border-color: var(--red); }
+  .weekly .wk-dot.today { box-shadow: 0 0 0 2px var(--cream), 0 0 0 3px var(--ink); }
+  .dots { display: flex; gap: 6px; justify-content: center; margin-top: 4px; }
+  .dots.dots-r { justify-content: flex-end; }
+  .dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 2px solid var(--cream); background: transparent;
+  }
+  .dot.on { background: var(--red); border-color: var(--red); }
+
+  /* DIAMOND */
+  .diamond-wrap { display: flex; justify-content: center; margin: 0 0 18px; }
+  .diamond { width: 200px; height: 200px; }
+  .diamond svg { width: 100%; height: 100%; display: block; }
+  .base { fill: var(--cream); stroke: var(--ink); stroke-width: 2; transition: fill 200ms ease; }
+  .base.occupied { fill: var(--red); }
+
+  /* PITCH CARD */
+  .card {
+    background: var(--cream-2); border: 2px solid var(--ink); border-radius: 3px;
+    padding: 18px 18px 22px; position: relative; box-shadow: 6px 6px 0 var(--ink);
+  }
+  .card::before {
+    content: ""; position: absolute; top: -2px; left: 8px; right: 8px; height: 2px;
+    background-image: radial-gradient(circle, var(--cream) 2px, transparent 2.5px);
+    background-size: 12px 4px; background-repeat: repeat-x; background-position: 0 -1px;
+  }
+  .pitch-tag {
+    display: inline-block; background: var(--red); color: var(--cream);
+    font-family: 'Alfa Slab One', serif; font-size: 12px; letter-spacing: 0.18em;
+    padding: 4px 10px 3px; margin-bottom: 12px; transform: rotate(-1.5deg);
+  }
+  .pitch-tag .tier { color: #F5E2A4; }
+  .prompt { font-family: 'Old Standard TT', serif; font-size: 22px; line-height: 1.3; margin: 0 0 16px; }
+  .opening-hint {
+    font-family: 'Special Elite', monospace; font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--red); margin-bottom: 14px;
+  }
+
+  /* ARSENAL */
+  .arsenal { display: grid; grid-template-columns: auto 1fr auto auto; gap: 6px 12px; align-items: center; margin-bottom: 14px; font-family: 'Special Elite', monospace; font-size: 13px; }
+  .arsenal .ars-emoji { font-size: 20px; }
+  .arsenal .ars-name { font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.05em; }
+  .arsenal .ars-speed { text-align: right; }
+  .arsenal .ars-usage { text-align: right; font-weight: 700; }
+
+  /* CHOICES */
+  .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .choice {
+    background: var(--cream); border: 2px solid var(--ink); color: var(--ink);
+    font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 16px;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    padding: 14px 8px; cursor: pointer; box-shadow: 3px 3px 0 var(--ink);
+    transition: transform 80ms ease, background 80ms ease, opacity 200ms ease;
+  }
+  .choice:hover:not(:disabled) { background: #fff5dc; }
+  .choice:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+  .choice.wrong { opacity: 0.35; text-decoration: line-through; }
+  .choice:disabled { cursor: not-allowed; }
+
+  /* TEXT INPUT (3B/HR) */
+  .input-wrap { position: relative; }
+  .input-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+  .text-input {
+    background: var(--cream); border: 2px solid var(--ink); color: var(--ink);
+    font-family: 'Old Standard TT', serif; font-size: 18px; padding: 12px 12px;
+    width: 100%; box-shadow: 3px 3px 0 var(--ink); outline: none;
+  }
+  .text-input:focus { background: #fff5dc; }
+  .swing-btn {
+    background: var(--red); color: var(--cream); border: 2px solid var(--ink);
+    font-family: 'Alfa Slab One', serif; font-size: 14px; letter-spacing: 0.15em;
+    padding: 0 18px; cursor: pointer; box-shadow: 3px 3px 0 var(--ink);
+  }
+  .swing-btn:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+  .swing-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .autocomplete {
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 5;
+    background: var(--cream); border: 2px solid var(--ink); margin-top: 4px;
+    max-height: 180px; overflow-y: auto; box-shadow: 3px 3px 0 var(--ink);
+  }
+  .autocomplete div {
+    padding: 8px 12px; cursor: pointer;
+    font-family: 'Oswald', sans-serif; font-size: 15px; letter-spacing: 0.04em;
+    border-bottom: 1px solid var(--line);
+  }
+  .autocomplete div:hover, .autocomplete div.active { background: #fff5dc; }
+
+  /* PAST GUESSES */
+  .past {
+    margin-top: 14px; font-family: 'Special Elite', monospace; font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+  .past .row { display: flex; gap: 8px; align-items: baseline; padding: 3px 0; }
+  .past .x { color: var(--red); font-weight: 700; }
+  .past .ginfo { opacity: 0.7; }
+
+  /* HINTS */
+  .hints { margin-top: 12px; }
+  .hint {
+    background: rgba(178,42,43,0.08); border-left: 3px solid var(--red);
+    padding: 6px 10px; margin-top: 6px;
+    font-family: 'Special Elite', monospace; font-size: 12px; letter-spacing: 0.08em;
+  }
+  .hint::before { content: "HINT  "; color: var(--red); font-weight: 700; }
+
+  /* RESULT SCREEN */
+  .result-card {
+    background: var(--cream-2); border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink); padding: 22px 20px; position: relative;
+  }
+  .result-card::before {
+    content: ""; position: absolute; top: -2px; left: 8px; right: 8px; height: 2px;
+    background-image: radial-gradient(circle, var(--cream) 2px, transparent 2.5px);
+    background-size: 12px 4px; background-repeat: repeat-x; background-position: 0 -1px;
+  }
+  .result-title {
+    font-family: 'Alfa Slab One', serif; font-size: 32px; line-height: 1;
+    text-transform: uppercase; margin: 0 0 8px;
+  }
+  .result-sub {
+    font-family: 'Special Elite', monospace; font-size: 12px;
+    letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 18px;
+  }
+  .result-bases {
+    font-family: 'Special Elite', monospace; font-size: 13px; letter-spacing: 0.05em;
+    line-height: 1.8; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    padding: 10px 0; margin-bottom: 16px;
+  }
+  .result-bases .br-row { display: grid; grid-template-columns: 30px 24px 1fr; align-items: baseline; gap: 6px; }
+  .result-bases .br-tier { font-family: 'Alfa Slab One', serif; font-size: 13px; }
+  .result-bases .br-mark { font-size: 16px; }
+  .result-bases .miss { opacity: 0.55; }
+  .result-bases .miss .ans { color: var(--red); }
+  .result-bases .br-detail {
+    font-family: 'Special Elite', monospace; font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-left: 4px;
+  }
+
+  .share-card {
+    background: var(--cream); border: 2px dashed var(--ink); padding: 14px 16px;
+    margin-bottom: 14px; white-space: pre-wrap;
+    font-family: 'Special Elite', monospace; font-size: 13px; letter-spacing: 0.06em;
+    line-height: 1.5;
+  }
+  .share-btn {
+    width: 100%; background: var(--red); color: var(--cream); border: 2px solid var(--ink);
+    font-family: 'Alfa Slab One', serif; font-size: 16px; letter-spacing: 0.15em;
+    padding: 14px; cursor: pointer; box-shadow: 4px 4px 0 var(--ink);
+  }
+  .share-btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+  .tomorrow {
+    text-align: center; margin-top: 16px;
+    font-family: 'Special Elite', monospace; font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--red);
+  }
+
+  .boxscore {
+    margin-top: 22px; border-top: 3px double var(--ink); padding-top: 12px;
+  }
+  .bs-title {
+    font-family: 'Alfa Slab One', serif; font-size: 14px;
+    letter-spacing: 0.22em; margin-bottom: 8px; text-transform: uppercase;
+  }
+  .bs-row, .bs-total {
+    display: grid; grid-template-columns: 36px 66px 1fr 56px;
+    gap: 8px; align-items: baseline; padding: 4px 0;
+    font-family: 'Special Elite', monospace; font-size: 12px;
+    letter-spacing: 0.04em;
+    border-bottom: 1px dotted var(--line);
+  }
+  .bs-row.today { background: rgba(178,42,43,0.06); margin: 0 -6px; padding: 4px 6px; border-bottom-color: var(--line); }
+  .bs-row.today .bs-day, .bs-row.today .bs-runs { color: var(--red); }
+  .bs-row.missed, .bs-row.future { opacity: 0.4; }
+  .bs-day { font-family: 'Alfa Slab One', serif; font-size: 11px; letter-spacing: 0.1em; }
+  .bs-date { text-transform: uppercase; letter-spacing: 0.1em; font-size: 10px; }
+  .bs-grid { font-size: 14px; letter-spacing: 0.02em; }
+  .bs-runs { text-align: right; font-weight: 700; }
+  .bs-total {
+    border-bottom: none; border-top: 2px solid var(--ink); margin-top: 2px; padding-top: 6px;
+    font-family: 'Alfa Slab One', serif; font-size: 12px; letter-spacing: 0.08em;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center; margin-top: 28px;
+    font-family: 'Special Elite', monospace; font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.65;
+  }
+  footer .star { color: var(--red); }
+
+  /* DEV reset */
+  .dev-reset {
+    margin-top: 12px; text-align: center;
+    font-family: 'Special Elite', monospace; font-size: 10px; letter-spacing: 0.2em;
+  }
+  .dev-reset a { color: var(--ink); opacity: 0.4; cursor: pointer; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">★ Daily ★</div>
+      <h1>Round the Bases</h1>
+      <div class="subhead">
+        <span id="day-no">Day No. —</span> <span class="pipe">|</span> <span id="day-date">—</span>
+        <span class="pipe" id="streak-pipe">|</span> <span id="streak-chip" style="display:none"></span>
+      </div>
+    </header>
+
+    <div class="scoreboard">
+      <div class="sb-runs">
+        <div class="sb-label">Runs</div>
+        <div class="sb-val" id="sb-runs">0</div>
+      </div>
+      <div class="sb-strikes">
+        <div class="sb-label">Strikes</div>
+        <div class="dots" id="sb-strike-dots">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+      <div class="sb-outs">
+        <div class="sb-label">Outs</div>
+        <div class="dots dots-r" id="sb-out-dots">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+    </div>
+    <div class="weekly">
+      <div><span class="wk-val" id="wk-runs">0</span>Runs this week</div>
+      <div class="wk-dots" id="wk-dots"></div>
+    </div>
+
+    <div class="diamond-wrap">
+      <div class="diamond">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outfield grass: triangle from home (100,160), capped by back arc -->
+          <path d="M 100 160 L 195 65 Q 100 -30 5 65 Z"
+            fill="#3D5B3B" fill-opacity="0.12" stroke="none"/>
+          <!-- Outfield wall / warning track -->
+          <path d="M 5 65 Q 100 -30 195 65"
+            fill="none" stroke="#1A1612" stroke-width="2"
+            stroke-linecap="round"/>
+          <!-- Baseball-stitch detail (inner red, dashed) -->
+          <path d="M 11 71 Q 100 -19 189 71"
+            fill="none" stroke="#B22A2B" stroke-width="1"
+            stroke-dasharray="2 5" stroke-linecap="round"/>
+          <!-- Foul lines from home plate through 1B/3B and out to the wall -->
+          <line x1="100" y1="160" x2="195" y2="65"
+            stroke="#1A1612" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="100" y1="160" x2="5"   y2="65"
+            stroke="#1A1612" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Infield dirt fill -->
+          <polygon points="100,40 160,100 100,160 40,100"
+            fill="#8B6A3F" fill-opacity="0.22" stroke="none"/>
+          <!-- Baselines (the actual diamond) -->
+          <polygon points="100,40 160,100 100,160 40,100"
+            fill="none" stroke="#1A1612" stroke-width="2"
+            stroke-linejoin="round"/>
+          <!-- Pitcher's mound -->
+          <circle cx="100" cy="100" r="9"
+            fill="#8B6A3F" fill-opacity="0.55"
+            stroke="#1A1612" stroke-width="1.5"/>
+          <circle cx="100" cy="100" r="2.5" fill="#1A1612"/>
+          <!-- Bases — 1B, 2B, 3B kept; home plate sits on the diamond's bottom vertex -->
+          <rect class="base" id="base-2b" x="93" y="33"  width="14" height="14" transform="rotate(45 100 40)"/>
+          <rect class="base" id="base-1b" x="153" y="93" width="14" height="14" transform="rotate(45 160 100)"/>
+          <rect class="base" id="base-3b" x="33" y="93"  width="14" height="14" transform="rotate(45 40 100)"/>
+          <!-- Home plate: pentagon, flat edge faces pitcher, point faces catcher -->
+          <polygon class="base" id="base-hr" points="93,153 107,153 107,160 100,167 93,160"/>
+        </svg>
+      </div>
+    </div>
+
+    <section id="game-area"></section>
+
+    <div class="dev-reset"><a id="reset-link">↻ reset (dev)</a></div>
+
+    <footer><span class="star">★</span> Play Ball <span class="star">★</span></footer>
+  </div>
+
+<script>
+  // ---------- PLAYER DICTIONARY (autocomplete pool) ----------
+  const PLAYERS = [
+    "Jose Altuve","Todd Helton","Aaron Judge","Bryce Harper","Tony Gwynn",
+    "Mike Trout","Mookie Betts","Manny Machado","Vladimir Guerrero Jr.",
+    "Ronald Acuña Jr.","Juan Soto","Freddie Freeman","Cody Bellinger",
+    "Joey Votto","Albert Pujols","Miguel Cabrera","Alex Rodriguez","Derek Jeter",
+    "Clayton Kershaw","Corbin Burnes","Spencer Strider","Jacob deGrom",
+    "R.A. Dickey","Pedro Martinez","Greg Maddux","Randy Johnson","Mariano Rivera",
+    "Justin Verlander","Max Scherzer","Roger Clemens","Madison Bumgarner",
+    "Felix Hernandez","Chris Sale","Gerrit Cole","Tarik Skubal","Dylan Cease"
+  ];
+
+  // ---------- STATE ----------
+  let puzzle = null;
+  const state = {
+    pitchIndex: 0,
+    strikes: 0,           // resets each at-bat
+    outs: 0,
+    runs: 0,
+    bases: { "1B": false, "2B": false, "3B": false },
+    pitchOutcomes: [],    // 'hit' | 'out', one per completed at-bat
+    pitchHits: [],        // 'single'|'double'|'triple'|'hr'|null  per at-bat
+    pitchRBI: [],         // runs driven in by this hit
+    pitchGuesses: [],     // [[guess,...], ...] per at-bat
+    pitchHints: [],       // hints revealed (count) per at-bat
+    swingsTotal: 0,       // not headlined, kept for share footer
+    gameOver: false,
+  };
+
+  // Each tier's question is a different kind of hit.
+  // Pitch-card subtitle: tells player what kind of hit this at-bat earns.
+  const TIER_LABEL = { "1B": "SINGLE", "2B": "DOUBLE", "3B": "TRIPLE", "HR": "HOME RUN" };
+  const TIER_HIT   = { "1B": "single", "2B": "double", "3B": "triple", "HR": "hr" };
+  const HIT_LABEL  = { single: "SINGLE", double: "DOUBLE", triple: "TRIPLE", hr: "HOME RUN" };
+  const HIT_BASES  = { single: 1, double: 2, triple: 3, hr: 4 };
+
+  // ---------- PERSISTENCE ----------
+  const STORAGE_KEY = "rtb:state";
+  let storage = { history: {}, streak: 0, lastPlayedDate: null };
+
+  function loadStorage() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) storage = { history: {}, streak: 0, lastPlayedDate: null, ...JSON.parse(raw) };
+    } catch {}
+  }
+  function saveStorage() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(storage)); } catch {}
+  }
+  function snapshotGame() {
+    return {
+      pitchIndex: state.pitchIndex, strikes: state.strikes, outs: state.outs, runs: state.runs,
+      bases: { ...state.bases },
+      pitchOutcomes: [...state.pitchOutcomes], pitchHits: [...state.pitchHits], pitchRBI: [...state.pitchRBI],
+      pitchGuesses: state.pitchGuesses.map(g => [...g]), pitchHints: [...state.pitchHints],
+      swingsTotal: state.swingsTotal, gameOver: state.gameOver,
+    };
+  }
+  function restoreGame(snap) { Object.assign(state, snap); }
+  function yesterdayOf(iso) {
+    const d = new Date(iso + "T00:00:00"); d.setDate(d.getDate() - 1);
+    return d.toISOString().slice(0,10);
+  }
+  // Mon-Sun week containing the given ISO date. Returns ['YYYY-MM-DD' x 7].
+  function weekDates(iso) {
+    const d = new Date(iso + "T00:00:00");
+    const offset = (d.getDay() + 6) % 7; // days since Monday
+    const monday = new Date(d); monday.setDate(d.getDate() - offset);
+    const out = [];
+    for (let i = 0; i < 7; i++) {
+      const x = new Date(monday); x.setDate(monday.getDate() + i);
+      out.push(x.toISOString().slice(0, 10));
+    }
+    return out;
+  }
+  function updateStreakOnce(date) {
+    if (storage.lastPlayedDate === date) return;
+    if (storage.lastPlayedDate === yesterdayOf(date)) storage.streak = (storage.streak || 0) + 1;
+    else storage.streak = 1;
+    storage.lastPlayedDate = date;
+  }
+  function persist() {
+    const date = puzzle.date;
+    if (state.gameOver) {
+      if (!storage.history[date]) {
+        storage.history[date] = snapshotGame();
+        updateStreakOnce(date);
+      }
+      delete storage.inProgress;
+    } else {
+      storage.inProgress = { date, ...snapshotGame() };
+    }
+    saveStorage();
+  }
+
+  function norm(s) {
+    return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+  }
+
+  // ---------- INIT ----------
+  function freshState() {
+    Object.assign(state, {
+      pitchIndex: 0, strikes: 0, outs: 0, runs: 0,
+      bases: { "1B": false, "2B": false, "3B": false },
+      pitchOutcomes: [], pitchHits: [], pitchRBI: [],
+      pitchGuesses: puzzle.pitches.map(() => []),
+      pitchHints: puzzle.pitches.map(() => 0),
+      swingsTotal: 0, gameOver: false,
+    });
+  }
+  async function init() {
+    loadStorage();
+    const path = "puzzles/2026-06-05.json";
+    puzzle = await fetch(path).then(r => r.json());
+    freshState();
+    document.getElementById("day-no").textContent = "Day No. " + puzzle.puzzleNumber;
+    document.getElementById("day-date").textContent = formatDate(puzzle.date);
+
+    // Restore today's progress or completed game
+    if (storage.history[puzzle.date]) {
+      restoreGame(storage.history[puzzle.date]);
+    } else if (storage.inProgress && storage.inProgress.date === puzzle.date) {
+      restoreGame(storage.inProgress);
+    }
+    render();
+    updateStreakHeader();
+
+    document.getElementById("reset-link").addEventListener("click", () => {
+      delete storage.history[puzzle.date];
+      delete storage.inProgress;
+      saveStorage();
+      freshState(); render(); updateStreakHeader();
+    });
+  }
+
+  function updateWeekly() {
+    if (!puzzle) return;
+    const dates = weekDates(puzzle.date);
+    const runsEl = document.getElementById("wk-runs");
+    const dotsEl = document.getElementById("wk-dots");
+    if (!runsEl || !dotsEl) return;
+    let total = 0;
+    dotsEl.innerHTML = "";
+    const labels = ["M","T","W","T","F","S","S"];
+    dates.forEach((d, i) => {
+      const h = storage.history[d];
+      if (h) total += h.runs || 0;
+      const dot = document.createElement("span");
+      dot.className = "wk-dot";
+      if (h) dot.classList.add("played");
+      if (d === puzzle.date) dot.classList.add("today");
+      dot.title = `${labels[i]} ${d}` + (h ? ` — ${h.runs} runs` : "");
+      dotsEl.appendChild(dot);
+    });
+    // Include in-progress runs even if not yet completed
+    if (!storage.history[puzzle.date]) total += state.runs;
+    runsEl.textContent = total;
+  }
+
+  function updateStreakHeader() {
+    const chip = document.getElementById("streak-chip");
+    const pipe = document.getElementById("streak-pipe");
+    if (!chip) return;
+    if (storage.streak > 0) {
+      chip.style.display = ""; pipe.style.display = "";
+      chip.textContent = `🔥 ${storage.streak}`;
+    } else {
+      chip.style.display = "none"; pipe.style.display = "none";
+    }
+  }
+
+  function formatDate(iso) {
+    const [y,m,d] = iso.split("-").map(Number);
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${months[m-1]} ${d}, ${y}`;
+  }
+
+  // ---------- CORE GAME ----------
+  // Advance existing runners by `bases` and place batter; returns runs scored.
+  function advanceRunners(hitType) {
+    const advance = HIT_BASES[hitType];
+    const old = { ...state.bases };
+    state.bases = { "1B": false, "2B": false, "3B": false };
+    let runs = 0;
+    // Move existing runners (process from 3B down so we don't double-place).
+    for (const b of ["3B", "2B", "1B"]) {
+      if (!old[b]) continue;
+      const startNum = { "1B": 1, "2B": 2, "3B": 3 }[b];
+      const target = startNum + advance;
+      if (target >= 4) runs++;
+      else state.bases[["1B", "2B", "3B"][target - 1]] = true;
+    }
+    // Place batter
+    if (hitType === "hr") runs++;
+    else state.bases[{ single: "1B", double: "2B", triple: "3B" }[hitType]] = true;
+    return runs;
+  }
+
+  function advancePitch() {
+    state.strikes = 0; // fresh at-bat
+    if (state.outs >= 3 || state.pitchIndex === puzzle.pitches.length - 1) {
+      state.gameOver = true;
+    } else {
+      state.pitchIndex++;
+    }
+  }
+
+  function submitGuess(guess) {
+    if (state.gameOver) return;
+    const pitch = puzzle.pitches[state.pitchIndex];
+    state.swingsTotal++;
+    state.pitchGuesses[state.pitchIndex].push(guess);
+
+    if (norm(guess) === norm(pitch.answer)) {
+      // HIT
+      const hitType = TIER_HIT[pitch.tier];
+      const rbi = advanceRunners(hitType);
+      state.runs += rbi;
+      state.pitchOutcomes.push("hit");
+      state.pitchHits.push(hitType);
+      state.pitchRBI.push(rbi);
+      advancePitch();
+    } else {
+      // STRIKE
+      state.strikes++;
+      state.pitchHints[state.pitchIndex]++;
+      if (state.strikes >= 3) {
+        // STRIKEOUT
+        state.outs++;
+        state.pitchOutcomes.push("out");
+        state.pitchHits.push(null);
+        state.pitchRBI.push(0);
+        advancePitch();
+      }
+    }
+    persist();
+    render();
+  }
+
+  // ---------- RENDER ----------
+  function render() {
+    // scoreboard
+    document.getElementById("sb-runs").textContent = state.runs;
+    document.querySelectorAll("#sb-strike-dots .dot").forEach((d, i) =>
+      d.classList.toggle("on", i < state.strikes));
+    document.querySelectorAll("#sb-out-dots .dot").forEach((d, i) =>
+      d.classList.toggle("on", i < state.outs));
+
+    // diamond — bases occupied by current runners
+    ["1B","2B","3B"].forEach(b => {
+      const el = document.getElementById("base-" + b.toLowerCase());
+      el.classList.toggle("occupied", !!state.bases[b]);
+    });
+
+    const area = document.getElementById("game-area");
+    area.innerHTML = "";
+    if (state.gameOver) area.appendChild(renderResult());
+    else area.appendChild(renderPitch());
+    updateStreakHeader();
+    updateWeekly();
+  }
+
+  function renderPitch() {
+    const pitch = puzzle.pitches[state.pitchIndex];
+    const tier  = pitch.tier;
+    const guesses = state.pitchGuesses[state.pitchIndex];
+    const hintsShown = state.pitchHints[state.pitchIndex];
+
+    const card = document.createElement("section");
+    card.className = "card";
+
+    const tag = document.createElement("div");
+    tag.className = "pitch-tag";
+    tag.innerHTML = `PITCH ${state.pitchIndex+1} <span class="tier">· ${TIER_LABEL[tier]}</span>`;
+    card.appendChild(tag);
+
+    // PROMPT
+    if (pitch.type === "arsenal") {
+      const p = document.createElement("div");
+      p.className = "arsenal";
+      pitch.prompt.pitches.forEach(pp => {
+        p.insertAdjacentHTML("beforeend",
+          `<div class="ars-emoji">${pp.emoji}</div>
+           <div class="ars-name">${pp.name}</div>
+           <div class="ars-speed">${pp.speed} mph</div>
+           <div class="ars-usage">${pp.usage}%</div>`);
+      });
+      card.appendChild(p);
+    } else {
+      const p = document.createElement("p");
+      p.className = "prompt";
+      p.textContent = pitch.prompt;
+      card.appendChild(p);
+    }
+
+    // OPENING HINT (always shown for 3B/HR if present)
+    if (pitch.openingHint) {
+      const h = document.createElement("div");
+      h.className = "opening-hint";
+      h.textContent = "· " + pitch.openingHint + " ·";
+      card.appendChild(h);
+    }
+
+    // INPUT
+    if (pitch.type === "trivia" || pitch.type === "career_arc") {
+      const choices = document.createElement("div");
+      choices.className = "choices";
+      pitch.choices.forEach(choice => {
+        const btn = document.createElement("button");
+        btn.className = "choice";
+        btn.textContent = choice;
+        const alreadyWrong = guesses.some(g => norm(g) === norm(choice));
+        if (alreadyWrong) { btn.classList.add("wrong"); btn.disabled = true; }
+        btn.addEventListener("click", () => submitGuess(choice));
+        choices.appendChild(btn);
+      });
+      card.appendChild(choices);
+    } else {
+      card.appendChild(renderFreeText(pitch));
+    }
+
+    // PROGRESSIVE HINTS revealed by wrong guesses
+    if (pitch.progressiveHints && hintsShown > 0) {
+      const hbox = document.createElement("div");
+      hbox.className = "hints";
+      pitch.progressiveHints.slice(0, hintsShown).forEach(h => {
+        const el = document.createElement("div");
+        el.className = "hint"; el.textContent = h;
+        hbox.appendChild(el);
+      });
+      card.appendChild(hbox);
+    }
+
+    // PAST GUESSES (for free-text)
+    if ((pitch.type === "stat_line" || pitch.type === "arsenal") && guesses.length) {
+      const past = document.createElement("div");
+      past.className = "past";
+      guesses.forEach(g => {
+        past.insertAdjacentHTML("beforeend",
+          `<div class="row"><span class="x">✗</span><span>${g}</span></div>`);
+      });
+      card.appendChild(past);
+    }
+
+    return card;
+  }
+
+  function renderFreeText(pitch) {
+    const wrap = document.createElement("div");
+    wrap.className = "input-wrap";
+    const row = document.createElement("div");
+    row.className = "input-row";
+
+    const input = document.createElement("input");
+    input.type = "text"; input.className = "text-input";
+    input.placeholder = "Type a player name…"; input.autocomplete = "off";
+
+    const btn = document.createElement("button");
+    btn.className = "swing-btn"; btn.textContent = "SWING";
+    btn.disabled = true;
+
+    const ac = document.createElement("div");
+    ac.className = "autocomplete"; ac.style.display = "none";
+
+    let suggestions = []; let activeIdx = -1;
+
+    function update() {
+      const q = norm(input.value);
+      if (!q) { ac.style.display = "none"; btn.disabled = true; return; }
+      suggestions = PLAYERS.filter(p => norm(p).includes(q)).slice(0, 6);
+      ac.innerHTML = "";
+      suggestions.forEach((s, i) => {
+        const d = document.createElement("div");
+        d.textContent = s;
+        if (i === activeIdx) d.classList.add("active");
+        d.addEventListener("mousedown", e => { e.preventDefault(); input.value = s; ac.style.display = "none"; btn.disabled = false; });
+        ac.appendChild(d);
+      });
+      ac.style.display = suggestions.length ? "block" : "none";
+      btn.disabled = !input.value.trim();
+    }
+
+    input.addEventListener("input", () => { activeIdx = -1; update(); });
+    input.addEventListener("keydown", e => {
+      if (e.key === "ArrowDown") { activeIdx = Math.min(activeIdx + 1, suggestions.length - 1); update(); e.preventDefault(); }
+      else if (e.key === "ArrowUp") { activeIdx = Math.max(activeIdx - 1, -1); update(); e.preventDefault(); }
+      else if (e.key === "Enter") {
+        e.preventDefault();
+        const v = activeIdx >= 0 ? suggestions[activeIdx] : input.value.trim();
+        if (v) submitGuess(v);
+      }
+    });
+    input.addEventListener("blur", () => setTimeout(() => ac.style.display = "none", 120));
+
+    btn.addEventListener("click", () => { if (input.value.trim()) submitGuess(input.value.trim()); });
+
+    row.appendChild(input); row.appendChild(btn);
+    wrap.appendChild(row); wrap.appendChild(ac);
+    setTimeout(() => input.focus(), 30);
+    return wrap;
+  }
+
+  // ---------- RESULT ----------
+  function renderResult() {
+    const card = document.createElement("section");
+    card.className = "result-card";
+
+    const runs = state.runs;
+    const lob = ["1B","2B","3B"].filter(b => state.bases[b]).length;
+    const grid = ["⬜","⬜","⬜","⬜"];
+    state.pitchOutcomes.forEach((o, i) => grid[i] = o === "hit" ? "⚾" : "✗");
+    // Indices past the last faced at-bat are "didn't bat".
+    const lastFaced = state.pitchOutcomes.length - 1;
+
+    const title = document.createElement("h2");
+    title.className = "result-title";
+    title.textContent = runs === 0 ? "HELD SCORELESS" : `${runs} RUN${runs === 1 ? "" : "S"}`;
+    card.appendChild(title);
+
+    const subParts = [];
+    if (lob) subParts.push(`Left ${lob} on base`);
+    subParts.push(`${state.swingsTotal} swings`);
+    const sub = document.createElement("div");
+    sub.className = "result-sub";
+    sub.textContent = subParts.join(" · ");
+    card.appendChild(sub);
+
+    const bases = document.createElement("div");
+    bases.className = "result-bases";
+    puzzle.pitches.forEach((p, i) => {
+      const o = state.pitchOutcomes[i];
+      const hit = state.pitchHits[i];
+      const rbi = state.pitchRBI[i] || 0;
+      const notFaced = i > lastFaced;
+      const mark = notFaced ? "—" : (o === "hit" ? "⚾" : "✗");
+      const detail = notFaced
+        ? "did not bat"
+        : (o === "hit" ? `${HIT_LABEL[hit].toLowerCase()}${rbi ? ` · ${rbi} RBI` : ""}` : "K");
+      const miss = o !== "hit";
+      const ans = miss ? `<span class="ans">(${p.answer})</span>` : p.answer;
+      bases.insertAdjacentHTML("beforeend",
+        `<div class="br-row ${miss?'miss':''}"><span class="br-tier">${p.tier}</span><span class="br-mark">${mark}</span><span>${ans} <span class="br-detail">${detail}</span></span></div>`);
+    });
+    card.appendChild(bases);
+
+    const headline = runs === 0 ? "Held scoreless" : `${runs} run${runs === 1 ? "" : "s"}`;
+    const streakLine = storage.streak > 1 ? `streak ${storage.streak} 🔥\n` : "";
+    const shareText =
+      `Round the Bases #${puzzle.puzzleNumber}\n` +
+      `${headline}${lob ? ` · ${lob} LOB` : ""}\n` +
+      `${grid.join("")}\n` +
+      streakLine +
+      `play.roundthebases.com`;
+
+    const share = document.createElement("div");
+    share.className = "share-card"; share.textContent = shareText;
+    card.appendChild(share);
+
+    const btn = document.createElement("button");
+    btn.className = "share-btn"; btn.textContent = "COPY SHARE";
+    btn.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(shareText); btn.textContent = "COPIED ✓"; setTimeout(() => btn.textContent = "COPY SHARE", 1500); }
+      catch { btn.textContent = "COPY FAILED"; }
+    });
+    card.appendChild(btn);
+
+    const tomorrow = document.createElement("div");
+    tomorrow.className = "tomorrow";
+    tomorrow.textContent = "Next inning tomorrow ⚾";
+    card.appendChild(tomorrow);
+
+    card.appendChild(renderBoxScore());
+    return card;
+  }
+
+  function renderBoxScore() {
+    const dates = weekDates(puzzle.date);
+    const dayLabels = ["MON","TUE","WED","THU","FRI","SAT","SUN"];
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const fmtDate = d => {
+      const [, m, dd] = d.split("-");
+      return `${months[parseInt(m)-1]} ${parseInt(dd)}`;
+    };
+
+    const box = document.createElement("div");
+    box.className = "boxscore";
+    box.insertAdjacentHTML("beforeend", `<div class="bs-title">This Week</div>`);
+
+    let total = 0, played = 0;
+    dates.forEach((d, i) => {
+      const h = storage.history[d];
+      const isToday = d === puzzle.date;
+      const isFuture = d > puzzle.date;
+      let cls = "bs-row";
+      let grid = "—";
+      let runsCell = "—";
+      if (h) {
+        played++;
+        total += h.runs || 0;
+        const outs = h.pitchOutcomes || [];
+        const cells = outs.map(o => o === "hit" ? "⚾" : "✗");
+        while (cells.length < 4) cells.push("⬜");
+        grid = cells.join("");
+        runsCell = `${h.runs || 0} R`;
+        if (isToday) cls += " today";
+      } else if (isFuture) {
+        cls += " future";
+      } else {
+        cls += " missed";
+      }
+      box.insertAdjacentHTML("beforeend",
+        `<div class="${cls}">
+          <span class="bs-day">${dayLabels[i]}</span>
+          <span class="bs-date">${fmtDate(d)}</span>
+          <span class="bs-grid">${grid}</span>
+          <span class="bs-runs">${runsCell}</span>
+        </div>`);
+    });
+
+    box.insertAdjacentHTML("beforeend",
+      `<div class="bs-total">
+        <span class="bs-day">WK</span>
+        <span></span>
+        <span>${played} game${played === 1 ? "" : "s"}</span>
+        <span class="bs-runs">${total} R</span>
+      </div>`);
+    return box;
+  }
+
+  init();
+</script>
+</body>
+</html>

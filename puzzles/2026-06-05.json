@@ -1,0 +1,54 @@
+{
+  "date": "2026-06-05",
+  "puzzleNumber": 88,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2016 World Series, ending a 108-year drought?",
+      "choices": ["Cubs", "Indians", "Dodgers", "Royals"],
+      "answer": "Cubs"
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Played 20 seasons, all with the Yankees. 3,465 hits. 5 rings.",
+      "choices": ["Derek Jeter", "Bernie Williams", "Mariano Rivera", "Jorge Posada"],
+      "answer": "Derek Jeter"
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".346 / 24 HR / 81 RBI / 32 SB",
+      "openingHint": "2017 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Listed at 5'6\"",
+        "Won AL MVP"
+      ],
+      "answer": "Jose Altuve",
+      "answerSeason": 2017
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          { "emoji": "🔥", "name": "4-Seam", "speed": 92.8, "usage": 41 },
+          { "emoji": "🪄", "name": "Slider",  "speed": 87.1, "usage": 38 },
+          { "emoji": "🌀", "name": "Curveball","speed": 72.8, "usage": 18 },
+          { "emoji": "💨", "name": "Changeup", "speed": 86.4, "usage": 3 }
+        ]
+      },
+      "openingHint": "LHP, active 2010s–present, Dodgers",
+      "progressiveHints": [
+        "3-time Cy Young winner",
+        "2020 World Series champion",
+        "First name starts with C"
+      ],
+      "answer": "Clayton Kershaw",
+      "answerSeason": 2024
+    }
+  ]
+}
