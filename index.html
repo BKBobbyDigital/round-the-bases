@@ -504,7 +504,7 @@
 
     <main id="game-area" aria-live="polite" aria-atomic="false"></main>
 
-    <div class="dev-reset"><a id="reset-link">↻ reset (dev)</a></div>
+    <div class="dev-reset" id="dev-reset" hidden><a id="reset-link">↻ reset (dev)</a></div>
 
     <footer><span class="star">★</span> Play Ball <span class="star">★</span></footer>
   </div>
@@ -917,6 +917,10 @@
     maybeShowOnboarding();
     // Lazy — doesn't block first paint; autocomplete just expands once it lands.
     loadFullPlayers();
+
+    // Dev-only reset link — visible on localhost or when ?dev is in the URL.
+    const isDev = /^(localhost|127\.|0\.0\.0\.0|.*\.local)/i.test(location.hostname) || /[?&]dev\b/.test(location.search);
+    if (isDev) document.getElementById("dev-reset").hidden = false;
 
     document.getElementById("reset-link").addEventListener("click", () => {
       delete storage.history[puzzle.date];
