@@ -1,0 +1,84 @@
+{
+  "date": "2026-06-12",
+  "puzzleNumber": 95,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
+      "answer": "Mariners",
+      "choices": [
+        "Mariners",
+        "Reds",
+        "White Sox",
+        "Yankees"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
+      "answer": "Chipper Jones",
+      "choices": [
+        "Chipper Jones",
+        "Andruw Jones",
+        "Dale Murphy",
+        "David Justice"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".355 / 39 HR / 123 RBI / 8 SB",
+      "answer": "Hank Aaron",
+      "openingHint": "1959 NL season",
+      "progressiveHints": [
+        "Played his whole prime in Milwaukee",
+        "Right fielder",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1959
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.5,
+            "usage": 46
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 84.9,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 80.5,
+            "usage": 18
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 79.7,
+            "usage": 15
+          }
+        ]
+      },
+      "answer": "Trevor Bauer",
+      "openingHint": "RHP, 2012\u20132021",
+      "progressiveHints": [
+        "2020 NL Cy Young",
+        "Won pitching the shortened season",
+        "Was a Red at the time"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "date": "2026-06-10",
+  "puzzleNumber": 93,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Camden Yards?",
+      "answer": "Orioles",
+      "choices": [
+        "Orioles",
+        "Nationals",
+        "Phillies",
+        "Pirates"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
+      "answer": "Chipper Jones",
+      "choices": [
+        "Chipper Jones",
+        "Andruw Jones",
+        "Dale Murphy",
+        "David Justice"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".328 / 73 HR / 137 RBI / 13 SB",
+      "answer": "Barry Bonds",
+      "openingHint": "2001 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Set the single-season HR record"
+      ],
+      "answerSeason": 2001
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.3,
+            "usage": 51
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.3,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 79.6,
+            "usage": 12
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 85.3,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Spencer Strider",
+      "openingHint": "RHP, active 2021\u2013present, NL East",
+      "progressiveHints": [
+        "Braves ace",
+        "Two-pitch mix",
+        "Mustache icon"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}

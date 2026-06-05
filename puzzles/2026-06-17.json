@@ -1,0 +1,78 @@
+{
+  "date": "2026-06-17",
+  "puzzleNumber": 100,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Camden Yards?",
+      "answer": "Orioles",
+      "choices": [
+        "Orioles",
+        "Nationals",
+        "Phillies",
+        "Pirates"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Two-way player. AL MVP. Threw a no-hitter AND hit 40+ HRs in the same season.",
+      "answer": "Shohei Ohtani",
+      "choices": [
+        "Shohei Ohtani",
+        "Babe Ruth",
+        "Mike Trout",
+        "Bryce Harper"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".299 / 70 HR / 147 RBI / 1 SB",
+      "answer": "Mark McGwire",
+      "openingHint": "1998 NL season",
+      "progressiveHints": [
+        "NL Central team",
+        "First baseman",
+        "Broke Maris's HR record this year"
+      ],
+      "answerSeason": 1998
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 93.2,
+            "usage": 85
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 83.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 94.8,
+            "usage": 6
+          }
+        ]
+      },
+      "answer": "Kenley Jansen",
+      "openingHint": "RHP closer, active 2010\u2013present",
+      "progressiveHints": [
+        "All-time saves rank top 5",
+        "Throws essentially one pitch",
+        "Was a Dodger at the time"
+      ],
+      "answerSeason": 2017
+    }
+  ]
+}

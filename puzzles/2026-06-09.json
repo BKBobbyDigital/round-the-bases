@@ -1,0 +1,84 @@
+{
+  "date": "2026-06-09",
+  "puzzleNumber": 92,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Career: Red Sox to Yankees. Won World Series with both.",
+      "answer": "Johnny Damon",
+      "choices": [
+        "Johnny Damon",
+        "Wade Boggs",
+        "Roger Clemens",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".394 / 12 HR / 64 RBI / 5 SB",
+      "answer": "Tony Gwynn",
+      "openingHint": "Strike-shortened 1994",
+      "progressiveHints": [
+        "NL West team",
+        "Listed at 5'11\"",
+        "Made 15 All-Star teams"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.9,
+            "usage": 44
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 89.9,
+            "usage": 35
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 72.0,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 83.4,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Clayton Kershaw",
+      "openingHint": "LHP, active 2010s\u2013present, Dodgers",
+      "progressiveHints": [
+        "3-time Cy Young",
+        "2020 World Series champion",
+        "First name starts with C"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}

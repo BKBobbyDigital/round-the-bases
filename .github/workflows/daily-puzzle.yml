@@ -2,8 +2,9 @@ name: Daily puzzle
 
 on:
   schedule:
-    # 09:00 UTC every day = 4 a.m. ET. Plenty of buffer before US morning play.
-    - cron: '0 9 * * *'
+    # 22:00 UTC = 5 p.m. ET (6 p.m. EDT). Runs well before ET midnight rollover
+    # so the new day's puzzle exists before any ET player crosses the boundary.
+    - cron: '0 22 * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -31,10 +32,10 @@ jobs:
       - name: Determine target date
         id: target
         run: |
-          # Generate tomorrow's puzzle so it's ready when players load the site.
-          TARGET=$(date -u -d "tomorrow" +%Y-%m-%d)
+          # ET tomorrow — the day key the front-end will request next.
+          TARGET=$(TZ='America/New_York' date -d "tomorrow" +%Y-%m-%d)
           echo "date=$TARGET" >> "$GITHUB_OUTPUT"
-          echo "Generating puzzle for $TARGET"
+          echo "Generating puzzle for $TARGET (ET)"
 
       - name: Generate puzzle
         run: python scripts/generate_puzzle.py ${{ steps.target.outputs.date }}

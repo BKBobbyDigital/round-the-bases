@@ -235,7 +235,10 @@ def build_2b(row: dict) -> Pitch:
 
 def build_3b(row: dict) -> Pitch:
     season = int(row["season"])
-    stat_line = fetch_batter_stat_line(row["player"], season)
+    # Prefer the baked stat line — the CSV is the source of truth so the
+    # pipeline doesn't depend on a flaky scraper for canonical stats.
+    # Fall back to a live fetch only if the column is missing.
+    stat_line = (row.get("stats") or "").strip() or fetch_batter_stat_line(row["player"], season)
     hints = [h.strip() for h in row.get("hints", "").split("|") if h.strip()]
     return Pitch(
         tier="3B", type="stat_line",

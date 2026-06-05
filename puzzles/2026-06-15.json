@@ -1,0 +1,84 @@
+{
+  "date": "2026-06-15",
+  "puzzleNumber": 98,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose consecutive-games-played streak did Cal Ripken break in 1995?",
+      "answer": "Lou Gehrig",
+      "choices": [
+        "Lou Gehrig",
+        "Pete Rose",
+        "Hank Aaron",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Pitched a no-hitter at age 44, has the all-time strikeout record.",
+      "answer": "Nolan Ryan",
+      "choices": [
+        "Nolan Ryan",
+        "Randy Johnson",
+        "Roger Clemens",
+        "Bartolo Colon"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".366 / 49 HR / 130 RBI / 33 SB",
+      "answer": "Larry Walker",
+      "openingHint": "1997 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Won NL MVP playing at altitude"
+      ],
+      "answerSeason": 1997
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 92.8,
+            "usage": 44
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.6,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 76.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.4,
+            "usage": 7
+          }
+        ]
+      },
+      "answer": "Madison Bumgarner",
+      "openingHint": "LHP, active 2009\u20132024",
+      "progressiveHints": [
+        "3-time WS champion",
+        "Wrote himself into postseason lore",
+        "Was a Giant at the time"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}

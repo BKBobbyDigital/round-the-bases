@@ -502,6 +502,27 @@
     return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
   }
 
+  // ---------- COUNTDOWN ----------
+  // Live-updating "Next inning in 7h 12m" timer keyed to ET midnight.
+  // Switches to seconds resolution under one hour for the last-minute drama.
+  let _countdownTimer = null;
+  function startCountdown(el) {
+    if (_countdownTimer) clearTimeout(_countdownTimer);
+    function tick() {
+      const ms = msUntilNextDay();
+      if (ms <= 0) { el.textContent = "Next inning ready ⚾"; return; }
+      const h = Math.floor(ms / 3600000);
+      const m = Math.floor((ms % 3600000) / 60000);
+      const s = Math.floor((ms % 60000) / 1000);
+      el.textContent = h > 0
+        ? `Next inning in ${h}h ${m}m`
+        : `Next inning in ${m}m ${s}s`;
+      const nextDelay = h > 0 ? 30000 : 1000;
+      _countdownTimer = setTimeout(tick, nextDelay);
+    }
+    tick();
+  }
+
   // ---------- SHARE IMAGE (canvas → PNG) ----------
   async function renderShareImage() {
     // Ensure web fonts are loaded before drawing — Canvas falls back silently otherwise.
@@ -600,10 +621,21 @@
       swingsTotal: 0, gameOver: false,
     });
   }
+  // Anchor "today" to ET — uniform rollover at ET midnight regardless of
+  // where the player is. Baseball runs on ET; so does this game.
+  const GAME_TZ = "America/New_York";
   function todayISO() {
-    const d = new Date();
-    const off = d.getTimezoneOffset();
-    return new Date(d.getTime() - off * 60000).toISOString().slice(0, 10);
+    return new Intl.DateTimeFormat("en-CA", { timeZone: GAME_TZ }).format(new Date());
+  }
+  // ms until the next midnight in GAME_TZ.
+  function msUntilNextDay() {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: GAME_TZ, hourCycle: "h23",
+      hour: "2-digit", minute: "2-digit", second: "2-digit",
+    }).formatToParts(new Date());
+    const get = t => parseInt(parts.find(p => p.type === t).value, 10);
+    const h = get("hour"), m = get("minute"), s = get("second");
+    return ((24 - h) * 3600 - m * 60 - s) * 1000;
   }
 
   async function init() {
@@ -988,8 +1020,8 @@
 
     const tomorrow = document.createElement("div");
     tomorrow.className = "tomorrow";
-    tomorrow.textContent = "Next inning tomorrow ⚾";
     card.appendChild(tomorrow);
+    startCountdown(tomorrow);
 
     card.appendChild(renderBoxScore());
     return card;

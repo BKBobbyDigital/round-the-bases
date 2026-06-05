@@ -21,28 +21,40 @@ DIRT    = (139, 106, 63)
 GREEN   = (53, 90, 59)
 
 
-def find_font(*candidates: str) -> str | None:
-    """Return the first font path that exists on this system."""
-    import os
-    for name in candidates:
-        for prefix in ("/System/Library/Fonts/", "/Library/Fonts/", "/usr/share/fonts/",
-                       "/System/Library/Fonts/Supplemental/"):
-            for ext in (".ttf", ".ttc", ".otf"):
-                p = os.path.join(prefix, name + ext)
-                if os.path.exists(p):
-                    return p
-        if os.path.exists(name):
-            return name
-    return None
+import os
+
+# Concrete font paths covering macOS, Linux, and GitHub Actions runners.
+# Tried in order; first one that exists wins. Every entry should support ★ (U+2605).
+SERIF_PATHS = [
+    "/System/Library/Fonts/Supplemental/Times New Roman Bold.ttf",   # macOS
+    "/System/Library/Fonts/Times.ttc",                                # macOS
+    "/Library/Fonts/Times New Roman Bold.ttf",
+    "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf",  # Ubuntu / GH runners
+    "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
+]
+SANS_PATHS = [
+    # Arial Unicode actually has ★; Arial Bold's cmap maps it to a tofu box.
+    "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",  # Linux: real stars
+    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+    "/System/Library/Fonts/Supplemental/Arial Bold.ttf",      # last resort
+    "/System/Library/Fonts/Helvetica.ttc",
+]
+MONO_PATHS = [
+    "/System/Library/Fonts/Supplemental/Courier New Bold.ttf",
+    "/System/Library/Fonts/Courier.ttc",
+    "/usr/share/fonts/truetype/liberation/LiberationMono-Bold.ttf",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf",
+]
 
 
-def load_font(size: int, *candidates: str) -> ImageFont.FreeTypeFont:
-    path = find_font(*candidates)
-    if path:
-        try:
-            return ImageFont.truetype(path, size)
-        except Exception:
-            pass
+def load_font(size: int, paths: list[str]) -> ImageFont.FreeTypeFont:
+    for p in paths:
+        if os.path.exists(p):
+            try:
+                return ImageFont.truetype(p, size)
+            except Exception:
+                continue
     return ImageFont.load_default()
 
 
@@ -72,15 +84,14 @@ def main() -> None:
 
     dashed_rect((36, 36, W - 36, H - 36))
 
-    # Pick the best slab serif and monospace fonts available locally.
-    slab  = load_font(110, "Times New Roman Bold", "Times-Bold", "DejaVuSerif-Bold", "Georgia Bold")
-    small = load_font(28,  "Courier New Bold", "Courier", "DejaVuSansMono-Bold")
-    tag   = load_font(40,  "Times New Roman Bold", "Georgia Bold")
+    slab  = load_font(110, SERIF_PATHS)
+    small = load_font(28,  MONO_PATHS)
+    eyebrow_f = load_font(32, SANS_PATHS)   # for ★, which the mono font may lack
 
-    # Eyebrow
+    # Eyebrow — uses a sans font that reliably has ★ (U+2605).
     eyebrow = "★  DAILY  ★"
-    bbox = d.textbbox((0, 0), eyebrow, font=small)
-    d.text(((W - (bbox[2] - bbox[0])) / 2, 80), eyebrow, font=small, fill=RED)
+    bbox = d.textbbox((0, 0), eyebrow, font=eyebrow_f)
+    d.text(((W - (bbox[2] - bbox[0])) / 2, 70), eyebrow, font=eyebrow_f, fill=RED)
 
     # Title
     title = "ROUND THE BASES"

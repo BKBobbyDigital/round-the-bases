@@ -1,0 +1,72 @@
+{
+  "date": "2026-06-13",
+  "puzzleNumber": 96,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What position is known as 'the hot corner'?",
+      "answer": "Third base",
+      "choices": [
+        "Third base",
+        "Shortstop",
+        "Catcher",
+        "Second base"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Set the rookie home run record with 52 in 2017.",
+      "answer": "Aaron Judge",
+      "choices": [
+        "Aaron Judge",
+        "Cody Bellinger",
+        "Pete Alonso",
+        "Yordan Alvarez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".366 / 49 HR / 130 RBI / 33 SB",
+      "answer": "Larry Walker",
+      "openingHint": "1997 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Won NL MVP playing at altitude"
+      ],
+      "answerSeason": 1997
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\udd8b",
+            "name": "Knuckleball",
+            "speed": 77.8,
+            "usage": 85
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 84.0,
+            "usage": 13
+          }
+        ]
+      },
+      "answer": "R.A. Dickey",
+      "openingHint": "RHP, knuckleballer",
+      "progressiveHints": [
+        "2012 NL Cy Young",
+        "Played for the Mets",
+        "Wrote a memoir titled 'Wherever I Wind Up'"
+      ],
+      "answerSeason": 2012
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "date": "2026-06-14",
+  "puzzleNumber": 97,
+  "theme": "Stumper Sunday",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose number is that \u2014 retired league-wide?",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Ted Williams"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Set the rookie home run record with 52 in 2017.",
+      "answer": "Aaron Judge",
+      "choices": [
+        "Aaron Judge",
+        "Cody Bellinger",
+        "Pete Alonso",
+        "Yordan Alvarez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".362 / 45 HR / 101 RBI / 6 SB",
+      "answer": "Barry Bonds",
+      "openingHint": "2004 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Walked an unprecedented amount of times",
+        "Won his 4th straight MVP"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.6,
+            "usage": 50
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 87.4,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 79.4,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 86.9,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Justin Verlander",
+      "openingHint": "RHP, active 2005\u2013present",
+      "progressiveHints": [
+        "3-time AL Cy Young",
+        "2011 AL MVP",
+        "Pitched for the Astros at the time"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
