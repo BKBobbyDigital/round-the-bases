@@ -203,12 +203,15 @@ def load_curated(name: str) -> list[dict]:
 
 def pick_for_date(rows: list[dict], date_str: str, salt: str) -> dict | None:
     """
-    Deterministic daily pick: same date + same salt → same row,
-    so generation is reproducible.
+    Deterministic daily pick. Uses sha256 so adjacent dates map to
+    spread-out indices instead of adjacent rows (which kept landing
+    on the same player when a tier had relatively few rows).
     """
     if not rows:
         return None
-    seed = sum(ord(c) for c in (date_str + salt))
+    import hashlib
+    h = hashlib.sha256(f"{date_str}:{salt}".encode()).hexdigest()
+    seed = int(h[:8], 16)
     return rows[seed % len(rows)]
 
 

@@ -264,10 +264,25 @@
   .boxscore {
     margin-top: 22px; border-top: 3px double var(--ink); padding-top: 12px;
   }
+  .bs-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 8px;
+  }
   .bs-title {
     font-family: 'Alfa Slab One', serif; font-size: 14px;
-    letter-spacing: 0.22em; margin-bottom: 8px; text-transform: uppercase;
+    letter-spacing: 0.22em; text-transform: uppercase;
   }
+  .bs-nav {
+    display: flex; gap: 6px;
+  }
+  .bs-nav-btn {
+    background: var(--cream); border: 2px solid var(--ink); color: var(--ink);
+    font-family: 'Alfa Slab One', serif; font-size: 14px;
+    width: 28px; height: 28px; padding: 0; cursor: pointer;
+    box-shadow: 2px 2px 0 var(--ink); line-height: 1;
+  }
+  .bs-nav-btn:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ink); }
+  .bs-nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
   .bs-row, .bs-total {
     display: grid; grid-template-columns: 36px 66px 1fr 56px;
     gap: 8px; align-items: baseline; padding: 4px 0;
@@ -980,8 +995,10 @@
     return card;
   }
 
+  // Which week the box score is showing; null = current week.
+  let viewWeekStart = null;
+
   function renderBoxScore() {
-    const dates = weekDates(puzzle.date);
     const dayLabels = ["MON","TUE","WED","THU","FRI","SAT","SUN"];
     const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     const fmtDate = d => {
@@ -989,9 +1006,32 @@
       return `${months[parseInt(m)-1]} ${parseInt(dd)}`;
     };
 
+    const currentWeekStart = weekDates(puzzle.date)[0];
+    const weekStart = viewWeekStart || currentWeekStart;
+    const dates = weekDates(weekStart);
+    const isCurrentWeek = weekStart === currentWeekStart;
+
+    // Earliest week with any played history — caps how far back you can browse.
+    const historyDates = Object.keys(storage.history).sort();
+    const earliestWeekStart = historyDates.length ? weekDates(historyDates[0])[0] : currentWeekStart;
+    const canGoBack = weekStart > earliestWeekStart;
+    const canGoForward = !isCurrentWeek;
+    const showNav = currentWeekStart > earliestWeekStart;
+
+    const titleText = isCurrentWeek
+      ? "This Week"
+      : `Week of ${fmtDate(weekStart)}`;
+
     const box = document.createElement("div");
     box.className = "boxscore";
-    box.insertAdjacentHTML("beforeend", `<div class="bs-title">This Week</div>`);
+    const navHTML = showNav
+      ? `<div class="bs-nav">
+           <button class="bs-nav-btn" id="bs-prev" ${canGoBack ? "" : "disabled"}>‹</button>
+           <button class="bs-nav-btn" id="bs-next" ${canGoForward ? "" : "disabled"}>›</button>
+         </div>`
+      : "";
+    box.insertAdjacentHTML("beforeend",
+      `<div class="bs-header"><div class="bs-title">${titleText}</div>${navHTML}</div>`);
 
     let total = 0, played = 0;
     dates.forEach((d, i) => {
@@ -1032,6 +1072,21 @@
         <span>${played} game${played === 1 ? "" : "s"}</span>
         <span class="bs-runs">${total} R</span>
       </div>`);
+
+    // Hook up nav after the DOM is built.
+    const prev = box.querySelector("#bs-prev");
+    const next = box.querySelector("#bs-next");
+    function shiftWeek(days) {
+      const d = new Date(weekStart + "T00:00:00");
+      d.setDate(d.getDate() + days);
+      viewWeekStart = d.toISOString().slice(0, 10);
+      // Re-render in place: replace the boxscore element.
+      const fresh = renderBoxScore();
+      box.replaceWith(fresh);
+    }
+    if (prev) prev.addEventListener("click", () => shiftWeek(-7));
+    if (next) next.addEventListener("click", () => shiftWeek(+7));
+
     return box;
   }
 
