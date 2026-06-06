@@ -6,25 +6,25 @@
     {
       "tier": "1B",
       "type": "trivia",
-      "prompt": "Which team plays at Camden Yards?",
-      "answer": "Orioles",
+      "prompt": "Which team has won the most World Series titles?",
+      "answer": "Yankees",
       "choices": [
-        "Orioles",
-        "Nationals",
-        "Phillies",
-        "Pirates"
+        "Yankees",
+        "Cardinals",
+        "Athletics",
+        "Red Sox"
       ]
     },
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
-      "answer": "Chipper Jones",
+      "prompt": "Broke that rookie HR record with 53 in 2019.",
+      "answer": "Pete Alonso",
       "choices": [
-        "Chipper Jones",
-        "Andruw Jones",
-        "Dale Murphy",
-        "David Justice"
+        "Pete Alonso",
+        "Aaron Judge",
+        "Yordan Alvarez",
+        "Mark McGwire"
       ]
     },
     {
@@ -48,37 +48,37 @@
           {
             "emoji": "\ud83d\udd25",
             "name": "4-Seam Fastball",
-            "speed": 96.3,
-            "usage": 51
+            "speed": 98.8,
+            "usage": 48
           },
           {
             "emoji": "\ud83e\ude84",
             "name": "Slider",
-            "speed": 85.3,
-            "usage": 33
-          },
-          {
-            "emoji": "\ud83c\udf00",
-            "name": "Curveball",
-            "speed": 79.6,
-            "usage": 12
+            "speed": 92.5,
+            "usage": 39
           },
           {
             "emoji": "\ud83d\udca8",
             "name": "Changeup",
-            "speed": 85.3,
-            "usage": 4
+            "speed": 91.7,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 83.4,
+            "usage": 5
           }
         ]
       },
-      "answer": "Spencer Strider",
-      "openingHint": "RHP, active 2021\u2013present, NL East",
+      "answer": "Jacob deGrom",
+      "openingHint": "RHP, active 2014\u2013present",
       "progressiveHints": [
-        "Braves ace",
-        "Two-pitch mix",
-        "Mustache icon"
+        "Two-time NL Cy Young",
+        "Started his career with the Mets",
+        "Signed with Texas"
       ],
-      "answerSeason": 2024
+      "answerSeason": 2022
     }
   ]
 }

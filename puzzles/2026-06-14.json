@@ -18,28 +18,27 @@
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Set the rookie home run record with 52 in 2017.",
-      "answer": "Aaron Judge",
+      "prompt": "All-time saves leader with 652. Wore #42, retired league-wide alongside his.",
+      "answer": "Mariano Rivera",
       "choices": [
-        "Aaron Judge",
-        "Cody Bellinger",
-        "Pete Alonso",
-        "Yordan Alvarez"
+        "Mariano Rivera",
+        "Trevor Hoffman",
+        "Lee Smith",
+        "Dennis Eckersley"
       ]
     },
     {
       "tier": "3B",
       "type": "stat_line",
-      "prompt": ".362 / 45 HR / 101 RBI / 6 SB",
-      "answer": "Barry Bonds",
-      "openingHint": "2004 NL season",
+      "prompt": ".299 / 70 HR / 147 RBI / 1 SB",
+      "answer": "Mark McGwire",
+      "openingHint": "1998 NL season",
       "progressiveHints": [
-        "NL West team",
-        "Outfielder",
-        "Walked an unprecedented amount of times",
-        "Won his 4th straight MVP"
+        "NL Central team",
+        "First baseman",
+        "Broke Maris's HR record this year"
       ],
-      "answerSeason": 2004
+      "answerSeason": 1998
     },
     {
       "tier": "HR",

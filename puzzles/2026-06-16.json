@@ -18,13 +18,13 @@
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Broke that rookie HR record with 53 in 2019.",
-      "answer": "Pete Alonso",
+      "prompt": "Retired at age 30 with 3 Cy Youngs and a perfect game.",
+      "answer": "Sandy Koufax",
       "choices": [
-        "Pete Alonso",
-        "Aaron Judge",
-        "Yordan Alvarez",
-        "Mark McGwire"
+        "Sandy Koufax",
+        "Warren Spahn",
+        "Don Drysdale",
+        "Whitey Ford"
       ]
     },
     {

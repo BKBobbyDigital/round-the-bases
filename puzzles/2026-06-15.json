@@ -18,27 +18,27 @@
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Pitched a no-hitter at age 44, has the all-time strikeout record.",
-      "answer": "Nolan Ryan",
+      "prompt": "Played in 2,632 consecutive games \u2014 the streak Ripken broke.",
+      "answer": "Lou Gehrig",
       "choices": [
-        "Nolan Ryan",
-        "Randy Johnson",
-        "Roger Clemens",
-        "Bartolo Colon"
+        "Lou Gehrig",
+        "Cal Ripken Jr.",
+        "Steve Garvey",
+        "Pete Rose"
       ]
     },
     {
       "tier": "3B",
       "type": "stat_line",
-      "prompt": ".366 / 49 HR / 130 RBI / 33 SB",
-      "answer": "Larry Walker",
-      "openingHint": "1997 NL season",
+      "prompt": ".350 / 8 HR / 69 RBI / 56 SB",
+      "answer": "Ichiro Suzuki",
+      "openingHint": "2001 AL season",
       "progressiveHints": [
-        "NL West team",
+        "AL West team",
         "Outfielder",
-        "Won NL MVP playing at altitude"
+        "Won AL ROY and AL MVP in the same year"
       ],
-      "answerSeason": 1997
+      "answerSeason": 2001
     },
     {
       "tier": "HR",

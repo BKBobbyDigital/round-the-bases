@@ -6,25 +6,25 @@
     {
       "tier": "1B",
       "type": "trivia",
-      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
-      "answer": "Mariners",
+      "prompt": "Which league adopted the designated hitter first?",
+      "answer": "American League",
       "choices": [
-        "Mariners",
-        "Reds",
-        "White Sox",
-        "Yankees"
+        "American League",
+        "National League",
+        "Both at once",
+        "Neither uses it"
       ]
     },
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
-      "answer": "Chipper Jones",
+      "prompt": "Broke MLB's color barrier in 1947 with the Brooklyn Dodgers.",
+      "answer": "Jackie Robinson",
       "choices": [
-        "Chipper Jones",
-        "Andruw Jones",
-        "Dale Murphy",
-        "David Justice"
+        "Jackie Robinson",
+        "Larry Doby",
+        "Roy Campanella",
+        "Satchel Paige"
       ]
     },
     {

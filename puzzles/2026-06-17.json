@@ -18,27 +18,27 @@
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Two-way player. AL MVP. Threw a no-hitter AND hit 40+ HRs in the same season.",
-      "answer": "Shohei Ohtani",
+      "prompt": "Stole 130 bases in a single season (1982).",
+      "answer": "Rickey Henderson",
       "choices": [
-        "Shohei Ohtani",
-        "Babe Ruth",
-        "Mike Trout",
-        "Bryce Harper"
+        "Rickey Henderson",
+        "Vince Coleman",
+        "Lou Brock",
+        "Tim Raines"
       ]
     },
     {
       "tier": "3B",
       "type": "stat_line",
-      "prompt": ".299 / 70 HR / 147 RBI / 1 SB",
-      "answer": "Mark McGwire",
-      "openingHint": "1998 NL season",
+      "prompt": ".346 / 32 HR / 80 RBI / 30 SB",
+      "answer": "Mookie Betts",
+      "openingHint": "2018 AL season",
       "progressiveHints": [
-        "NL Central team",
-        "First baseman",
-        "Broke Maris's HR record this year"
+        "AL East team at the time",
+        "Right fielder",
+        "Won AL MVP"
       ],
-      "answerSeason": 1998
+      "answerSeason": 2018
     },
     {
       "tier": "HR",

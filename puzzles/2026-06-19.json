@@ -18,13 +18,13 @@
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "13 Gold Gloves at shortstop. Never won an MVP.",
-      "answer": "Ozzie Smith",
+      "prompt": "Career: Red Sox to Yankees. Won World Series with both.",
+      "answer": "Johnny Damon",
       "choices": [
-        "Ozzie Smith",
-        "Omar Vizquel",
-        "Cal Ripken",
-        "Derek Jeter"
+        "Johnny Damon",
+        "Wade Boggs",
+        "Roger Clemens",
+        "Babe Ruth"
       ]
     },
     {

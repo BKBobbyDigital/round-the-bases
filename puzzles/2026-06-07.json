@@ -18,13 +18,13 @@
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Won AL MVP and AL Cy Young in the same season (2011).",
-      "answer": "Justin Verlander",
+      "prompt": "Broke Babe Ruth's career home run record in 1974.",
+      "answer": "Hank Aaron",
       "choices": [
-        "Justin Verlander",
-        "CC Sabathia",
-        "Felix Hernandez",
-        "David Price"
+        "Hank Aaron",
+        "Willie Mays",
+        "Frank Robinson",
+        "Roger Maris"
       ]
     },
     {

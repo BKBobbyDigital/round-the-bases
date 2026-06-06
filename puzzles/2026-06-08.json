@@ -6,25 +6,25 @@
     {
       "tier": "1B",
       "type": "trivia",
-      "prompt": "Which team won the 2023 World Series?",
-      "answer": "Rangers",
+      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
+      "answer": "Mariners",
       "choices": [
-        "Rangers",
-        "Diamondbacks",
-        "Astros",
-        "Phillies"
+        "Mariners",
+        "Reds",
+        "White Sox",
+        "Yankees"
       ]
     },
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Won Cy Young in both leagues. Pitched into his 40s.",
-      "answer": "Roger Clemens",
+      "prompt": "Stole 130 bases in a single season (1982).",
+      "answer": "Rickey Henderson",
       "choices": [
-        "Roger Clemens",
-        "Pedro Martinez",
-        "Randy Johnson",
-        "Greg Maddux"
+        "Rickey Henderson",
+        "Vince Coleman",
+        "Lou Brock",
+        "Tim Raines"
       ]
     },
     {

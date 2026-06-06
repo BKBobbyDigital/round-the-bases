@@ -6,25 +6,25 @@
     {
       "tier": "1B",
       "type": "trivia",
-      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
-      "answer": "Mariners",
+      "prompt": "What does ERA stand for?",
+      "answer": "Earned Run Average",
       "choices": [
-        "Mariners",
-        "Reds",
-        "White Sox",
-        "Yankees"
+        "Earned Run Average",
+        "Earned Runs Allowed",
+        "Effective Run Average",
+        "Even Run Average"
       ]
     },
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Hit the 'Shot Heard 'Round the World' in 1951.",
-      "answer": "Bobby Thomson",
+      "prompt": "Caught the final out of the 1986 World Series for the Mets.",
+      "answer": "Gary Carter",
       "choices": [
-        "Bobby Thomson",
-        "Joe DiMaggio",
-        "Willie Mays",
-        "Duke Snider"
+        "Gary Carter",
+        "Mike Scioscia",
+        "Tony Pena",
+        "Jody Davis"
       ]
     },
     {
@@ -46,37 +46,43 @@
       "prompt": {
         "pitches": [
           {
-            "emoji": "\ud83d\udd25",
-            "name": "4-Seam Fastball",
-            "speed": 92.8,
-            "usage": 44
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.8,
+            "usage": 32
           },
           {
-            "emoji": "\u2702\ufe0f",
-            "name": "Cutter",
-            "speed": 88.6,
-            "usage": 33
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 92.9,
+            "usage": 29
           },
           {
             "emoji": "\ud83c\udf00",
             "name": "Curveball",
-            "speed": 76.8,
+            "speed": 80.8,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.2,
             "usage": 14
           },
           {
-            "emoji": "\ud83d\udca8",
-            "name": "Changeup",
-            "speed": 84.4,
-            "usage": 7
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.0,
+            "usage": 8
           }
         ]
       },
-      "answer": "Madison Bumgarner",
-      "openingHint": "LHP, active 2009\u20132024",
+      "answer": "Felix Hernandez",
+      "openingHint": "RHP, 2005\u20132019, AL West",
       "progressiveHints": [
-        "3-time WS champion",
-        "Wrote himself into postseason lore",
-        "Was a Giant at the time"
+        "2010 AL Cy Young",
+        "Nicknamed 'King'",
+        "Spent his whole career with one team"
       ],
       "answerSeason": 2014
     }

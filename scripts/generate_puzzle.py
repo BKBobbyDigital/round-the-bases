@@ -100,25 +100,42 @@ def _split_name(player: str) -> tuple[str, str]:
 
 
 def _normalize_for_match(s: str) -> str:
-    """Lowercase, drop punctuation and whitespace — for fuzzy first-name compares."""
-    import re
+    """Lowercase, strip accents, drop punctuation/whitespace.
+
+    Chadwick stores some Hispanic names with accents (Hernández, Acuña),
+    while our CSVs and most US sources use the ASCII form. We compare on
+    the ASCII-only, alphanumeric-only form so both sides match.
+    """
+    import re, unicodedata
+    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
+_CHADWICK_CACHE = None
+def _chadwick():
+    global _CHADWICK_CACHE
+    if _CHADWICK_CACHE is None:
+        from pybaseball import chadwick_register
+        df = chadwick_register(save=False)
+        df = df[df["mlb_played_first"].notna()].copy()
+        df["_first_norm"] = df["name_first"].fillna("").apply(_normalize_for_match)
+        df["_last_norm"]  = df["name_last"].fillna("").apply(_normalize_for_match)
+        _CHADWICK_CACHE = df
+    return _CHADWICK_CACHE
+
+
 def _mlbam_id(player: str) -> int:
-    """Look up an MLBAM id. pybaseball stores names with quirky punctuation/spacing
-    (e.g. 'r. a.' for R.A. Dickey), so we look up by last name and filter first
-    via a normalized compare."""
-    from pybaseball import playerid_lookup
+    """Look up an MLBAM id with accent-insensitive matching against Chadwick."""
     first, last = _split_name(player)
-    rows = playerid_lookup(last)
-    if rows is None or rows.empty:
-        raise ValueError(f"player not found: {player!r}")
-    needle = _normalize_for_match(first)
-    matches = rows[rows["name_first"].fillna("").apply(_normalize_for_match) == needle]
-    if matches.empty:
-        # Last-resort: contains-match (e.g. 'Junior' against 'jr').
-        matches = rows[rows["name_first"].fillna("").apply(_normalize_for_match).str.contains(needle, na=False)]
+    df = _chadwick()
+    fn, ln = _normalize_for_match(first), _normalize_for_match(last)
+    matches = df[df["_last_norm"] == ln]
+    if not matches.empty:
+        exact = matches[matches["_first_norm"] == fn]
+        if not exact.empty: matches = exact
+        else:
+            partial = matches[matches["_first_norm"].str.contains(fn, na=False)]
+            if not partial.empty: matches = partial
     if matches.empty:
         raise ValueError(f"player not found: {player!r}")
     if "mlb_played_last" in matches.columns:
@@ -201,18 +218,58 @@ def load_curated(name: str) -> list[dict]:
         return list(csv.DictReader(f))
 
 
-def pick_for_date(rows: list[dict], date_str: str, salt: str) -> dict | None:
+def _answer_of(row: dict) -> str:
+    """The canonical answer for a row — varies by tier CSV format."""
+    return (row.get("answer") or row.get("player") or "").strip().lower()
+
+
+def pick_for_date(rows: list[dict], date_str: str, salt: str,
+                  recent_answers: set[str] | None = None,
+                  retries: int = 16) -> dict | None:
     """
-    Deterministic daily pick. Uses sha256 so adjacent dates map to
-    spread-out indices instead of adjacent rows (which kept landing
-    on the same player when a tier had relatively few rows).
+    Deterministic daily pick that avoids repeating any answer used in the
+    recent window (default: last 7 days). When the first sha256-salted pick
+    collides, we retry with a numeric suffix until we land on a fresh
+    answer or exhaust the budget — still fully deterministic per (date,
+    salt, recent_answers).
     """
     if not rows:
         return None
     import hashlib
+    recent_answers = recent_answers or set()
+    for attempt in range(retries):
+        s = salt if attempt == 0 else f"{salt}#{attempt}"
+        h = hashlib.sha256(f"{date_str}:{s}".encode()).hexdigest()
+        candidate = rows[int(h[:8], 16) % len(rows)]
+        if _answer_of(candidate) not in recent_answers:
+            return candidate
+    # All retries collided (unlikely with a 30-row pool and 7-day window).
+    # Fall back to the unsalted pick rather than fail the build.
     h = hashlib.sha256(f"{date_str}:{salt}".encode()).hexdigest()
-    seed = int(h[:8], 16)
-    return rows[seed % len(rows)]
+    return rows[int(h[:8], 16) % len(rows)]
+
+
+def load_recent_answers(date_str: str, window: int = 7) -> dict[str, set[str]]:
+    """Look at the previous `window` days of puzzles and bucket the answers
+    by tier so the picker can avoid repeating any of them."""
+    import datetime as dt
+    out: dict[str, set[str]] = {"1B": set(), "2B": set(), "3B": set(), "HR": set()}
+    today = dt.date.fromisoformat(date_str)
+    for offset in range(1, window + 1):
+        prior = (today - dt.timedelta(days=offset)).isoformat()
+        p = PUZZLES / f"{prior}.json"
+        if not p.exists():
+            continue
+        try:
+            data = json.loads(p.read_text())
+        except Exception:
+            continue
+        for pitch in data.get("pitches", []):
+            tier = pitch.get("tier")
+            ans = pitch.get("answer")
+            if tier in out and ans:
+                out[tier].add(ans.strip().lower())
+    return out
 
 
 # --- PITCH BUILDERS -----------------------------------------------------------
@@ -274,14 +331,16 @@ def generate(date_str: str) -> Puzzle:
     rows_3b = load_curated("curated_3b")
     rows_hr = load_curated("curated_hr")
 
+    recent = load_recent_answers(date_str)
+
     pitches: list[Pitch] = []
-    row = pick_for_date(rows_1b, date_str, "1b")
+    row = pick_for_date(rows_1b, date_str, "1b", recent["1B"])
     if row: pitches.append(build_1b(row))
-    row = pick_for_date(rows_2b, date_str, "2b")
+    row = pick_for_date(rows_2b, date_str, "2b", recent["2B"])
     if row: pitches.append(build_2b(row))
-    row = pick_for_date(rows_3b, date_str, "3b")
+    row = pick_for_date(rows_3b, date_str, "3b", recent["3B"])
     if row: pitches.append(build_3b(row))
-    row = pick_for_date(rows_hr, date_str, "hr")
+    row = pick_for_date(rows_hr, date_str, "hr", recent["HR"])
     if row: pitches.append(build_hr(row))
 
     # Puzzle number = days since launch.

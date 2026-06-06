@@ -18,13 +18,13 @@
     {
       "tier": "2B",
       "type": "career_arc",
-      "prompt": "Set the rookie home run record with 52 in 2017.",
-      "answer": "Aaron Judge",
+      "prompt": "Threw the only perfect game in World Series history (1956).",
+      "answer": "Don Larsen",
       "choices": [
-        "Aaron Judge",
-        "Cody Bellinger",
-        "Pete Alonso",
-        "Yordan Alvarez"
+        "Don Larsen",
+        "Sandy Koufax",
+        "Whitey Ford",
+        "Bob Gibson"
       ]
     },
     {

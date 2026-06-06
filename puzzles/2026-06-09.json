@@ -6,13 +6,13 @@
     {
       "tier": "1B",
       "type": "trivia",
-      "prompt": "Which team won the 2023 World Series?",
-      "answer": "Rangers",
+      "prompt": "How many innings are in a regulation MLB game?",
+      "answer": "9",
       "choices": [
-        "Rangers",
-        "Diamondbacks",
-        "Astros",
-        "Phillies"
+        "9",
+        "7",
+        "10",
+        "11"
       ]
     },
     {
@@ -46,37 +46,37 @@
       "prompt": {
         "pitches": [
           {
-            "emoji": "\ud83e\ude84",
-            "name": "Slider",
-            "speed": 85.9,
-            "usage": 44
-          },
-          {
             "emoji": "\ud83d\udd25",
             "name": "4-Seam Fastball",
-            "speed": 89.9,
-            "usage": 35
+            "speed": 96.3,
+            "usage": 51
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.3,
+            "usage": 33
           },
           {
             "emoji": "\ud83c\udf00",
             "name": "Curveball",
-            "speed": 72.0,
-            "usage": 16
+            "speed": 79.6,
+            "usage": 12
           },
           {
-            "emoji": "\ud83c\udf74",
-            "name": "Split-Finger",
-            "speed": 83.4,
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 85.3,
             "usage": 4
           }
         ]
       },
-      "answer": "Clayton Kershaw",
-      "openingHint": "LHP, active 2010s\u2013present, Dodgers",
+      "answer": "Spencer Strider",
+      "openingHint": "RHP, active 2021\u2013present, NL East",
       "progressiveHints": [
-        "3-time Cy Young",
-        "2020 World Series champion",
-        "First name starts with C"
+        "Braves ace",
+        "Two-pitch mix",
+        "Mustache icon"
       ],
       "answerSeason": 2024
     }
