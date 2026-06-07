@@ -1,7 +1,7 @@
 {
   "date": "2026-06-07",
   "puzzleNumber": 3,
-  "theme": "Stumper Sunday",
+  "theme": "Sunday Special",
   "pitches": [
     {
       "tier": "1B",
@@ -29,68 +29,27 @@
     },
     {
       "tier": "3B",
-      "type": "stat_line",
-      "prompt": ".304 / 56 HR / 147 RBI / 15 SB",
-      "answer": "Ken Griffey Jr.",
-      "openingHint": "1997 AL season",
-      "progressiveHints": [
-        "AL West team",
-        "Center fielder",
-        "Won AL MVP"
-      ],
-      "answerSeason": 1997
+      "type": "stance",
+      "prompt": "Lefty with a signature pre-stride 'pulling bat from sleeve' motion; slap-style contact hitter.",
+      "answer": "Ichiro Suzuki",
+      "choices": [
+        "Ichiro Suzuki",
+        "Tony Gwynn",
+        "Pete Rose",
+        "Wade Boggs"
+      ]
     },
     {
       "tier": "HR",
-      "type": "arsenal",
-      "prompt": {
-        "pitches": [
-          {
-            "emoji": "\u2702\ufe0f",
-            "name": "Cutter",
-            "speed": 95.2,
-            "usage": 45
-          },
-          {
-            "emoji": "\ud83c\udf00",
-            "name": "Curveball",
-            "speed": 80.2,
-            "usage": 21
-          },
-          {
-            "emoji": "\ud83e\ude84",
-            "name": "Slider",
-            "speed": 87.6,
-            "usage": 12
-          },
-          {
-            "emoji": "\ud83d\udca8",
-            "name": "Changeup",
-            "speed": 89.2,
-            "usage": 11
-          },
-          {
-            "emoji": "\u26a1",
-            "name": "Sinker",
-            "speed": 97.0,
-            "usage": 8
-          },
-          {
-            "emoji": "\ud83c\udf2a",
-            "name": "Sweeper",
-            "speed": 84.3,
-            "usage": 2
-          }
-        ]
-      },
-      "answer": "Corbin Burnes",
-      "openingHint": "RHP, active 2018\u2013present",
-      "progressiveHints": [
-        "2021 NL Cy Young",
-        "Cutter is his primary pitch",
-        "Started with the Brewers"
-      ],
-      "answerSeason": 2024
+      "type": "silhouette",
+      "prompt": "6-foot-10 lefty with a slingshot side-arm delivery and 4,875 career strikeouts.",
+      "answer": "Randy Johnson",
+      "choices": [
+        "Randy Johnson",
+        "CC Sabathia",
+        "Chris Sale",
+        "Sandy Koufax"
+      ]
     }
   ]
 }

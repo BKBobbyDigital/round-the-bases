@@ -38,7 +38,21 @@ DAY_THEMES = {
     3: "Leather Day",
     4: "Modern Era",
     5: "Weekend Warm-Up",
-    6: "Stumper Sunday",
+    6: "Sunday Special",
+}
+
+# Sunday Special — instead of stat_line / arsenal, 3B and HR rotate through
+# alternative formats keyed off the ISO week number. Adding more entries here
+# adds more variety; the rotation is fully deterministic.
+SUNDAY_FORMATS = {
+    "3B": [
+        ("curated_3b_moment", "iconic_moment"),
+        ("curated_3b_stance", "stance"),
+    ],
+    "HR": [
+        ("curated_hr_moment", "iconic_moment"),
+        ("curated_hr_silhouette", "silhouette"),
+    ],
 }
 
 PITCH_EMOJI = {
@@ -306,6 +320,15 @@ def build_3b(row: dict) -> Pitch:
     )
 
 
+def build_mc(row: dict, tier: str, ptype: str) -> Pitch:
+    """Builder for Sunday Special multiple-choice formats (moment, stance, silhouette)."""
+    choices = [c.strip() for c in row["choices"].split("|")]
+    return Pitch(
+        tier=tier, type=ptype,
+        prompt=row["prompt"], choices=choices, answer=row["answer"],
+    )
+
+
 def build_hr(row: dict) -> Pitch:
     season = int(row["season"])
     arsenal = fetch_pitcher_arsenal(row["player"], season)
@@ -338,10 +361,21 @@ def generate(date_str: str) -> Puzzle:
     if row: pitches.append(build_1b(row))
     row = pick_for_date(rows_2b, date_str, "2b", recent["2B"])
     if row: pitches.append(build_2b(row))
-    row = pick_for_date(rows_3b, date_str, "3b", recent["3B"])
-    if row: pitches.append(build_3b(row))
-    row = pick_for_date(rows_hr, date_str, "hr", recent["HR"])
-    if row: pitches.append(build_hr(row))
+
+    # Sunday Special: rotate 3B and HR through alternative formats by ISO week.
+    is_sunday = d.weekday() == 6
+    if is_sunday:
+        week = d.isocalendar()[1]
+        for tier, formats in SUNDAY_FORMATS.items():
+            csv_name, ptype = formats[week % len(formats)]
+            rows = load_curated(csv_name)
+            picked = pick_for_date(rows, date_str, ptype, recent[tier])
+            if picked: pitches.append(build_mc(picked, tier, ptype))
+    else:
+        row = pick_for_date(rows_3b, date_str, "3b", recent["3B"])
+        if row: pitches.append(build_3b(row))
+        row = pick_for_date(rows_hr, date_str, "hr", recent["HR"])
+        if row: pitches.append(build_hr(row))
 
     # Puzzle number = days since launch.
     launch = dt.date(2026, 6, 5)

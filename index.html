@@ -601,8 +601,20 @@
   const HIT_BASES  = { single: 1, double: 2, triple: 3, hr: 4 };
   // Strike budget per at-bat. Easy multiple-choice gets sharper; harder
   // free-text pitches get more thinking room. This inversion is intentional:
-  // easy questions test recognition, not elimination.
+  // easy questions test recognition, not elimination. Sunday Special MC
+  // pitches (iconic_moment / stance / silhouette) get 2 strikes — harder
+  // to ID than 1B/2B trivia but easier than free-text stat lines.
   const STRIKE_LIMIT = { "1B": 1, "2B": 2, "3B": 3, "HR": 3 };
+  function strikeLimitFor(pitch) {
+    if (["iconic_moment", "stance", "silhouette"].includes(pitch?.type)) return 2;
+    return STRIKE_LIMIT[pitch?.tier] || 3;
+  }
+  // Pitch sub-label — appears under the main tier (e.g. "TRIPLE · ICONIC MOMENT").
+  const TYPE_SUB_LABEL = {
+    iconic_moment: "Iconic Moment",
+    stance: "Batting Stance",
+    silhouette: "Silhouette",
+  };
   // How many of a pitch's progressiveHints are shown up front as essential
   // context instead of being gated behind wrong guesses. HR already has its
   // team/era/handedness in openingHint, so 0. 3B needs the first couple
@@ -1065,7 +1077,7 @@
       // STRIKE
       state.strikes++;
       state.pitchHints[state.pitchIndex]++;
-      const limit = STRIKE_LIMIT[pitch.tier] || 3;
+      const limit = strikeLimitFor(pitch);
       if (state.strikes >= limit) {
         // STRIKEOUT
         state.outs++;
@@ -1086,10 +1098,10 @@
 
     // Strike dots = current pitch's budget (1 for 1B, 2 for 2B, 3 for 3B/HR).
     // After game over we show whatever the final pitch's budget was.
-    const currentTier = state.gameOver
-      ? puzzle.pitches[Math.min(state.pitchIndex, puzzle.pitches.length - 1)].tier
-      : puzzle.pitches[state.pitchIndex].tier;
-    const strikeLimit = STRIKE_LIMIT[currentTier] || 3;
+    const currentPitch = state.gameOver
+      ? puzzle.pitches[Math.min(state.pitchIndex, puzzle.pitches.length - 1)]
+      : puzzle.pitches[state.pitchIndex];
+    const strikeLimit = strikeLimitFor(currentPitch);
     const strikeDots = document.getElementById("sb-strike-dots");
     if (strikeDots.children.length !== strikeLimit) {
       strikeDots.innerHTML = "";
@@ -1129,7 +1141,10 @@
 
     const tag = document.createElement("div");
     tag.className = "pitch-tag";
-    tag.innerHTML = `PITCH ${state.pitchIndex+1} <span class="tier">· ${TIER_LABEL[tier]}</span>`;
+    const sub = TYPE_SUB_LABEL[pitch.type];
+    tag.innerHTML = sub
+      ? `PITCH ${state.pitchIndex+1} <span class="tier">· ${TIER_LABEL[tier]} · ${sub.toUpperCase()}</span>`
+      : `PITCH ${state.pitchIndex+1} <span class="tier">· ${TIER_LABEL[tier]}</span>`;
     card.appendChild(tag);
 
     // PROMPT
@@ -1165,7 +1180,7 @@
     }
 
     // INPUT
-    if (pitch.type === "trivia" || pitch.type === "career_arc") {
+    if (["trivia", "career_arc", "iconic_moment", "stance", "silhouette"].includes(pitch.type)) {
       const choices = document.createElement("div");
       choices.className = "choices";
       choices.setAttribute("role", "group");
