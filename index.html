@@ -599,6 +599,15 @@
   const TIER_HIT   = { "1B": "single", "2B": "double", "3B": "triple", "HR": "hr" };
   const HIT_LABEL  = { single: "SINGLE", double: "DOUBLE", triple: "TRIPLE", hr: "HOME RUN" };
   const HIT_BASES  = { single: 1, double: 2, triple: 3, hr: 4 };
+  // Strike budget per at-bat. Easy multiple-choice gets sharper; harder
+  // free-text pitches get more thinking room. This inversion is intentional:
+  // easy questions test recognition, not elimination.
+  const STRIKE_LIMIT = { "1B": 1, "2B": 2, "3B": 3, "HR": 3 };
+  // How many of a pitch's progressiveHints are shown up front as essential
+  // context instead of being gated behind wrong guesses. HR already has its
+  // team/era/handedness in openingHint, so 0. 3B needs the first couple
+  // hints visible so the stat line isn't pure cryptography.
+  const ALWAYS_ON_HINTS = { "3B": 2, "HR": 0 };
 
   // ---------- PERSISTENCE ----------
   const STORAGE_KEY = "rtb:state";
@@ -714,8 +723,9 @@
         <h2 id="ob-title">How to play</h2>
         <div class="ob-steps">
           <div class="ob-step"><span class="ob-num">1</span><span>Face <b>four pitches</b> — single, double, triple, home run.</span></div>
-          <div class="ob-step"><span class="ob-num">2</span><span>Right answer = <b>hit</b>. Three wrong on one = <b>strikeout</b>.</span></div>
-          <div class="ob-step"><span class="ob-num">3</span><span>Runners advance per real baseball. Score <b>runs</b>.</span></div>
+          <div class="ob-step"><span class="ob-num">2</span><span>Strike budget per at-bat: <b>1 · 2 · 3 · 3</b>. Easy pitches are unforgiving — no eliminating.</span></div>
+          <div class="ob-step"><span class="ob-num">3</span><span>Triple and home run show <b>era, team, and role</b> — you have enough to recognize the player.</span></div>
+          <div class="ob-step"><span class="ob-num">4</span><span>Hits drive runs per real baseball. Score <b>runs</b>.</span></div>
         </div>
         <button class="onboard-go" type="button" autofocus>Play Ball</button>
       </div>
@@ -1055,7 +1065,8 @@
       // STRIKE
       state.strikes++;
       state.pitchHints[state.pitchIndex]++;
-      if (state.strikes >= 3) {
+      const limit = STRIKE_LIMIT[pitch.tier] || 3;
+      if (state.strikes >= limit) {
         // STRIKEOUT
         state.outs++;
         state.pitchOutcomes.push("out");
@@ -1072,8 +1083,24 @@
   function render() {
     // scoreboard
     document.getElementById("sb-runs").textContent = state.runs;
-    document.querySelectorAll("#sb-strike-dots .dot").forEach((d, i) =>
+
+    // Strike dots = current pitch's budget (1 for 1B, 2 for 2B, 3 for 3B/HR).
+    // After game over we show whatever the final pitch's budget was.
+    const currentTier = state.gameOver
+      ? puzzle.pitches[Math.min(state.pitchIndex, puzzle.pitches.length - 1)].tier
+      : puzzle.pitches[state.pitchIndex].tier;
+    const strikeLimit = STRIKE_LIMIT[currentTier] || 3;
+    const strikeDots = document.getElementById("sb-strike-dots");
+    if (strikeDots.children.length !== strikeLimit) {
+      strikeDots.innerHTML = "";
+      for (let i = 0; i < strikeLimit; i++) {
+        const d = document.createElement("span"); d.className = "dot";
+        strikeDots.appendChild(d);
+      }
+    }
+    Array.from(strikeDots.children).forEach((d, i) =>
       d.classList.toggle("on", i < state.strikes));
+
     document.querySelectorAll("#sb-out-dots .dot").forEach((d, i) =>
       d.classList.toggle("on", i < state.outs));
 
@@ -1124,11 +1151,16 @@
       card.appendChild(p);
     }
 
-    // OPENING HINT (always shown for 3B/HR if present)
-    if (pitch.openingHint) {
+    // CONTEXT (always shown for 3B/HR): the opening hint plus the first N
+    // progressive hints, where N is per-tier. This is the "you have enough
+    // to triangulate" floor — the puzzle is then recognition, not crypto.
+    const alwaysOnCount = ALWAYS_ON_HINTS[pitch.tier] || 0;
+    const alwaysOnHints = (pitch.progressiveHints || []).slice(0, alwaysOnCount);
+    const contextLine = [pitch.openingHint, ...alwaysOnHints].filter(Boolean).join(" · ");
+    if (contextLine) {
       const h = document.createElement("div");
       h.className = "opening-hint";
-      h.textContent = "· " + pitch.openingHint + " ·";
+      h.textContent = "· " + contextLine + " ·";
       card.appendChild(h);
     }
 
@@ -1169,11 +1201,14 @@
       card.appendChild(renderFreeText(pitch));
     }
 
-    // PROGRESSIVE HINTS revealed by wrong guesses
-    if (pitch.progressiveHints && hintsShown > 0) {
+    // PROGRESSIVE HINTS — reveal flavor unlocks AFTER the always-on context.
+    // For 3B the first 2 hints are shown up front (above), so reveals start
+    // from index 2. For HR all hints are flavor unlocks.
+    const revealableHints = (pitch.progressiveHints || []).slice(alwaysOnCount);
+    if (revealableHints.length && hintsShown > 0) {
       const hbox = document.createElement("div");
       hbox.className = "hints";
-      pitch.progressiveHints.slice(0, hintsShown).forEach(h => {
+      revealableHints.slice(0, hintsShown).forEach(h => {
         const el = document.createElement("div");
         el.className = "hint"; el.textContent = h;
         hbox.appendChild(el);
