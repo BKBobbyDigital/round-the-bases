@@ -185,6 +185,10 @@
   }
   .choice:hover:not(:disabled) { background: #fff5dc; }
   .choice:active:not(:disabled) { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
+  /* Belt-and-suspenders: suppress the browser focus ring whenever focus
+     wasn't actually keyboard-driven (covers any touch path we miss). */
+  .choice:focus:not(:focus-visible) { outline: none; }
+  .choice:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
   .choice.wrong { opacity: 0.35; text-decoration: line-through; }
   .choice:disabled { cursor: not-allowed; }
 
@@ -666,6 +670,36 @@
     return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
   }
 
+  // Deterministic Fisher-Yates shuffle keyed off a string so each pitch
+  // gets the same choice order every render — but never with the answer
+  // pinned at index 0 (which is how every CSV row was authored).
+  function seededShuffle(arr, seedStr) {
+    let h = 2166136261;
+    for (let i = 0; i < seedStr.length; i++) {
+      h ^= seedStr.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    let s = (h >>> 0) || 1;
+    const next = () => { s = (Math.imul(s, 1664525) + 1013904223) >>> 0; return s / 0x100000000; };
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(next() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  // Track whether the most recent input came from a keyboard. Auto-focus is
+  // helpful for keyboard players but on touch/mouse the browser draws a focus
+  // ring which (with the answer-first CSV pattern) was visually hinting at
+  // the right choice.
+  let _lastInputKbd = false;
+  window.addEventListener("keydown", e => {
+    if (e.key === "Tab" || e.key === "Enter" || e.key.startsWith("Arrow")) _lastInputKbd = true;
+  }, true);
+  window.addEventListener("pointerdown", () => { _lastInputKbd = false; }, true);
+  window.addEventListener("touchstart", () => { _lastInputKbd = false; }, true);
+
   // ---------- ONBOARDING (first visit only) ----------
   function maybeShowOnboarding() {
     if (storage.onboarded) return;
@@ -1105,7 +1139,15 @@
       choices.setAttribute("role", "group");
       choices.setAttribute("aria-label", "Choose an answer");
       let firstEnabled = null;
-      pitch.choices.forEach(choice => {
+      // Shuffle so the answer (always first in the CSV) isn't always at index 0.
+      // Fisher-Yates can still land on the original first element ~1/N of the
+      // time; if that happens, swap it with the last slot. Order stays
+      // deterministic per (date, tier) and the answer is never first.
+      const ordered = seededShuffle(pitch.choices, `${puzzle.date}:${pitch.tier}`);
+      if (ordered[0] === pitch.answer && ordered.length > 1) {
+        [ordered[0], ordered[ordered.length - 1]] = [ordered[ordered.length - 1], ordered[0]];
+      }
+      ordered.forEach(choice => {
         const btn = document.createElement("button");
         btn.className = "choice";
         btn.textContent = choice;
@@ -1120,7 +1162,9 @@
         if (!alreadyWrong && !firstEnabled) firstEnabled = btn;
       });
       card.appendChild(choices);
-      if (firstEnabled) setTimeout(() => firstEnabled.focus(), 30);
+      // Only auto-focus when the player is actually using a keyboard —
+      // on touch/mouse the focus ring would visually hint at the choice.
+      if (firstEnabled && _lastInputKbd) setTimeout(() => firstEnabled.focus(), 30);
     } else {
       card.appendChild(renderFreeText(pitch));
     }
