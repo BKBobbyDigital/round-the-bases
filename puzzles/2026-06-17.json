@@ -30,15 +30,15 @@
     {
       "tier": "3B",
       "type": "stat_line",
-      "prompt": ".346 / 32 HR / 80 RBI / 30 SB",
-      "answer": "Mookie Betts",
-      "openingHint": "2018 AL season",
+      "prompt": ".299 / 70 HR / 147 RBI / 1 SB",
+      "answer": "Mark McGwire",
+      "openingHint": "1998 NL season",
       "progressiveHints": [
-        "AL East team at the time",
-        "Right fielder",
-        "Won AL MVP"
+        "NL Central team",
+        "First baseman",
+        "Broke Maris's HR record this year"
       ],
-      "answerSeason": 2018
+      "answerSeason": 1998
     },
     {
       "tier": "HR",
