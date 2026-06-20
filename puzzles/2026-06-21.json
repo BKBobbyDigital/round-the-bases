@@ -1,0 +1,55 @@
+{
+  "date": "2026-06-21",
+  "puzzleNumber": 17,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which league adopted the designated hitter first?",
+      "answer": "American League",
+      "choices": [
+        "American League",
+        "National League",
+        "Both at once",
+        "Neither uses it"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke MLB's color barrier in 1947 with the Brooklyn Dodgers.",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Larry Doby",
+        "Roy Campanella",
+        "Satchel Paige"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stance",
+      "prompt": "Signature pre-pitch ritual: spit in hands, clap, pat the chest plate. Big lefty masher.",
+      "answer": "David Ortiz",
+      "choices": [
+        "David Ortiz",
+        "Manny Ramirez",
+        "Jim Thome",
+        "Frank Thomas"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "silhouette",
+      "prompt": "6-foot-10 lefty with a slingshot side-arm delivery and 4,875 career strikeouts.",
+      "answer": "Randy Johnson",
+      "choices": [
+        "Randy Johnson",
+        "CC Sabathia",
+        "Chris Sale",
+        "Sandy Koufax"
+      ]
+    }
+  ]
+}
