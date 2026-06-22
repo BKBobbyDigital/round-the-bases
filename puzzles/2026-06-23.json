@@ -1,0 +1,90 @@
+{
+  "date": "2026-06-23",
+  "puzzleNumber": 19,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose number is that \u2014 retired league-wide?",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Ted Williams"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Caught the final out of the 1986 World Series for the Mets.",
+      "answer": "Gary Carter",
+      "choices": [
+        "Gary Carter",
+        "Mike Scioscia",
+        "Tony Pena",
+        "Jody Davis"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".394 / 12 HR / 64 RBI / 5 SB",
+      "answer": "Tony Gwynn",
+      "openingHint": "Strike-shortened 1994",
+      "progressiveHints": [
+        "NL West team",
+        "Listed at 5'11\"",
+        "Made 15 All-Star teams"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.0,
+            "usage": 49
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.4,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.6,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 77.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.0,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Max Scherzer",
+      "openingHint": "RHP, active 2008\u2013present",
+      "progressiveHints": [
+        "3-time Cy Young",
+        "Two different colored eyes",
+        "Was a National at the time"
+      ],
+      "answerSeason": 2017
+    }
+  ]
+}
