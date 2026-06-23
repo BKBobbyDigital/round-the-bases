@@ -1,0 +1,84 @@
+{
+  "date": "2026-06-24",
+  "puzzleNumber": 20,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Posted a 1.74 ERA in 2000 \u2014 one of the lowest in modern history.",
+      "answer": "Pedro Martinez",
+      "choices": [
+        "Pedro Martinez",
+        "Greg Maddux",
+        "Roger Clemens",
+        "Randy Johnson"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".333 / 44 HR / 165 RBI / 2 SB",
+      "answer": "Manny Ramirez",
+      "openingHint": "1999 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Outfielder",
+        "Set a then-modern record for RBIs"
+      ],
+      "answerSeason": 1999
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.3,
+            "usage": 51
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.3,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 79.6,
+            "usage": 12
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 85.3,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Spencer Strider",
+      "openingHint": "RHP, active 2021\u2013present, NL East",
+      "progressiveHints": [
+        "Braves ace",
+        "Two-pitch mix",
+        "Mustache icon"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
