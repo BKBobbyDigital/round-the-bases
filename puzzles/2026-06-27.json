@@ -1,0 +1,78 @@
+{
+  "date": "2026-06-27",
+  "puzzleNumber": 23,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Camden Yards?",
+      "answer": "Orioles",
+      "choices": [
+        "Orioles",
+        "Nationals",
+        "Phillies",
+        "Pirates"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Hit 762 home runs \u2014 the all-time record.",
+      "answer": "Barry Bonds",
+      "choices": [
+        "Barry Bonds",
+        "Hank Aaron",
+        "Babe Ruth",
+        "Alex Rodriguez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".304 / 56 HR / 147 RBI / 15 SB",
+      "answer": "Ken Griffey Jr.",
+      "openingHint": "1997 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Center fielder",
+        "Won AL MVP"
+      ],
+      "answerSeason": 1997
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 100.9,
+            "usage": 82
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.5,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.6,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Aroldis Chapman",
+      "openingHint": "LHP closer, active 2010\u2013present",
+      "progressiveHints": [
+        "Topped 105 mph that season",
+        "Cuban defector",
+        "Was with the Cubs for the postseason"
+      ],
+      "answerSeason": 2016
+    }
+  ]
+}
