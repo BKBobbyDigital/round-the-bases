@@ -1,0 +1,55 @@
+{
+  "date": "2026-06-28",
+  "puzzleNumber": 24,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many innings are in a regulation MLB game?",
+      "answer": "9",
+      "choices": [
+        "9",
+        "7",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Called his shot during the 1932 World Series.",
+      "answer": "Babe Ruth",
+      "choices": [
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Joe DiMaggio",
+        "Mickey Mantle"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Set the single-season hits record (262) in 2004.",
+      "answer": "Ichiro Suzuki",
+      "choices": [
+        "Ichiro Suzuki",
+        "Pete Rose",
+        "Wade Boggs",
+        "Rod Carew"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Pitched 5 scoreless relief innings in Game 7 of the 2014 World Series, on two days rest.",
+      "answer": "Madison Bumgarner",
+      "choices": [
+        "Madison Bumgarner",
+        "Tim Lincecum",
+        "Jeremy Affeldt",
+        "Sergio Romo"
+      ]
+    }
+  ]
+}
