@@ -1,0 +1,108 @@
+{
+  "date": "2026-06-30",
+  "puzzleNumber": 26,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which jersey number is retired across all of MLB?",
+      "answer": "42",
+      "choices": [
+        "42",
+        "7",
+        "3",
+        "24"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Set the rookie home run record with 52 in 2017.",
+      "answer": "Aaron Judge",
+      "choices": [
+        "Aaron Judge",
+        "Cody Bellinger",
+        "Pete Alonso",
+        "Yordan Alvarez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".299 / 70 HR / 147 RBI / 1 SB",
+      "answer": "Mark McGwire",
+      "openingHint": "1998 NL season",
+      "progressiveHints": [
+        "NL Central team",
+        "First baseman",
+        "Broke Maris's HR record this year"
+      ],
+      "answerSeason": 1998
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 86.0,
+            "usage": 35
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.6,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 81.9,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 90.0,
+            "usage": 9
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 95.2,
+            "usage": 9
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 79.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 92.7,
+            "usage": 4
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 72.3,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Yu Darvish",
+      "openingHint": "RHP, active 2012\u2013present",
+      "progressiveHints": [
+        "Massive pitch arsenal \u2014 6+ pitches",
+        "Japanese star",
+        "Was with the Cubs at the time"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
