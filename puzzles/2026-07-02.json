@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-02",
+  "puzzleNumber": 28,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many bases are there on a baseball diamond?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Retired at age 30 with 3 Cy Youngs and a perfect game.",
+      "answer": "Sandy Koufax",
+      "choices": [
+        "Sandy Koufax",
+        "Warren Spahn",
+        "Don Drysdale",
+        "Whitey Ford"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".333 / 44 HR / 165 RBI / 2 SB",
+      "answer": "Manny Ramirez",
+      "openingHint": "1999 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Outfielder",
+        "Set a then-modern record for RBIs"
+      ],
+      "answerSeason": 1999
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.7,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 75.9,
+            "usage": 28
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 91.7,
+            "usage": 22
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 91.9,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.7,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Adam Wainwright",
+      "openingHint": "RHP, 2005\u20132023",
+      "progressiveHints": [
+        "3-time Cy Young runner-up",
+        "Signature curveball",
+        "Spent his whole career with the Cardinals"
+      ],
+      "answerSeason": 2013
+    }
+  ]
+}
