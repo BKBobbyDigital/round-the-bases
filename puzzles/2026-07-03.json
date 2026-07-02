@@ -1,0 +1,84 @@
+{
+  "date": "2026-07-03",
+  "puzzleNumber": 29,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose number is that \u2014 retired league-wide?",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Ted Williams"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won the AL Triple Crown in 2012 \u2014 first since Yastrzemski in '67.",
+      "answer": "Miguel Cabrera",
+      "choices": [
+        "Miguel Cabrera",
+        "Mike Trout",
+        "Robinson Cano",
+        "Albert Pujols"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".330 / 44 HR / 139 RBI / 4 SB",
+      "answer": "Miguel Cabrera",
+      "openingHint": "2012 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Third baseman that year",
+        "Won the Triple Crown"
+      ],
+      "answerSeason": 2012
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 81.7,
+            "usage": 41
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 90.8,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 90.8,
+            "usage": 20
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 72.5,
+            "usage": 9
+          }
+        ]
+      },
+      "answer": "Patrick Corbin",
+      "openingHint": "LHP, active 2012\u2013present",
+      "progressiveHints": [
+        "Slider-heavy starter",
+        "Was a D-back at that point",
+        "Signed with the Nationals after this year"
+      ],
+      "answerSeason": 2018
+    }
+  ]
+}
