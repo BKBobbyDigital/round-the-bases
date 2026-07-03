@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-04",
+  "puzzleNumber": 30,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "13 Gold Gloves at shortstop. Never won an MVP.",
+      "answer": "Ozzie Smith",
+      "choices": [
+        "Ozzie Smith",
+        "Omar Vizquel",
+        "Cal Ripken",
+        "Derek Jeter"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".337 / 39 HR / 126 RBI / 15 SB",
+      "answer": "Vladimir Guerrero",
+      "openingHint": "2004 AL season",
+      "progressiveHints": [
+        "AL West team at the time",
+        "Right fielder",
+        "Won AL MVP in his first season with the team"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.8,
+            "usage": 32
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 92.9,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 80.8,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.2,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.0,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Felix Hernandez",
+      "openingHint": "RHP, 2005\u20132019, AL West",
+      "progressiveHints": [
+        "2010 AL Cy Young",
+        "Nicknamed 'King'",
+        "Spent his whole career with one team"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}
