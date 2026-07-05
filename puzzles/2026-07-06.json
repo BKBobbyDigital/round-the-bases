@@ -1,0 +1,84 @@
+{
+  "date": "2026-07-06",
+  "puzzleNumber": 32,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team has won the most World Series titles?",
+      "answer": "Yankees",
+      "choices": [
+        "Yankees",
+        "Cardinals",
+        "Athletics",
+        "Red Sox"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Posted a 1.74 ERA in 2000 \u2014 one of the lowest in modern history.",
+      "answer": "Pedro Martinez",
+      "choices": [
+        "Pedro Martinez",
+        "Greg Maddux",
+        "Roger Clemens",
+        "Randy Johnson"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".319 / 45 HR / 110 RBI / 25 SB",
+      "answer": "Chipper Jones",
+      "openingHint": "1999 NL season",
+      "progressiveHints": [
+        "Played his entire career with one team",
+        "Switch-hitting third baseman",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1999
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 92.8,
+            "usage": 44
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.6,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 76.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.4,
+            "usage": 7
+          }
+        ]
+      },
+      "answer": "Madison Bumgarner",
+      "openingHint": "LHP, active 2009\u20132024",
+      "progressiveHints": [
+        "3-time WS champion",
+        "Wrote himself into postseason lore",
+        "Was a Giant at the time"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}
