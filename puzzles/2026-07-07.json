@@ -1,0 +1,84 @@
+{
+  "date": "2026-07-07",
+  "puzzleNumber": 33,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many feet between bases?",
+      "answer": "90",
+      "choices": [
+        "90",
+        "80",
+        "100",
+        "85"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke Babe Ruth's career home run record in 1974.",
+      "answer": "Hank Aaron",
+      "choices": [
+        "Hank Aaron",
+        "Willie Mays",
+        "Frank Robinson",
+        "Roger Maris"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".346 / 24 HR / 81 RBI / 32 SB",
+      "answer": "Jose Altuve",
+      "openingHint": "2017 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Listed at 5'6\"",
+        "Won AL MVP"
+      ],
+      "answerSeason": 2017
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.8,
+            "usage": 51
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 81.3,
+            "usage": 20
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.5,
+            "usage": 19
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.0,
+            "usage": 9
+          }
+        ]
+      },
+      "answer": "Blake Snell",
+      "openingHint": "LHP, active 2016\u2013present",
+      "progressiveHints": [
+        "2018 AL Cy Young",
+        "Was a Ray at the time",
+        "Won a second Cy Young in 2023"
+      ],
+      "answerSeason": 2018
+    }
+  ]
+}
