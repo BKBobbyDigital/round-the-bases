@@ -1,0 +1,96 @@
+{
+  "date": "2026-07-08",
+  "puzzleNumber": 34,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2016 World Series, ending a 108-year drought?",
+      "answer": "Cubs",
+      "choices": [
+        "Cubs",
+        "Indians",
+        "Dodgers",
+        "Royals"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke that rookie HR record with 53 in 2019.",
+      "answer": "Pete Alonso",
+      "choices": [
+        "Pete Alonso",
+        "Aaron Judge",
+        "Yordan Alvarez",
+        "Mark McGwire"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".406 / 37 HR / 120 RBI / 2 SB",
+      "answer": "Ted Williams",
+      "openingHint": "1941 AL season",
+      "progressiveHints": [
+        "AL East team",
+        "Last player to bat .400",
+        "Outfielder"
+      ],
+      "answerSeason": 1941
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 95.2,
+            "usage": 45
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 80.2,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 87.6,
+            "usage": 12
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.2,
+            "usage": 11
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 97.0,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 84.3,
+            "usage": 2
+          }
+        ]
+      },
+      "answer": "Corbin Burnes",
+      "openingHint": "RHP, active 2018\u2013present",
+      "progressiveHints": [
+        "2021 NL Cy Young",
+        "Cutter is his primary pitch",
+        "Started with the Brewers"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
