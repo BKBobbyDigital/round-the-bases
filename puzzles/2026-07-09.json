@@ -1,0 +1,84 @@
+{
+  "date": "2026-07-09",
+  "puzzleNumber": 35,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What position is known as 'the hot corner'?",
+      "answer": "Third base",
+      "choices": [
+        "Third base",
+        "Shortstop",
+        "Catcher",
+        "Second base"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke MLB's color barrier in 1947 with the Brooklyn Dodgers.",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Larry Doby",
+        "Roy Campanella",
+        "Satchel Paige"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".372 / 42 HR / 147 RBI / 5 SB",
+      "answer": "Todd Helton",
+      "openingHint": "2000 season",
+      "progressiveHints": [
+        "NL West team",
+        "First baseman",
+        "Played his whole career at altitude"
+      ],
+      "answerSeason": 2000
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 92.0,
+            "usage": 42
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.3,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.6,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.7,
+            "usage": 12
+          }
+        ]
+      },
+      "answer": "Roy Halladay",
+      "openingHint": "RHP, 1998\u20132013",
+      "progressiveHints": [
+        "2-time Cy Young (one in each league)",
+        "Threw a postseason no-hitter that year",
+        "Was a Phillie at the time"
+      ],
+      "answerSeason": 2010
+    }
+  ]
+}
