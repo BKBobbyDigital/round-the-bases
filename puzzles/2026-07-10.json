@@ -1,0 +1,84 @@
+{
+  "date": "2026-07-10",
+  "puzzleNumber": 36,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Dodger Stadium?",
+      "answer": "Dodgers",
+      "choices": [
+        "Dodgers",
+        "Angels",
+        "Giants",
+        "Padres"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Stole 130 bases in a single season (1982).",
+      "answer": "Rickey Henderson",
+      "choices": [
+        "Rickey Henderson",
+        "Vince Coleman",
+        "Lou Brock",
+        "Tim Raines"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".366 / 49 HR / 130 RBI / 33 SB",
+      "answer": "Larry Walker",
+      "openingHint": "1997 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Won NL MVP playing at altitude"
+      ],
+      "answerSeason": 1997
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 81.4,
+            "usage": 31
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.9,
+            "usage": 27
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.8,
+            "usage": 21
+          }
+        ]
+      },
+      "answer": "Stephen Strasburg",
+      "openingHint": "RHP, 2010\u20132022",
+      "progressiveHints": [
+        "2019 WS MVP",
+        "Spent his whole career with one team",
+        "Was a National"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
