@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-11",
+  "puzzleNumber": 37,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many runs does a grand slam score?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won AL MVP and AL Cy Young in the same season (2011).",
+      "answer": "Justin Verlander",
+      "choices": [
+        "Justin Verlander",
+        "CC Sabathia",
+        "Felix Hernandez",
+        "David Price"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".260 / 53 HR / 120 RBI / 1 SB",
+      "answer": "Pete Alonso",
+      "openingHint": "2019 NL season",
+      "progressiveHints": [
+        "NL East team",
+        "First baseman",
+        "Set the rookie HR record"
+      ],
+      "answerSeason": 2019
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.7,
+            "usage": 38
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.8,
+            "usage": 30
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.9,
+            "usage": 19
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 85.4,
+            "usage": 10
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 84.8,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Charlie Morton",
+      "openingHint": "RHP, 2008\u2013present",
+      "progressiveHints": [
+        "Career resurgence in his 30s",
+        "Curveball mastery",
+        "Was with the Rays at the time"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
