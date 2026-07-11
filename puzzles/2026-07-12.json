@@ -1,0 +1,55 @@
+{
+  "date": "2026-07-12",
+  "puzzleNumber": 38,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose consecutive-games-played streak did Cal Ripken break in 1995?",
+      "answer": "Lou Gehrig",
+      "choices": [
+        "Lou Gehrig",
+        "Pete Rose",
+        "Hank Aaron",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Two-way player. AL MVP. Threw a no-hitter AND hit 40+ HRs in the same season.",
+      "answer": "Shohei Ohtani",
+      "choices": [
+        "Shohei Ohtani",
+        "Babe Ruth",
+        "Mike Trout",
+        "Bryce Harper"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Hit two walk-off home runs in the 2011 World Series, including a Game 6 force-extra game blast.",
+      "answer": "David Freese",
+      "choices": [
+        "David Freese",
+        "Albert Pujols",
+        "Lance Berkman",
+        "Yadier Molina"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Struck out 20 batters in his fifth career start (May 6, 1998) at age 20.",
+      "answer": "Kerry Wood",
+      "choices": [
+        "Kerry Wood",
+        "Roger Clemens",
+        "Randy Johnson",
+        "Max Scherzer"
+      ]
+    }
+  ]
+}
