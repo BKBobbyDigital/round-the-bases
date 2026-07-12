@@ -1,0 +1,85 @@
+{
+  "date": "2026-07-13",
+  "puzzleNumber": 39,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many innings are in a regulation MLB game?",
+      "answer": "9",
+      "choices": [
+        "9",
+        "7",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "7-time Cy Young winner \u2014 the most ever.",
+      "answer": "Roger Clemens",
+      "choices": [
+        "Roger Clemens",
+        "Greg Maddux",
+        "Randy Johnson",
+        "Steve Carlton"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".362 / 45 HR / 101 RBI / 6 SB",
+      "answer": "Barry Bonds",
+      "openingHint": "2004 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Walked an unprecedented amount of times",
+        "Won his 4th straight MVP"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 98.8,
+            "usage": 48
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 92.5,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 91.7,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 83.4,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Jacob deGrom",
+      "openingHint": "RHP, active 2014\u2013present",
+      "progressiveHints": [
+        "Two-time NL Cy Young",
+        "Started his career with the Mets",
+        "Signed with Texas"
+      ],
+      "answerSeason": 2022
+    }
+  ]
+}
