@@ -1,0 +1,84 @@
+{
+  "date": "2026-07-15",
+  "puzzleNumber": 41,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Who holds the all-time strikeout record?",
+      "answer": "Nolan Ryan",
+      "choices": [
+        "Nolan Ryan",
+        "Randy Johnson",
+        "Roger Clemens",
+        "Steve Carlton"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Pitched 5 scoreless relief innings in Game 7 of the 2014 World Series.",
+      "answer": "Madison Bumgarner",
+      "choices": [
+        "Madison Bumgarner",
+        "Tim Lincecum",
+        "Jeremy Affeldt",
+        "Hunter Strickland"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".359 / 43 HR / 124 RBI / 5 SB",
+      "answer": "Albert Pujols",
+      "openingHint": "2003 NL season",
+      "progressiveHints": [
+        "NL Central team at the time",
+        "First baseman",
+        "Finished 2nd in NL MVP voting"
+      ],
+      "answerSeason": 2003
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 92.8,
+            "usage": 44
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.6,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 76.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.4,
+            "usage": 7
+          }
+        ]
+      },
+      "answer": "Madison Bumgarner",
+      "openingHint": "LHP, active 2009\u20132024",
+      "progressiveHints": [
+        "3-time WS champion",
+        "Wrote himself into postseason lore",
+        "Was a Giant at the time"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}
