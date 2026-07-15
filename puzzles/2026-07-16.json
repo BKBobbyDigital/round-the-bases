@@ -1,0 +1,78 @@
+{
+  "date": "2026-07-16",
+  "puzzleNumber": 42,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which league adopted the designated hitter first?",
+      "answer": "American League",
+      "choices": [
+        "American League",
+        "National League",
+        "Both at once",
+        "Neither uses it"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Threw the only perfect game in World Series history (1956).",
+      "answer": "Don Larsen",
+      "choices": [
+        "Don Larsen",
+        "Sandy Koufax",
+        "Whitey Ford",
+        "Bob Gibson"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".353 / 38 HR / 101 RBI / 2 SB",
+      "answer": "Frank Thomas",
+      "openingHint": "Strike-shortened 1994 AL",
+      "progressiveHints": [
+        "AL Central team",
+        "First baseman / DH",
+        "Won back-to-back AL MVPs"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 100.9,
+            "usage": 82
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.5,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.6,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Aroldis Chapman",
+      "openingHint": "LHP closer, active 2010\u2013present",
+      "progressiveHints": [
+        "Topped 105 mph that season",
+        "Cuban defector",
+        "Was with the Cubs for the postseason"
+      ],
+      "answerSeason": 2016
+    }
+  ]
+}
