@@ -1,0 +1,96 @@
+{
+  "date": "2026-07-17",
+  "puzzleNumber": 43,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many feet between bases?",
+      "answer": "90",
+      "choices": [
+        "90",
+        "80",
+        "100",
+        "85"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Called his shot during the 1932 World Series.",
+      "answer": "Babe Ruth",
+      "choices": [
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Joe DiMaggio",
+        "Mickey Mantle"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".337 / 39 HR / 126 RBI / 15 SB",
+      "answer": "Vladimir Guerrero",
+      "openingHint": "2004 AL season",
+      "progressiveHints": [
+        "AL West team at the time",
+        "Right fielder",
+        "Won AL MVP in his first season with the team"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.6,
+            "usage": 41
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.0,
+            "usage": 23
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 90.4,
+            "usage": 23
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 91.5,
+            "usage": 6
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 86.3,
+            "usage": 4
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 94.6,
+            "usage": 2
+          }
+        ]
+      },
+      "answer": "Yoshinobu Yamamoto",
+      "openingHint": "RHP, active 2024\u2013present in MLB",
+      "progressiveHints": [
+        "Japanese ace import",
+        "Joined the Dodgers",
+        "Won the World Series in his rookie season"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
