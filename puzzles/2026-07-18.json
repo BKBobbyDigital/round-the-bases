@@ -1,0 +1,96 @@
+{
+  "date": "2026-07-18",
+  "puzzleNumber": 44,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team has won the most World Series titles?",
+      "answer": "Yankees",
+      "choices": [
+        "Yankees",
+        "Cardinals",
+        "Athletics",
+        "Red Sox"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "10 consecutive 200-hit seasons \u2014 set the record.",
+      "answer": "Ichiro Suzuki",
+      "choices": [
+        "Ichiro Suzuki",
+        "Pete Rose",
+        "Wade Boggs",
+        "Rod Carew"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".311 / 62 HR / 131 RBI / 16 SB",
+      "answer": "Aaron Judge",
+      "openingHint": "2022 season",
+      "progressiveHints": [
+        "AL East team",
+        "Right fielder",
+        "Set the AL HR record"
+      ],
+      "answerSeason": 2022
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.4,
+            "usage": 44
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 91.7,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 84.9,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 80.2,
+            "usage": 13
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 95.3,
+            "usage": 7
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 91.5,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Walker Buehler",
+      "openingHint": "RHP, active 2017\u2013present",
+      "progressiveHints": [
+        "Two-time WS champion (so far)",
+        "Dodgers postseason workhorse",
+        "First name starts with W"
+      ],
+      "answerSeason": 2021
+    }
+  ]
+}
