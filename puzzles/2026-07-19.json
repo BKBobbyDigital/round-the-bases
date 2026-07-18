@@ -1,0 +1,55 @@
+{
+  "date": "2026-07-19",
+  "puzzleNumber": 45,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Dodger Stadium?",
+      "answer": "Dodgers",
+      "choices": [
+        "Dodgers",
+        "Angels",
+        "Giants",
+        "Padres"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "4 straight Cy Youngs in the 1990s. Signature glasses on the mound. Braves dynasty.",
+      "answer": "Greg Maddux",
+      "choices": [
+        "Greg Maddux",
+        "Tom Glavine",
+        "John Smoltz",
+        "Steve Avery"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stance",
+      "prompt": "Right-handed bat wag, aggressive timing-mechanism, pre-pitch routine widely imitated and parodied.",
+      "answer": "Gary Sheffield",
+      "choices": [
+        "Gary Sheffield",
+        "Manny Ramirez",
+        "Sammy Sosa",
+        "Alex Rodriguez"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "silhouette",
+      "prompt": "5-foot-11 lefty with long hair and an exaggerated leg kick; San Francisco's ace, back-to-back NL Cy Youngs.",
+      "answer": "Tim Lincecum",
+      "choices": [
+        "Tim Lincecum",
+        "Barry Zito",
+        "Madison Bumgarner",
+        "Matt Cain"
+      ]
+    }
+  ]
+}
