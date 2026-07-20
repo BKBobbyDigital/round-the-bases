@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-21",
+  "puzzleNumber": 47,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke that rookie HR record with 53 in 2019.",
+      "answer": "Pete Alonso",
+      "choices": [
+        "Pete Alonso",
+        "Aaron Judge",
+        "Yordan Alvarez",
+        "Mark McGwire"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".372 / 8 HR / 60 RBI / 36 SB",
+      "answer": "Ichiro Suzuki",
+      "openingHint": "2004 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Outfielder",
+        "Set the single-season hits record (262)"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.7,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 75.9,
+            "usage": 28
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 91.7,
+            "usage": 22
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 91.9,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.7,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Adam Wainwright",
+      "openingHint": "RHP, 2005\u20132023",
+      "progressiveHints": [
+        "3-time Cy Young runner-up",
+        "Signature curveball",
+        "Spent his whole career with the Cardinals"
+      ],
+      "answerSeason": 2013
+    }
+  ]
+}
