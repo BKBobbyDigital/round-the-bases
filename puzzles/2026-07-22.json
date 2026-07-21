@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-22",
+  "puzzleNumber": 48,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which jersey number is retired across all of MLB?",
+      "answer": "42",
+      "choices": [
+        "42",
+        "7",
+        "3",
+        "24"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Last player to hit over .400 \u2014 batted .406 in 1941.",
+      "answer": "Ted Williams",
+      "choices": [
+        "Ted Williams",
+        "Joe DiMaggio",
+        "Stan Musial",
+        "Lou Gehrig"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".330 / 42 HR / 99 RBI / 6 SB",
+      "answer": "Bryce Harper",
+      "openingHint": "2015 season",
+      "progressiveHints": [
+        "NL East team",
+        "Right fielder",
+        "NL MVP at age 22"
+      ],
+      "answerSeason": 2015
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.7,
+            "usage": 38
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.8,
+            "usage": 30
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.9,
+            "usage": 19
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 85.4,
+            "usage": 10
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 84.8,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Charlie Morton",
+      "openingHint": "RHP, 2008\u2013present",
+      "progressiveHints": [
+        "Career resurgence in his 30s",
+        "Curveball mastery",
+        "Was with the Rays at the time"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
