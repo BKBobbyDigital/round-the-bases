@@ -1,0 +1,84 @@
+{
+  "date": "2026-07-24",
+  "puzzleNumber": 50,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What stadium is home to the Green Monster?",
+      "answer": "Fenway Park",
+      "choices": [
+        "Fenway Park",
+        "Wrigley Field",
+        "Camden Yards",
+        "Oracle Park"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Pitched 5 scoreless relief innings in Game 7 of the 2014 World Series.",
+      "answer": "Madison Bumgarner",
+      "choices": [
+        "Madison Bumgarner",
+        "Tim Lincecum",
+        "Jeremy Affeldt",
+        "Hunter Strickland"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".317 / 50 HR / 126 RBI / 5 SB",
+      "answer": "Albert Belle",
+      "openingHint": "1995 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Outfielder",
+        "First player ever with 50 HR + 50 2B"
+      ],
+      "answerSeason": 1995
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.3,
+            "usage": 51
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.3,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 79.6,
+            "usage": 12
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 85.3,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Spencer Strider",
+      "openingHint": "RHP, active 2021\u2013present, NL East",
+      "progressiveHints": [
+        "Braves ace",
+        "Two-pitch mix",
+        "Mustache icon"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
