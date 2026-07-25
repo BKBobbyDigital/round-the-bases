@@ -1,0 +1,55 @@
+{
+  "date": "2026-07-26",
+  "puzzleNumber": 52,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which league adopted the designated hitter first?",
+      "answer": "American League",
+      "choices": [
+        "American League",
+        "National League",
+        "Both at once",
+        "Neither uses it"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Hit 762 home runs \u2014 the all-time record.",
+      "answer": "Barry Bonds",
+      "choices": [
+        "Barry Bonds",
+        "Hank Aaron",
+        "Babe Ruth",
+        "Alex Rodriguez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Hit a walk-off home run to win Game 7 of the 1960 World Series.",
+      "answer": "Bill Mazeroski",
+      "choices": [
+        "Bill Mazeroski",
+        "Hank Aaron",
+        "Mickey Mantle",
+        "Yogi Berra"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Pitched the only perfect game in World Series history (Game 5, 1956).",
+      "answer": "Don Larsen",
+      "choices": [
+        "Don Larsen",
+        "Whitey Ford",
+        "Sandy Koufax",
+        "Bob Gibson"
+      ]
+    }
+  ]
+}
