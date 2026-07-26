@@ -1,0 +1,84 @@
+{
+  "date": "2026-07-27",
+  "puzzleNumber": 53,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What position is known as 'the hot corner'?",
+      "answer": "Third base",
+      "choices": [
+        "Third base",
+        "Shortstop",
+        "Catcher",
+        "Second base"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "4 straight Cy Youngs in the 1990s. Signature glasses on the mound. Braves dynasty.",
+      "answer": "Greg Maddux",
+      "choices": [
+        "Greg Maddux",
+        "Tom Glavine",
+        "John Smoltz",
+        "Steve Avery"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".260 / 53 HR / 120 RBI / 1 SB",
+      "answer": "Pete Alonso",
+      "openingHint": "2019 NL season",
+      "progressiveHints": [
+        "NL East team",
+        "First baseman",
+        "Set the rookie HR record"
+      ],
+      "answerSeason": 2019
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 92.0,
+            "usage": 42
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.3,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.6,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.7,
+            "usage": 12
+          }
+        ]
+      },
+      "answer": "Roy Halladay",
+      "openingHint": "RHP, 1998\u20132013",
+      "progressiveHints": [
+        "2-time Cy Young (one in each league)",
+        "Threw a postseason no-hitter that year",
+        "Was a Phillie at the time"
+      ],
+      "answerSeason": 2010
+    }
+  ]
+}
