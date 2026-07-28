@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-29",
+  "puzzleNumber": 55,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What does ERA stand for?",
+      "answer": "Earned Run Average",
+      "choices": [
+        "Earned Run Average",
+        "Earned Runs Allowed",
+        "Effective Run Average",
+        "Even Run Average"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Set the rookie home run record with 52 in 2017.",
+      "answer": "Aaron Judge",
+      "choices": [
+        "Aaron Judge",
+        "Cody Bellinger",
+        "Pete Alonso",
+        "Yordan Alvarez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".330 / 44 HR / 139 RBI / 4 SB",
+      "answer": "Miguel Cabrera",
+      "openingHint": "2012 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Third baseman that year",
+        "Won the Triple Crown"
+      ],
+      "answerSeason": 2012
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.0,
+            "usage": 37
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 83.7,
+            "usage": 27
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 89.2,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 84.5,
+            "usage": 11
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 88.8,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Shane Bieber",
+      "openingHint": "RHP, active 2018\u2013present",
+      "progressiveHints": [
+        "2020 AL Cy Young (shortened season)",
+        "Cleveland's ace",
+        "First name starts with S"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
