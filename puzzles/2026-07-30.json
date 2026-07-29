@@ -1,0 +1,90 @@
+{
+  "date": "2026-07-30",
+  "puzzleNumber": 56,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which jersey number is retired across all of MLB?",
+      "answer": "42",
+      "choices": [
+        "42",
+        "7",
+        "3",
+        "24"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "3-time AL MVP. Played his entire career with the Angels.",
+      "answer": "Mike Trout",
+      "choices": [
+        "Mike Trout",
+        "Vladimir Guerrero",
+        "Garret Anderson",
+        "Tim Salmon"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".337 / 39 HR / 126 RBI / 15 SB",
+      "answer": "Vladimir Guerrero",
+      "openingHint": "2004 AL season",
+      "progressiveHints": [
+        "AL West team at the time",
+        "Right fielder",
+        "Won AL MVP in his first season with the team"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.7,
+            "usage": 38
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.8,
+            "usage": 30
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.9,
+            "usage": 19
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 85.4,
+            "usage": 10
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 84.8,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Charlie Morton",
+      "openingHint": "RHP, 2008\u2013present",
+      "progressiveHints": [
+        "Career resurgence in his 30s",
+        "Curveball mastery",
+        "Was with the Rays at the time"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
