@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-01",
+  "puzzleNumber": 58,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many bases are there on a baseball diamond?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Caught the final out of the 1986 World Series for the Mets.",
+      "answer": "Gary Carter",
+      "choices": [
+        "Gary Carter",
+        "Mike Scioscia",
+        "Tony Pena",
+        "Jody Davis"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".350 / 8 HR / 69 RBI / 56 SB",
+      "answer": "Ichiro Suzuki",
+      "openingHint": "2001 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Outfielder",
+        "Won AL ROY and AL MVP in the same year"
+      ],
+      "answerSeason": 2001
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.0,
+            "usage": 49
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.4,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.6,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 77.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.0,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Max Scherzer",
+      "openingHint": "RHP, active 2008\u2013present",
+      "progressiveHints": [
+        "3-time Cy Young",
+        "Two different colored eyes",
+        "Was a National at the time"
+      ],
+      "answerSeason": 2017
+    }
+  ]
+}
