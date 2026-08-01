@@ -1,0 +1,55 @@
+{
+  "date": "2026-08-02",
+  "puzzleNumber": 59,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
+      "answer": "Chipper Jones",
+      "choices": [
+        "Chipper Jones",
+        "Andruw Jones",
+        "Dale Murphy",
+        "David Justice"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stance",
+      "prompt": "Charlie Hustle. Switch hitter. Crouched stance. Sprinted to first base on a walk.",
+      "answer": "Pete Rose",
+      "choices": [
+        "Pete Rose",
+        "Joe Morgan",
+        "Johnny Bench",
+        "Tony Perez"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "silhouette",
+      "prompt": "Tall right-handed Cuban defector; 2024 NL Rookie of the Year and All-Star in his rookie season.",
+      "answer": "Paul Skenes",
+      "choices": [
+        "Paul Skenes",
+        "Jose Berrios",
+        "Hunter Greene",
+        "Bobby Miller"
+      ]
+    }
+  ]
+}
