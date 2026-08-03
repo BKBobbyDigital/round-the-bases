@@ -1,0 +1,84 @@
+{
+  "date": "2026-08-04",
+  "puzzleNumber": 61,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose number is that \u2014 retired league-wide?",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Ted Williams"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "4 straight Cy Youngs in the 1990s. Signature glasses on the mound. Braves dynasty.",
+      "answer": "Greg Maddux",
+      "choices": [
+        "Greg Maddux",
+        "Tom Glavine",
+        "John Smoltz",
+        "Steve Avery"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".346 / 24 HR / 81 RBI / 32 SB",
+      "answer": "Jose Altuve",
+      "openingHint": "2017 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Listed at 5'6\"",
+        "Won AL MVP"
+      ],
+      "answerSeason": 2017
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.5,
+            "usage": 46
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 84.9,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 80.5,
+            "usage": 18
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 79.7,
+            "usage": 15
+          }
+        ]
+      },
+      "answer": "Trevor Bauer",
+      "openingHint": "RHP, 2012\u20132021",
+      "progressiveHints": [
+        "2020 NL Cy Young",
+        "Won pitching the shortened season",
+        "Was a Red at the time"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
