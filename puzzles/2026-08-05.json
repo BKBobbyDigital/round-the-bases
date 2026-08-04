@@ -1,0 +1,83 @@
+{
+  "date": "2026-08-05",
+  "puzzleNumber": 62,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many feet between bases?",
+      "answer": "90",
+      "choices": [
+        "90",
+        "80",
+        "100",
+        "85"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "13 Gold Gloves at shortstop. Never won an MVP.",
+      "answer": "Ozzie Smith",
+      "choices": [
+        "Ozzie Smith",
+        "Omar Vizquel",
+        "Cal Ripken",
+        "Derek Jeter"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".305 / 47 HR / 115 RBI / 15 SB",
+      "answer": "Cody Bellinger",
+      "openingHint": "2019 NL season",
+      "progressiveHints": [
+        "NL West team at the time",
+        "Outfielder",
+        "Won NL MVP at age 24"
+      ],
+      "answerSeason": 2019
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.1,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 79.7,
+            "usage": 35
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.0,
+            "usage": 17
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.2,
+            "usage": 10
+          }
+        ]
+      },
+      "answer": "Chris Sale",
+      "openingHint": "LHP, active 2010\u2013present",
+      "progressiveHints": [
+        "2024 NL Cy Young",
+        "Tall"
+      ],
+      "answerSeason": 2018
+    }
+  ]
+}
