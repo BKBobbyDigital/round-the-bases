@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-07",
+  "puzzleNumber": 64,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Wrigley Field?",
+      "answer": "Cubs",
+      "choices": [
+        "Cubs",
+        "White Sox",
+        "Brewers",
+        "Cardinals"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Hit the 'Shot Heard 'Round the World' in 1951.",
+      "answer": "Bobby Thomson",
+      "choices": [
+        "Bobby Thomson",
+        "Joe DiMaggio",
+        "Willie Mays",
+        "Duke Snider"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".328 / 73 HR / 137 RBI / 13 SB",
+      "answer": "Barry Bonds",
+      "openingHint": "2001 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Set the single-season HR record"
+      ],
+      "answerSeason": 2001
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.7,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 75.9,
+            "usage": 28
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 91.7,
+            "usage": 22
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 91.9,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.7,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Adam Wainwright",
+      "openingHint": "RHP, 2005\u20132023",
+      "progressiveHints": [
+        "3-time Cy Young runner-up",
+        "Signature curveball",
+        "Spent his whole career with the Cardinals"
+      ],
+      "answerSeason": 2013
+    }
+  ]
+}
