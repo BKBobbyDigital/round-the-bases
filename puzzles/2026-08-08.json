@@ -1,0 +1,72 @@
+{
+  "date": "2026-08-08",
+  "puzzleNumber": 65,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which league adopted the designated hitter first?",
+      "answer": "American League",
+      "choices": [
+        "American League",
+        "National League",
+        "Both at once",
+        "Neither uses it"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Posted a 1.74 ERA in 2000 \u2014 one of the lowest in modern history.",
+      "answer": "Pedro Martinez",
+      "choices": [
+        "Pedro Martinez",
+        "Greg Maddux",
+        "Roger Clemens",
+        "Randy Johnson"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".406 / 37 HR / 120 RBI / 2 SB",
+      "answer": "Ted Williams",
+      "openingHint": "1941 AL season",
+      "progressiveHints": [
+        "AL East team",
+        "Last player to bat .400",
+        "Outfielder"
+      ],
+      "answerSeason": 1941
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 91.4,
+            "usage": 89
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 92.5,
+            "usage": 10
+          }
+        ]
+      },
+      "answer": "Mariano Rivera",
+      "openingHint": "RHP closer, 1995\u20132013",
+      "progressiveHints": [
+        "All-time saves leader",
+        "Threw essentially one pitch",
+        "Final season with the Yankees"
+      ],
+      "answerSeason": 2013
+    }
+  ]
+}
