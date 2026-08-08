@@ -1,0 +1,55 @@
+{
+  "date": "2026-08-09",
+  "puzzleNumber": 66,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
+      "answer": "Mariners",
+      "choices": [
+        "Mariners",
+        "Reds",
+        "White Sox",
+        "Yankees"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Two-way player. AL MVP. Threw a no-hitter AND hit 40+ HRs in the same season.",
+      "answer": "Shohei Ohtani",
+      "choices": [
+        "Shohei Ohtani",
+        "Babe Ruth",
+        "Mike Trout",
+        "Bryce Harper"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Broke Roger Maris's single-season HR record (62) in 1998.",
+      "answer": "Mark McGwire",
+      "choices": [
+        "Mark McGwire",
+        "Sammy Sosa",
+        "Barry Bonds",
+        "Ken Griffey Jr."
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Pitched a perfect game in 1965; retired at age 30 with 3 Cy Youngs.",
+      "answer": "Sandy Koufax",
+      "choices": [
+        "Sandy Koufax",
+        "Don Drysdale",
+        "Warren Spahn",
+        "Whitey Ford"
+      ]
+    }
+  ]
+}
