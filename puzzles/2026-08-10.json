@@ -1,0 +1,84 @@
+{
+  "date": "2026-08-10",
+  "puzzleNumber": 67,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Dodger Stadium?",
+      "answer": "Dodgers",
+      "choices": [
+        "Dodgers",
+        "Angels",
+        "Giants",
+        "Padres"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won AL MVP and AL Cy Young in the same season (2011).",
+      "answer": "Justin Verlander",
+      "choices": [
+        "Justin Verlander",
+        "CC Sabathia",
+        "Felix Hernandez",
+        "David Price"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".355 / 39 HR / 123 RBI / 8 SB",
+      "answer": "Hank Aaron",
+      "openingHint": "1959 NL season",
+      "progressiveHints": [
+        "Played his whole prime in Milwaukee",
+        "Right fielder",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1959
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 98.8,
+            "usage": 48
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 92.5,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 91.7,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 83.4,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Jacob deGrom",
+      "openingHint": "RHP, active 2014\u2013present",
+      "progressiveHints": [
+        "Two-time NL Cy Young",
+        "Started his career with the Mets",
+        "Signed with Texas"
+      ],
+      "answerSeason": 2022
+    }
+  ]
+}
