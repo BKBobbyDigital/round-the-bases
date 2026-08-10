@@ -1,0 +1,84 @@
+{
+  "date": "2026-08-11",
+  "puzzleNumber": 68,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many runs does a grand slam score?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won the AL Triple Crown in 2012 \u2014 first since Yastrzemski in '67.",
+      "answer": "Miguel Cabrera",
+      "choices": [
+        "Miguel Cabrera",
+        "Mike Trout",
+        "Robinson Cano",
+        "Albert Pujols"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".353 / 38 HR / 101 RBI / 2 SB",
+      "answer": "Frank Thomas",
+      "openingHint": "Strike-shortened 1994 AL",
+      "progressiveHints": [
+        "AL Central team",
+        "First baseman / DH",
+        "Won back-to-back AL MVPs"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 92.0,
+            "usage": 42
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.3,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.6,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.7,
+            "usage": 12
+          }
+        ]
+      },
+      "answer": "Roy Halladay",
+      "openingHint": "RHP, 1998\u20132013",
+      "progressiveHints": [
+        "2-time Cy Young (one in each league)",
+        "Threw a postseason no-hitter that year",
+        "Was a Phillie at the time"
+      ],
+      "answerSeason": 2010
+    }
+  ]
+}
