@@ -1,0 +1,108 @@
+{
+  "date": "2026-08-12",
+  "puzzleNumber": 69,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many innings are in a regulation MLB game?",
+      "answer": "9",
+      "choices": [
+        "9",
+        "7",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Hit 762 home runs \u2014 the all-time record.",
+      "answer": "Barry Bonds",
+      "choices": [
+        "Barry Bonds",
+        "Hank Aaron",
+        "Babe Ruth",
+        "Alex Rodriguez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".372 / 42 HR / 147 RBI / 5 SB",
+      "answer": "Todd Helton",
+      "openingHint": "2000 season",
+      "progressiveHints": [
+        "NL West team",
+        "First baseman",
+        "Played his whole career at altitude"
+      ],
+      "answerSeason": 2000
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 86.0,
+            "usage": 35
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.6,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 81.9,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 90.0,
+            "usage": 9
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 95.2,
+            "usage": 9
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 79.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 92.7,
+            "usage": 4
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 72.3,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Yu Darvish",
+      "openingHint": "RHP, active 2012\u2013present",
+      "progressiveHints": [
+        "Massive pitch arsenal \u2014 6+ pitches",
+        "Japanese star",
+        "Was with the Cubs at the time"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
