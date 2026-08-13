@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-14",
+  "puzzleNumber": 71,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What position is known as 'the hot corner'?",
+      "answer": "Third base",
+      "choices": [
+        "Third base",
+        "Shortstop",
+        "Catcher",
+        "Second base"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke MLB's color barrier in 1947 with the Brooklyn Dodgers.",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Larry Doby",
+        "Roy Campanella",
+        "Satchel Paige"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".394 / 12 HR / 64 RBI / 5 SB",
+      "answer": "Tony Gwynn",
+      "openingHint": "Strike-shortened 1994",
+      "progressiveHints": [
+        "NL West team",
+        "Listed at 5'11\"",
+        "Made 15 All-Star teams"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.8,
+            "usage": 32
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 92.9,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 80.8,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.2,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.0,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Felix Hernandez",
+      "openingHint": "RHP, 2005\u20132019, AL West",
+      "progressiveHints": [
+        "2010 AL Cy Young",
+        "Nicknamed 'King'",
+        "Spent his whole career with one team"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}
