@@ -1,0 +1,78 @@
+{
+  "date": "2026-08-15",
+  "puzzleNumber": 72,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose consecutive-games-played streak did Cal Ripken break in 1995?",
+      "answer": "Lou Gehrig",
+      "choices": [
+        "Lou Gehrig",
+        "Pete Rose",
+        "Hank Aaron",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Hit the 'Shot Heard 'Round the World' in 1951.",
+      "answer": "Bobby Thomson",
+      "choices": [
+        "Bobby Thomson",
+        "Joe DiMaggio",
+        "Willie Mays",
+        "Duke Snider"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".319 / 45 HR / 110 RBI / 25 SB",
+      "answer": "Chipper Jones",
+      "openingHint": "1999 NL season",
+      "progressiveHints": [
+        "Played his entire career with one team",
+        "Switch-hitting third baseman",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1999
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 100.9,
+            "usage": 82
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.5,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.6,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Aroldis Chapman",
+      "openingHint": "LHP closer, active 2010\u2013present",
+      "progressiveHints": [
+        "Topped 105 mph that season",
+        "Cuban defector",
+        "Was with the Cubs for the postseason"
+      ],
+      "answerSeason": 2016
+    }
+  ]
+}
