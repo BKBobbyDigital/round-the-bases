@@ -1,0 +1,55 @@
+{
+  "date": "2026-08-16",
+  "puzzleNumber": 73,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many feet between bases?",
+      "answer": "90",
+      "choices": [
+        "90",
+        "80",
+        "100",
+        "85"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Pitched 5 scoreless relief innings in Game 7 of the 2014 World Series.",
+      "answer": "Madison Bumgarner",
+      "choices": [
+        "Madison Bumgarner",
+        "Tim Lincecum",
+        "Jeremy Affeldt",
+        "Hunter Strickland"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stance",
+      "prompt": "Frequently swung at pitches outside the strike zone \u2014 even ones that bounced. Right-handed slugger from the Dominican Republic.",
+      "answer": "Vladimir Guerrero",
+      "choices": [
+        "Vladimir Guerrero",
+        "Sammy Sosa",
+        "Adrian Beltre",
+        "Pedro Guerrero"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "silhouette",
+      "prompt": "Compact closer delivery \u2014 threw a 92 mph cutter on 96% of his pitches for 19 years.",
+      "answer": "Mariano Rivera",
+      "choices": [
+        "Mariano Rivera",
+        "Trevor Hoffman",
+        "Kenley Jansen",
+        "Aroldis Chapman"
+      ]
+    }
+  ]
+}
