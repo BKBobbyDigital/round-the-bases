@@ -1,0 +1,84 @@
+{
+  "date": "2026-08-17",
+  "puzzleNumber": 74,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Who holds the all-time hits record?",
+      "answer": "Pete Rose",
+      "choices": [
+        "Pete Rose",
+        "Ty Cobb",
+        "Hank Aaron",
+        "Derek Jeter"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Set the rookie home run record with 52 in 2017.",
+      "answer": "Aaron Judge",
+      "choices": [
+        "Aaron Judge",
+        "Cody Bellinger",
+        "Pete Alonso",
+        "Yordan Alvarez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".372 / 8 HR / 60 RBI / 36 SB",
+      "answer": "Ichiro Suzuki",
+      "openingHint": "2004 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Outfielder",
+        "Set the single-season hits record (262)"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 81.4,
+            "usage": 31
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.9,
+            "usage": 27
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.8,
+            "usage": 21
+          }
+        ]
+      },
+      "answer": "Stephen Strasburg",
+      "openingHint": "RHP, 2010\u20132022",
+      "progressiveHints": [
+        "2019 WS MVP",
+        "Spent his whole career with one team",
+        "Was a National"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
