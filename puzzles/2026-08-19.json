@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-19",
+  "puzzleNumber": 76,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Camden Yards?",
+      "answer": "Orioles",
+      "choices": [
+        "Orioles",
+        "Nationals",
+        "Phillies",
+        "Pirates"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "7-time Cy Young winner \u2014 the most ever.",
+      "answer": "Roger Clemens",
+      "choices": [
+        "Roger Clemens",
+        "Greg Maddux",
+        "Randy Johnson",
+        "Steve Carlton"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".317 / 50 HR / 126 RBI / 5 SB",
+      "answer": "Albert Belle",
+      "openingHint": "1995 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Outfielder",
+        "First player ever with 50 HR + 50 2B"
+      ],
+      "answerSeason": 1995
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.7,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 75.9,
+            "usage": 28
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 91.7,
+            "usage": 22
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 91.9,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.7,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Adam Wainwright",
+      "openingHint": "RHP, 2005\u20132023",
+      "progressiveHints": [
+        "3-time Cy Young runner-up",
+        "Signature curveball",
+        "Spent his whole career with the Cardinals"
+      ],
+      "answerSeason": 2013
+    }
+  ]
+}
