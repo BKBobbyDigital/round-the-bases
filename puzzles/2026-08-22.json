@@ -1,0 +1,84 @@
+{
+  "date": "2026-08-22",
+  "puzzleNumber": 79,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which league adopted the designated hitter first?",
+      "answer": "American League",
+      "choices": [
+        "American League",
+        "National League",
+        "Both at once",
+        "Neither uses it"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Threw the only perfect game in World Series history (1956).",
+      "answer": "Don Larsen",
+      "choices": [
+        "Don Larsen",
+        "Sandy Koufax",
+        "Whitey Ford",
+        "Bob Gibson"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".334 / 48 HR / 121 RBI / 7 SB",
+      "answer": "Adrian Beltre",
+      "openingHint": "2004 NL season",
+      "progressiveHints": [
+        "NL West team at the time",
+        "Third baseman",
+        "Finished 2nd in NL MVP voting"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.3,
+            "usage": 51
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.3,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 79.6,
+            "usage": 12
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 85.3,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Spencer Strider",
+      "openingHint": "RHP, active 2021\u2013present, NL East",
+      "progressiveHints": [
+        "Braves ace",
+        "Two-pitch mix",
+        "Mustache icon"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
