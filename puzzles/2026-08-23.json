@@ -1,0 +1,55 @@
+{
+  "date": "2026-08-23",
+  "puzzleNumber": 80,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose consecutive-games-played streak did Cal Ripken break in 1995?",
+      "answer": "Lou Gehrig",
+      "choices": [
+        "Lou Gehrig",
+        "Pete Rose",
+        "Hank Aaron",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke MLB's color barrier in 1947 with the Brooklyn Dodgers.",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Larry Doby",
+        "Roy Campanella",
+        "Satchel Paige"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Hit a walk-off HR off Dennis Eckersley in Game 1 of the 1988 World Series.",
+      "answer": "Kirk Gibson",
+      "choices": [
+        "Kirk Gibson",
+        "Joe Carter",
+        "Carlton Fisk",
+        "David Freese"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Struck out 20 batters in his fifth career start (May 6, 1998) at age 20.",
+      "answer": "Kerry Wood",
+      "choices": [
+        "Kerry Wood",
+        "Roger Clemens",
+        "Randy Johnson",
+        "Max Scherzer"
+      ]
+    }
+  ]
+}
