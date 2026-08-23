@@ -1,0 +1,72 @@
+{
+  "date": "2026-08-24",
+  "puzzleNumber": 81,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Who holds the all-time strikeout record?",
+      "answer": "Nolan Ryan",
+      "choices": [
+        "Nolan Ryan",
+        "Randy Johnson",
+        "Roger Clemens",
+        "Steve Carlton"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "All-time saves leader with 652. Wore #42, retired league-wide alongside his.",
+      "answer": "Mariano Rivera",
+      "choices": [
+        "Mariano Rivera",
+        "Trevor Hoffman",
+        "Lee Smith",
+        "Dennis Eckersley"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".366 / 49 HR / 130 RBI / 33 SB",
+      "answer": "Larry Walker",
+      "openingHint": "1997 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Won NL MVP playing at altitude"
+      ],
+      "answerSeason": 1997
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 91.4,
+            "usage": 89
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 92.5,
+            "usage": 10
+          }
+        ]
+      },
+      "answer": "Mariano Rivera",
+      "openingHint": "RHP closer, 1995\u20132013",
+      "progressiveHints": [
+        "All-time saves leader",
+        "Threw essentially one pitch",
+        "Final season with the Yankees"
+      ],
+      "answerSeason": 2013
+    }
+  ]
+}
