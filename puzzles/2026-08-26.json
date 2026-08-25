@@ -1,0 +1,96 @@
+{
+  "date": "2026-08-26",
+  "puzzleNumber": 83,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which jersey number is retired across all of MLB?",
+      "answer": "42",
+      "choices": [
+        "42",
+        "7",
+        "3",
+        "24"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "13 Gold Gloves at shortstop. Never won an MVP.",
+      "answer": "Ozzie Smith",
+      "choices": [
+        "Ozzie Smith",
+        "Omar Vizquel",
+        "Cal Ripken",
+        "Derek Jeter"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".394 / 12 HR / 64 RBI / 5 SB",
+      "answer": "Tony Gwynn",
+      "openingHint": "Strike-shortened 1994",
+      "progressiveHints": [
+        "NL West team",
+        "Listed at 5'11\"",
+        "Made 15 All-Star teams"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.6,
+            "usage": 41
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.0,
+            "usage": 23
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 90.4,
+            "usage": 23
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 91.5,
+            "usage": 6
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 86.3,
+            "usage": 4
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 94.6,
+            "usage": 2
+          }
+        ]
+      },
+      "answer": "Yoshinobu Yamamoto",
+      "openingHint": "RHP, active 2024\u2013present in MLB",
+      "progressiveHints": [
+        "Japanese ace import",
+        "Joined the Dodgers",
+        "Won the World Series in his rookie season"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
