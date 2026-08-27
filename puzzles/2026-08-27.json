@@ -1,0 +1,78 @@
+{
+  "date": "2026-08-27",
+  "puzzleNumber": 84,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose number is that \u2014 retired league-wide?",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Ted Williams"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Set the rookie home run record with 52 in 2017.",
+      "answer": "Aaron Judge",
+      "choices": [
+        "Aaron Judge",
+        "Cody Bellinger",
+        "Pete Alonso",
+        "Yordan Alvarez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".326 / 36 HR / 110 RBI / 22 SB",
+      "answer": "Christian Yelich",
+      "openingHint": "2018 NL season",
+      "progressiveHints": [
+        "NL Central team",
+        "Outfielder",
+        "Won NL MVP"
+      ],
+      "answerSeason": 2018
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 93.2,
+            "usage": 85
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 83.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 94.8,
+            "usage": 6
+          }
+        ]
+      },
+      "answer": "Kenley Jansen",
+      "openingHint": "RHP closer, active 2010\u2013present",
+      "progressiveHints": [
+        "All-time saves rank top 5",
+        "Throws essentially one pitch",
+        "Was a Dodger at the time"
+      ],
+      "answerSeason": 2017
+    }
+  ]
+}
