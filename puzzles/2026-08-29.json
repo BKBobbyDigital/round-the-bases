@@ -1,0 +1,96 @@
+{
+  "date": "2026-08-29",
+  "puzzleNumber": 86,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many bases are there on a baseball diamond?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Pitched a no-hitter at age 44, has the all-time strikeout record.",
+      "answer": "Nolan Ryan",
+      "choices": [
+        "Nolan Ryan",
+        "Randy Johnson",
+        "Roger Clemens",
+        "Bartolo Colon"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".317 / 50 HR / 126 RBI / 5 SB",
+      "answer": "Albert Belle",
+      "openingHint": "1995 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Outfielder",
+        "First player ever with 50 HR + 50 2B"
+      ],
+      "answerSeason": 1995
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 95.2,
+            "usage": 45
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 80.2,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 87.6,
+            "usage": 12
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.2,
+            "usage": 11
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 97.0,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 84.3,
+            "usage": 2
+          }
+        ]
+      },
+      "answer": "Corbin Burnes",
+      "openingHint": "RHP, active 2018\u2013present",
+      "progressiveHints": [
+        "2021 NL Cy Young",
+        "Cutter is his primary pitch",
+        "Started with the Brewers"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
