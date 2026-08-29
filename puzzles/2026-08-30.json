@@ -1,0 +1,55 @@
+{
+  "date": "2026-08-30",
+  "puzzleNumber": 87,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Who holds the all-time hits record?",
+      "answer": "Pete Rose",
+      "choices": [
+        "Pete Rose",
+        "Ty Cobb",
+        "Hank Aaron",
+        "Derek Jeter"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "7-time Cy Young winner \u2014 the most ever.",
+      "answer": "Roger Clemens",
+      "choices": [
+        "Roger Clemens",
+        "Greg Maddux",
+        "Randy Johnson",
+        "Steve Carlton"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stance",
+      "prompt": "Signature backward cap, sweet left-handed swing, played his prime in Seattle.",
+      "answer": "Ken Griffey Jr.",
+      "choices": [
+        "Ken Griffey Jr.",
+        "Barry Bonds",
+        "Larry Walker",
+        "Bobby Bonds"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "silhouette",
+      "prompt": "RHP with a signature mustache and a two-pitch mix; Braves ace.",
+      "answer": "Spencer Strider",
+      "choices": [
+        "Spencer Strider",
+        "Charlie Morton",
+        "Max Fried",
+        "Kyle Wright"
+      ]
+    }
+  ]
+}
