@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-31",
+  "puzzleNumber": 88,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Wrigley Field?",
+      "answer": "Cubs",
+      "choices": [
+        "Cubs",
+        "White Sox",
+        "Brewers",
+        "Cardinals"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke that rookie HR record with 53 in 2019.",
+      "answer": "Pete Alonso",
+      "choices": [
+        "Pete Alonso",
+        "Aaron Judge",
+        "Yordan Alvarez",
+        "Mark McGwire"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".362 / 45 HR / 101 RBI / 6 SB",
+      "answer": "Barry Bonds",
+      "openingHint": "2004 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Walked an unprecedented amount of times",
+        "Won his 4th straight MVP"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.0,
+            "usage": 30
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.0,
+            "usage": 27
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 83.8,
+            "usage": 22
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 77.2,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 82.4,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Tim Lincecum",
+      "openingHint": "RHP, 2007\u20132016",
+      "progressiveHints": [
+        "Back-to-back NL Cy Youngs",
+        "Long hair"
+      ],
+      "answerSeason": 2009
+    }
+  ]
+}
