@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-01",
+  "puzzleNumber": 89,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What stadium is home to the Green Monster?",
+      "answer": "Fenway Park",
+      "choices": [
+        "Fenway Park",
+        "Wrigley Field",
+        "Camden Yards",
+        "Oracle Park"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "All-time saves leader with 652. Wore #42, retired league-wide alongside his.",
+      "answer": "Mariano Rivera",
+      "choices": [
+        "Mariano Rivera",
+        "Trevor Hoffman",
+        "Lee Smith",
+        "Dennis Eckersley"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".305 / 47 HR / 115 RBI / 15 SB",
+      "answer": "Cody Bellinger",
+      "openingHint": "2019 NL season",
+      "progressiveHints": [
+        "NL West team at the time",
+        "Outfielder",
+        "Won NL MVP at age 24"
+      ],
+      "answerSeason": 2019
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.6,
+            "usage": 50
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 87.4,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 79.4,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 86.9,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Justin Verlander",
+      "openingHint": "RHP, active 2005\u2013present",
+      "progressiveHints": [
+        "3-time AL Cy Young",
+        "2011 AL MVP",
+        "Pitched for the Astros at the time"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
