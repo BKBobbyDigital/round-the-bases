@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-03",
+  "puzzleNumber": 91,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which league adopted the designated hitter first?",
+      "answer": "American League",
+      "choices": [
+        "American League",
+        "National League",
+        "Both at once",
+        "Neither uses it"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
+      "answer": "Chipper Jones",
+      "choices": [
+        "Chipper Jones",
+        "Andruw Jones",
+        "Dale Murphy",
+        "David Justice"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".368 / 39 HR / 116 RBI / 15 SB",
+      "answer": "Jeff Bagwell",
+      "openingHint": "Strike-shortened 1994 NL",
+      "progressiveHints": [
+        "NL Central team",
+        "First baseman",
+        "Won unanimous NL MVP"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.0,
+            "usage": 37
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 83.7,
+            "usage": 27
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 89.2,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 84.5,
+            "usage": 11
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 88.8,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Shane Bieber",
+      "openingHint": "RHP, active 2018\u2013present",
+      "progressiveHints": [
+        "2020 AL Cy Young (shortened season)",
+        "Cleveland's ace",
+        "First name starts with S"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
