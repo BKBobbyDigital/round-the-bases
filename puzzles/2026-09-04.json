@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-04",
+  "puzzleNumber": 92,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
+      "answer": "Mariners",
+      "choices": [
+        "Mariners",
+        "Reds",
+        "White Sox",
+        "Yankees"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Last player to hit over .400 \u2014 batted .406 in 1941.",
+      "answer": "Ted Williams",
+      "choices": [
+        "Ted Williams",
+        "Joe DiMaggio",
+        "Stan Musial",
+        "Lou Gehrig"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".333 / 44 HR / 165 RBI / 2 SB",
+      "answer": "Manny Ramirez",
+      "openingHint": "1999 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Outfielder",
+        "Set a then-modern record for RBIs"
+      ],
+      "answerSeason": 1999
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 81.7,
+            "usage": 41
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 90.8,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 90.8,
+            "usage": 20
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 72.5,
+            "usage": 9
+          }
+        ]
+      },
+      "answer": "Patrick Corbin",
+      "openingHint": "LHP, active 2012\u2013present",
+      "progressiveHints": [
+        "Slider-heavy starter",
+        "Was a D-back at that point",
+        "Signed with the Nationals after this year"
+      ],
+      "answerSeason": 2018
+    }
+  ]
+}
