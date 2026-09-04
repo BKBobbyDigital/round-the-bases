@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-05",
+  "puzzleNumber": 93,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team has won the most World Series titles?",
+      "answer": "Yankees",
+      "choices": [
+        "Yankees",
+        "Cardinals",
+        "Athletics",
+        "Red Sox"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Hit the 'Shot Heard 'Round the World' in 1951.",
+      "answer": "Bobby Thomson",
+      "choices": [
+        "Bobby Thomson",
+        "Joe DiMaggio",
+        "Willie Mays",
+        "Duke Snider"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".350 / 8 HR / 69 RBI / 56 SB",
+      "answer": "Ichiro Suzuki",
+      "openingHint": "2001 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Outfielder",
+        "Won AL ROY and AL MVP in the same year"
+      ],
+      "answerSeason": 2001
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 81.4,
+            "usage": 31
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.9,
+            "usage": 27
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.8,
+            "usage": 21
+          }
+        ]
+      },
+      "answer": "Stephen Strasburg",
+      "openingHint": "RHP, 2010\u20132022",
+      "progressiveHints": [
+        "2019 WS MVP",
+        "Spent his whole career with one team",
+        "Was a National"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
