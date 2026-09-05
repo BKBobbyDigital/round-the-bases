@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-06",
+  "puzzleNumber": 94,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many bases are there on a baseball diamond?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "10 consecutive 200-hit seasons \u2014 set the record.",
+      "answer": "Ichiro Suzuki",
+      "choices": [
+        "Ichiro Suzuki",
+        "Pete Rose",
+        "Wade Boggs",
+        "Rod Carew"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Last player to bat .400 in a season \u2014 finished at .406 in 1941.",
+      "answer": "Ted Williams",
+      "choices": [
+        "Ted Williams",
+        "Joe DiMaggio",
+        "Stan Musial",
+        "Tony Gwynn"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Posted a 1.74 ERA in 2000 \u2014 one of the lowest of the live-ball era.",
+      "answer": "Pedro Martinez",
+      "choices": [
+        "Pedro Martinez",
+        "Greg Maddux",
+        "Roger Clemens",
+        "Randy Johnson"
+      ]
+    }
+  ]
+}
