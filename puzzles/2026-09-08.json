@@ -1,0 +1,96 @@
+{
+  "date": "2026-09-08",
+  "puzzleNumber": 96,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2016 World Series, ending a 108-year drought?",
+      "answer": "Cubs",
+      "choices": [
+        "Cubs",
+        "Indians",
+        "Dodgers",
+        "Royals"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "4 straight Cy Youngs in the 1990s. Signature glasses on the mound. Braves dynasty.",
+      "answer": "Greg Maddux",
+      "choices": [
+        "Greg Maddux",
+        "Tom Glavine",
+        "John Smoltz",
+        "Steve Avery"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".260 / 53 HR / 120 RBI / 1 SB",
+      "answer": "Pete Alonso",
+      "openingHint": "2019 NL season",
+      "progressiveHints": [
+        "NL East team",
+        "First baseman",
+        "Set the rookie HR record"
+      ],
+      "answerSeason": 2019
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 95.2,
+            "usage": 45
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 80.2,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 87.6,
+            "usage": 12
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.2,
+            "usage": 11
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 97.0,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 84.3,
+            "usage": 2
+          }
+        ]
+      },
+      "answer": "Corbin Burnes",
+      "openingHint": "RHP, active 2018\u2013present",
+      "progressiveHints": [
+        "2021 NL Cy Young",
+        "Cutter is his primary pitch",
+        "Started with the Brewers"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
