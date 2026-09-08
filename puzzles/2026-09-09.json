@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-09",
+  "puzzleNumber": 97,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Career: Red Sox to Yankees. Won World Series with both.",
+      "answer": "Johnny Damon",
+      "choices": [
+        "Johnny Damon",
+        "Wade Boggs",
+        "Roger Clemens",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".330 / 44 HR / 139 RBI / 4 SB",
+      "answer": "Miguel Cabrera",
+      "openingHint": "2012 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Third baseman that year",
+        "Won the Triple Crown"
+      ],
+      "answerSeason": 2012
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.9,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 86.4,
+            "usage": 27
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 96.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.5,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Tarik Skubal",
+      "openingHint": "LHP, active 2020\u2013present",
+      "progressiveHints": [
+        "2024 AL Cy Young",
+        "Tigers ace",
+        "First name starts with T"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
