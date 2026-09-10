@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-11",
+  "puzzleNumber": 99,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Camden Yards?",
+      "answer": "Orioles",
+      "choices": [
+        "Orioles",
+        "Nationals",
+        "Phillies",
+        "Pirates"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Played in 2,632 consecutive games \u2014 the streak Ripken broke.",
+      "answer": "Lou Gehrig",
+      "choices": [
+        "Lou Gehrig",
+        "Cal Ripken Jr.",
+        "Steve Garvey",
+        "Pete Rose"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".355 / 39 HR / 123 RBI / 8 SB",
+      "answer": "Hank Aaron",
+      "openingHint": "1959 NL season",
+      "progressiveHints": [
+        "Played his whole prime in Milwaukee",
+        "Right fielder",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1959
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.1,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 79.7,
+            "usage": 35
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.0,
+            "usage": 17
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.2,
+            "usage": 10
+          }
+        ]
+      },
+      "answer": "Chris Sale",
+      "openingHint": "LHP, active 2010\u2013present",
+      "progressiveHints": [
+        "2024 NL Cy Young",
+        "Tall"
+      ],
+      "answerSeason": 2018
+    }
+  ]
+}
