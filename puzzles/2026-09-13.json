@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-13",
+  "puzzleNumber": 101,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose consecutive-games-played streak did Cal Ripken break in 1995?",
+      "answer": "Lou Gehrig",
+      "choices": [
+        "Lou Gehrig",
+        "Pete Rose",
+        "Hank Aaron",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won 8 batting titles. Hit .394 in the strike-shortened 1994 season.",
+      "answer": "Tony Gwynn",
+      "choices": [
+        "Tony Gwynn",
+        "Wade Boggs",
+        "Rod Carew",
+        "George Brett"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stance",
+      "prompt": "Signature pre-pitch ritual: spit in hands, clap, pat the chest plate. Big lefty masher.",
+      "answer": "David Ortiz",
+      "choices": [
+        "David Ortiz",
+        "Manny Ramirez",
+        "Jim Thome",
+        "Frank Thomas"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "silhouette",
+      "prompt": "Intense glare on the mound; RHP from St. Louis. Threw inside; finished 1968 with a 1.12 ERA.",
+      "answer": "Bob Gibson",
+      "choices": [
+        "Bob Gibson",
+        "Steve Carlton",
+        "Bruce Sutter",
+        "Lee Smith"
+      ]
+    }
+  ]
+}
