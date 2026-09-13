@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-14",
+  "puzzleNumber": 102,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many innings are in a regulation MLB game?",
+      "answer": "9",
+      "choices": [
+        "9",
+        "7",
+        "10",
+        "11"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Called his shot during the 1932 World Series.",
+      "answer": "Babe Ruth",
+      "choices": [
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Joe DiMaggio",
+        "Mickey Mantle"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".304 / 56 HR / 147 RBI / 15 SB",
+      "answer": "Ken Griffey Jr.",
+      "openingHint": "1997 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Center fielder",
+        "Won AL MVP"
+      ],
+      "answerSeason": 1997
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 98.8,
+            "usage": 48
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 92.5,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 91.7,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 83.4,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Jacob deGrom",
+      "openingHint": "RHP, active 2014\u2013present",
+      "progressiveHints": [
+        "Two-time NL Cy Young",
+        "Started his career with the Mets",
+        "Signed with Texas"
+      ],
+      "answerSeason": 2022
+    }
+  ]
+}
