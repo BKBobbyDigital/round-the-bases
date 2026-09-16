@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-16",
+  "puzzleNumber": 104,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team has won the most World Series titles?",
+      "answer": "Yankees",
+      "choices": [
+        "Yankees",
+        "Cardinals",
+        "Athletics",
+        "Red Sox"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won the AL Triple Crown in 2012 \u2014 first since Yastrzemski in '67.",
+      "answer": "Miguel Cabrera",
+      "choices": [
+        "Miguel Cabrera",
+        "Mike Trout",
+        "Robinson Cano",
+        "Albert Pujols"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".394 / 12 HR / 64 RBI / 5 SB",
+      "answer": "Tony Gwynn",
+      "openingHint": "Strike-shortened 1994",
+      "progressiveHints": [
+        "NL West team",
+        "Listed at 5'11\"",
+        "Made 15 All-Star teams"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.0,
+            "usage": 37
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 83.7,
+            "usage": 27
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 89.2,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 84.5,
+            "usage": 11
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 88.8,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Shane Bieber",
+      "openingHint": "RHP, active 2018\u2013present",
+      "progressiveHints": [
+        "2020 AL Cy Young (shortened season)",
+        "Cleveland's ace",
+        "First name starts with S"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
