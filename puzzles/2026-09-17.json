@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-17",
+  "puzzleNumber": 105,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What does ERA stand for?",
+      "answer": "Earned Run Average",
+      "choices": [
+        "Earned Run Average",
+        "Earned Runs Allowed",
+        "Effective Run Average",
+        "Even Run Average"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
+      "answer": "Chipper Jones",
+      "choices": [
+        "Chipper Jones",
+        "Andruw Jones",
+        "Dale Murphy",
+        "David Justice"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".326 / 36 HR / 110 RBI / 22 SB",
+      "answer": "Christian Yelich",
+      "openingHint": "2018 NL season",
+      "progressiveHints": [
+        "NL Central team",
+        "Outfielder",
+        "Won NL MVP"
+      ],
+      "answerSeason": 2018
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.9,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 86.4,
+            "usage": 27
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 96.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.5,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Tarik Skubal",
+      "openingHint": "LHP, active 2020\u2013present",
+      "progressiveHints": [
+        "2024 AL Cy Young",
+        "Tigers ace",
+        "First name starts with T"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
