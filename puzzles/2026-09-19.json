@@ -1,0 +1,91 @@
+{
+  "date": "2026-09-19",
+  "puzzleNumber": 107,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many feet between bases?",
+      "answer": "90",
+      "choices": [
+        "90",
+        "80",
+        "100",
+        "85"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "10 consecutive 200-hit seasons \u2014 set the record.",
+      "answer": "Ichiro Suzuki",
+      "choices": [
+        "Ichiro Suzuki",
+        "Pete Rose",
+        "Wade Boggs",
+        "Rod Carew"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".362 / 45 HR / 101 RBI / 6 SB",
+      "answer": "Barry Bonds",
+      "openingHint": "2004 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Walked an unprecedented amount of times",
+        "Won his 4th straight MVP"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.8,
+            "usage": 32
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 92.9,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 80.8,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.2,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.0,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Felix Hernandez",
+      "openingHint": "RHP, 2005\u20132019, AL West",
+      "progressiveHints": [
+        "2010 AL Cy Young",
+        "Nicknamed 'King'",
+        "Spent his whole career with one team"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}
