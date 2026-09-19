@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-20",
+  "puzzleNumber": 108,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What position is known as 'the hot corner'?",
+      "answer": "Third base",
+      "choices": [
+        "Third base",
+        "Shortstop",
+        "Catcher",
+        "Second base"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Stole 130 bases in a single season (1982).",
+      "answer": "Rickey Henderson",
+      "choices": [
+        "Rickey Henderson",
+        "Vince Coleman",
+        "Lou Brock",
+        "Tim Raines"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Broke Babe Ruth's career home run record on April 8, 1974.",
+      "answer": "Hank Aaron",
+      "choices": [
+        "Hank Aaron",
+        "Willie Mays",
+        "Frank Robinson",
+        "Roger Maris"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Threw 7 career no-hitters and pitched until age 46.",
+      "answer": "Nolan Ryan",
+      "choices": [
+        "Nolan Ryan",
+        "Randy Johnson",
+        "Roger Clemens",
+        "Sandy Koufax"
+      ]
+    }
+  ]
+}
