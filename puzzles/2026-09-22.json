@@ -1,0 +1,96 @@
+{
+  "date": "2026-09-22",
+  "puzzleNumber": 110,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Two-way player. AL MVP. Threw a no-hitter AND hit 40+ HRs in the same season.",
+      "answer": "Shohei Ohtani",
+      "choices": [
+        "Shohei Ohtani",
+        "Babe Ruth",
+        "Mike Trout",
+        "Bryce Harper"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".314 / 54 HR / 156 RBI / 24 SB",
+      "answer": "Alex Rodriguez",
+      "openingHint": "2007 AL season",
+      "progressiveHints": [
+        "AL East team at the time",
+        "Played the corner",
+        "Won AL MVP for the third time"
+      ],
+      "answerSeason": 2007
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 98.8,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 94.0,
+            "usage": 28
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 83.0,
+            "usage": 11
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 84.7,
+            "usage": 10
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 86.6,
+            "usage": 6
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.3,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Paul Skenes",
+      "openingHint": "RHP rookie, active 2024\u2013present",
+      "progressiveHints": [
+        "2024 NL Rookie of the Year",
+        "Pirates' top pick",
+        "All-Star starter as a rookie"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
