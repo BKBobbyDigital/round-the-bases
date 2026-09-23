@@ -1,0 +1,79 @@
+{
+  "date": "2026-09-23",
+  "puzzleNumber": 111,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Who holds the all-time hits record?",
+      "answer": "Pete Rose",
+      "choices": [
+        "Pete Rose",
+        "Ty Cobb",
+        "Hank Aaron",
+        "Derek Jeter"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Threw the only perfect game in World Series history (1956).",
+      "answer": "Don Larsen",
+      "choices": [
+        "Don Larsen",
+        "Sandy Koufax",
+        "Whitey Ford",
+        "Bob Gibson"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".308 / 66 HR / 158 RBI / 18 SB",
+      "answer": "Sammy Sosa",
+      "openingHint": "1998 NL season",
+      "progressiveHints": [
+        "NL Central team",
+        "Outfielder",
+        "Battled for the HR title",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1998
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 93.2,
+            "usage": 85
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 83.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 94.8,
+            "usage": 6
+          }
+        ]
+      },
+      "answer": "Kenley Jansen",
+      "openingHint": "RHP closer, active 2010\u2013present",
+      "progressiveHints": [
+        "All-time saves rank top 5",
+        "Throws essentially one pitch",
+        "Was a Dodger at the time"
+      ],
+      "answerSeason": 2017
+    }
+  ]
+}
