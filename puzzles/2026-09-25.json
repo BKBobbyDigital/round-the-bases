@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-25",
+  "puzzleNumber": 113,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What does ERA stand for?",
+      "answer": "Earned Run Average",
+      "choices": [
+        "Earned Run Average",
+        "Earned Runs Allowed",
+        "Effective Run Average",
+        "Even Run Average"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke Babe Ruth's career home run record in 1974.",
+      "answer": "Hank Aaron",
+      "choices": [
+        "Hank Aaron",
+        "Willie Mays",
+        "Frank Robinson",
+        "Roger Maris"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".317 / 50 HR / 126 RBI / 5 SB",
+      "answer": "Albert Belle",
+      "openingHint": "1995 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Outfielder",
+        "First player ever with 50 HR + 50 2B"
+      ],
+      "answerSeason": 1995
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.0,
+            "usage": 30
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.0,
+            "usage": 27
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 83.8,
+            "usage": 22
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 77.2,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 82.4,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Tim Lincecum",
+      "openingHint": "RHP, 2007\u20132016",
+      "progressiveHints": [
+        "Back-to-back NL Cy Youngs",
+        "Long hair"
+      ],
+      "answerSeason": 2009
+    }
+  ]
+}
