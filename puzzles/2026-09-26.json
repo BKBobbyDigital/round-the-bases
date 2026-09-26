@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-26",
+  "puzzleNumber": 114,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Wrigley Field?",
+      "answer": "Cubs",
+      "choices": [
+        "Cubs",
+        "White Sox",
+        "Brewers",
+        "Cardinals"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Played 20 seasons all with the Yankees. 3,465 hits. 5 rings.",
+      "answer": "Derek Jeter",
+      "choices": [
+        "Derek Jeter",
+        "Bernie Williams",
+        "Mariano Rivera",
+        "Jorge Posada"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".260 / 53 HR / 120 RBI / 1 SB",
+      "answer": "Pete Alonso",
+      "openingHint": "2019 NL season",
+      "progressiveHints": [
+        "NL East team",
+        "First baseman",
+        "Set the rookie HR record"
+      ],
+      "answerSeason": 2019
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.3,
+            "usage": 51
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.3,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 79.6,
+            "usage": 12
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 85.3,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Spencer Strider",
+      "openingHint": "RHP, active 2021\u2013present, NL East",
+      "progressiveHints": [
+        "Braves ace",
+        "Two-pitch mix",
+        "Mustache icon"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
