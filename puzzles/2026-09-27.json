@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-27",
+  "puzzleNumber": 115,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many runs does a grand slam score?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Pitched 5 scoreless relief innings in Game 7 of the 2014 World Series.",
+      "answer": "Madison Bumgarner",
+      "choices": [
+        "Madison Bumgarner",
+        "Tim Lincecum",
+        "Jeremy Affeldt",
+        "Hunter Strickland"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stance",
+      "prompt": "Lefty with a signature pre-stride 'pulling bat from sleeve' motion; slap-style contact hitter.",
+      "answer": "Ichiro Suzuki",
+      "choices": [
+        "Ichiro Suzuki",
+        "Tony Gwynn",
+        "Pete Rose",
+        "Wade Boggs"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "silhouette",
+      "prompt": "Tall LHP. Signature pause at the top of the leg kick, hat tip on follow-through. Dodgers ace.",
+      "answer": "Clayton Kershaw",
+      "choices": [
+        "Clayton Kershaw",
+        "CC Sabathia",
+        "Andy Pettitte",
+        "Cole Hamels"
+      ]
+    }
+  ]
+}
