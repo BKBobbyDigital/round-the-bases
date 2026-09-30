@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-30",
+  "puzzleNumber": 118,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What position is known as 'the hot corner'?",
+      "answer": "Third base",
+      "choices": [
+        "Third base",
+        "Shortstop",
+        "Catcher",
+        "Second base"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Hit the 'Shot Heard 'Round the World' in 1951.",
+      "answer": "Bobby Thomson",
+      "choices": [
+        "Bobby Thomson",
+        "Joe DiMaggio",
+        "Willie Mays",
+        "Duke Snider"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".319 / 45 HR / 110 RBI / 25 SB",
+      "answer": "Chipper Jones",
+      "openingHint": "1999 NL season",
+      "progressiveHints": [
+        "Played his entire career with one team",
+        "Switch-hitting third baseman",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1999
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.5,
+            "usage": 46
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 84.9,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 80.5,
+            "usage": 18
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 79.7,
+            "usage": 15
+          }
+        ]
+      },
+      "answer": "Trevor Bauer",
+      "openingHint": "RHP, 2012\u20132021",
+      "progressiveHints": [
+        "2020 NL Cy Young",
+        "Won pitching the shortened season",
+        "Was a Red at the time"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
