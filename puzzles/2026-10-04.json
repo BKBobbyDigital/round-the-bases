@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-04",
+  "puzzleNumber": 122,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many feet between bases?",
+      "answer": "90",
+      "choices": [
+        "90",
+        "80",
+        "100",
+        "85"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke that rookie HR record with 53 in 2019.",
+      "answer": "Pete Alonso",
+      "choices": [
+        "Pete Alonso",
+        "Aaron Judge",
+        "Yordan Alvarez",
+        "Mark McGwire"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Hit two walk-off home runs in the 2011 World Series, including a Game 6 force-extra game blast.",
+      "answer": "David Freese",
+      "choices": [
+        "David Freese",
+        "Albert Pujols",
+        "Lance Berkman",
+        "Yadier Molina"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Posted a 1.12 ERA in 1968 \u2014 the year MLB lowered the mound the following season.",
+      "answer": "Bob Gibson",
+      "choices": [
+        "Bob Gibson",
+        "Denny McLain",
+        "Don Drysdale",
+        "Juan Marichal"
+      ]
+    }
+  ]
+}
