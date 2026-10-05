@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-05",
+  "puzzleNumber": 123,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Camden Yards?",
+      "answer": "Orioles",
+      "choices": [
+        "Orioles",
+        "Nationals",
+        "Phillies",
+        "Pirates"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won 8 batting titles. Hit .394 in the strike-shortened 1994 season.",
+      "answer": "Tony Gwynn",
+      "choices": [
+        "Tony Gwynn",
+        "Wade Boggs",
+        "Rod Carew",
+        "George Brett"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".311 / 62 HR / 131 RBI / 16 SB",
+      "answer": "Aaron Judge",
+      "openingHint": "2022 season",
+      "progressiveHints": [
+        "AL East team",
+        "Right fielder",
+        "Set the AL HR record"
+      ],
+      "answerSeason": 2022
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.8,
+            "usage": 51
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 81.3,
+            "usage": 20
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.5,
+            "usage": 19
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.0,
+            "usage": 9
+          }
+        ]
+      },
+      "answer": "Blake Snell",
+      "openingHint": "LHP, active 2016\u2013present",
+      "progressiveHints": [
+        "2018 AL Cy Young",
+        "Was a Ray at the time",
+        "Won a second Cy Young in 2023"
+      ],
+      "answerSeason": 2018
+    }
+  ]
+}
