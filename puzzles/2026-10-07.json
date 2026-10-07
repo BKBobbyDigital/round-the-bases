@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-07",
+  "puzzleNumber": 125,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many runs does a grand slam score?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Threw the only perfect game in World Series history (1956).",
+      "answer": "Don Larsen",
+      "choices": [
+        "Don Larsen",
+        "Sandy Koufax",
+        "Whitey Ford",
+        "Bob Gibson"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".337 / 39 HR / 126 RBI / 15 SB",
+      "answer": "Vladimir Guerrero",
+      "openingHint": "2004 AL season",
+      "progressiveHints": [
+        "AL West team at the time",
+        "Right fielder",
+        "Won AL MVP in his first season with the team"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 95.2,
+            "usage": 45
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 80.2,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 87.6,
+            "usage": 12
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.2,
+            "usage": 11
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 97.0,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 84.3,
+            "usage": 2
+          }
+        ]
+      },
+      "answer": "Corbin Burnes",
+      "openingHint": "RHP, active 2018\u2013present",
+      "progressiveHints": [
+        "2021 NL Cy Young",
+        "Cutter is his primary pitch",
+        "Started with the Brewers"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
