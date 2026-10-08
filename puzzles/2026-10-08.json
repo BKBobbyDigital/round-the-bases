@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-08",
+  "puzzleNumber": 126,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What position is known as 'the hot corner'?",
+      "answer": "Third base",
+      "choices": [
+        "Third base",
+        "Shortstop",
+        "Catcher",
+        "Second base"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Career: Red Sox to Yankees. Won World Series with both.",
+      "answer": "Johnny Damon",
+      "choices": [
+        "Johnny Damon",
+        "Wade Boggs",
+        "Roger Clemens",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".260 / 53 HR / 120 RBI / 1 SB",
+      "answer": "Pete Alonso",
+      "openingHint": "2019 NL season",
+      "progressiveHints": [
+        "NL East team",
+        "First baseman",
+        "Set the rookie HR record"
+      ],
+      "answerSeason": 2019
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.9,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 86.4,
+            "usage": 27
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 96.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.5,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Tarik Skubal",
+      "openingHint": "LHP, active 2020\u2013present",
+      "progressiveHints": [
+        "2024 AL Cy Young",
+        "Tigers ace",
+        "First name starts with T"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
