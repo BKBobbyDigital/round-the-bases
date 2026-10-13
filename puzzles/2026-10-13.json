@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-13",
+  "puzzleNumber": 131,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Who holds the all-time strikeout record?",
+      "answer": "Nolan Ryan",
+      "choices": [
+        "Nolan Ryan",
+        "Randy Johnson",
+        "Roger Clemens",
+        "Steve Carlton"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke MLB's color barrier in 1947 with the Brooklyn Dodgers.",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Larry Doby",
+        "Roy Campanella",
+        "Satchel Paige"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".366 / 49 HR / 130 RBI / 33 SB",
+      "answer": "Larry Walker",
+      "openingHint": "1997 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Won NL MVP playing at altitude"
+      ],
+      "answerSeason": 1997
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 98.8,
+            "usage": 48
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 92.5,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 91.7,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 83.4,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Jacob deGrom",
+      "openingHint": "RHP, active 2014\u2013present",
+      "progressiveHints": [
+        "Two-time NL Cy Young",
+        "Started his career with the Mets",
+        "Signed with Texas"
+      ],
+      "answerSeason": 2022
+    }
+  ]
+}
