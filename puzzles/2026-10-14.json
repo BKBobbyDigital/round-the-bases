@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-14",
+  "puzzleNumber": 132,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Wrigley Field?",
+      "answer": "Cubs",
+      "choices": [
+        "Cubs",
+        "White Sox",
+        "Brewers",
+        "Cardinals"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
+      "answer": "Chipper Jones",
+      "choices": [
+        "Chipper Jones",
+        "Andruw Jones",
+        "Dale Murphy",
+        "David Justice"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".308 / 66 HR / 158 RBI / 18 SB",
+      "answer": "Sammy Sosa",
+      "openingHint": "1998 NL season",
+      "progressiveHints": [
+        "NL Central team",
+        "Outfielder",
+        "Battled for the HR title",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1998
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\udd8b",
+            "name": "Knuckleball",
+            "speed": 77.8,
+            "usage": 85
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 84.0,
+            "usage": 13
+          }
+        ]
+      },
+      "answer": "R.A. Dickey",
+      "openingHint": "RHP, knuckleballer",
+      "progressiveHints": [
+        "2012 NL Cy Young",
+        "Played for the Mets",
+        "Wrote a memoir titled 'Wherever I Wind Up'"
+      ],
+      "answerSeason": 2012
+    }
+  ]
+}
