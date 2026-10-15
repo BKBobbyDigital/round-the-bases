@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-15",
+  "puzzleNumber": 133,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which jersey number is retired across all of MLB?",
+      "answer": "42",
+      "choices": [
+        "42",
+        "7",
+        "3",
+        "24"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Hit the 'Shot Heard 'Round the World' in 1951.",
+      "answer": "Bobby Thomson",
+      "choices": [
+        "Bobby Thomson",
+        "Joe DiMaggio",
+        "Willie Mays",
+        "Duke Snider"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".346 / 24 HR / 81 RBI / 32 SB",
+      "answer": "Jose Altuve",
+      "openingHint": "2017 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Listed at 5'6\"",
+        "Won AL MVP"
+      ],
+      "answerSeason": 2017
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.8,
+            "usage": 32
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 92.9,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 80.8,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.2,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.0,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Felix Hernandez",
+      "openingHint": "RHP, 2005\u20132019, AL West",
+      "progressiveHints": [
+        "2010 AL Cy Young",
+        "Nicknamed 'King'",
+        "Spent his whole career with one team"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}
