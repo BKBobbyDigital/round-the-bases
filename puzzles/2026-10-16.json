@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-16",
+  "puzzleNumber": 134,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Played 20 seasons all with the Yankees. 3,465 hits. 5 rings.",
+      "answer": "Derek Jeter",
+      "choices": [
+        "Derek Jeter",
+        "Bernie Williams",
+        "Mariano Rivera",
+        "Jorge Posada"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".299 / 70 HR / 147 RBI / 1 SB",
+      "answer": "Mark McGwire",
+      "openingHint": "1998 NL season",
+      "progressiveHints": [
+        "NL Central team",
+        "First baseman",
+        "Broke Maris's HR record this year"
+      ],
+      "answerSeason": 1998
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 92.8,
+            "usage": 44
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.6,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 76.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.4,
+            "usage": 7
+          }
+        ]
+      },
+      "answer": "Madison Bumgarner",
+      "openingHint": "LHP, active 2009\u20132024",
+      "progressiveHints": [
+        "3-time WS champion",
+        "Wrote himself into postseason lore",
+        "Was a Giant at the time"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}
