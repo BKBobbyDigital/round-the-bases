@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-18",
+  "puzzleNumber": 136,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What does ERA stand for?",
+      "answer": "Earned Run Average",
+      "choices": [
+        "Earned Run Average",
+        "Earned Runs Allowed",
+        "Effective Run Average",
+        "Even Run Average"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "10 consecutive 200-hit seasons \u2014 set the record.",
+      "answer": "Ichiro Suzuki",
+      "choices": [
+        "Ichiro Suzuki",
+        "Pete Rose",
+        "Wade Boggs",
+        "Rod Carew"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Hit a walk-off HR to win the 1993 World Series for the Blue Jays.",
+      "answer": "Joe Carter",
+      "choices": [
+        "Joe Carter",
+        "Roberto Alomar",
+        "Paul Molitor",
+        "John Olerud"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Threw a perfect game on Father's Day 1964; spent his career in Philadelphia.",
+      "answer": "Jim Bunning",
+      "choices": [
+        "Jim Bunning",
+        "Robin Roberts",
+        "Steve Carlton",
+        "Chris Short"
+      ]
+    }
+  ]
+}
