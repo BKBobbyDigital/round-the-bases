@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-17",
+  "puzzleNumber": 135,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
+      "answer": "Mariners",
+      "choices": [
+        "Mariners",
+        "Reds",
+        "White Sox",
+        "Yankees"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won 8 batting titles. Hit .394 in the strike-shortened 1994 season.",
+      "answer": "Tony Gwynn",
+      "choices": [
+        "Tony Gwynn",
+        "Wade Boggs",
+        "Rod Carew",
+        "George Brett"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".317 / 50 HR / 126 RBI / 5 SB",
+      "answer": "Albert Belle",
+      "openingHint": "1995 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Outfielder",
+        "First player ever with 50 HR + 50 2B"
+      ],
+      "answerSeason": 1995
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 81.4,
+            "usage": 31
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.9,
+            "usage": 27
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.8,
+            "usage": 21
+          }
+        ]
+      },
+      "answer": "Stephen Strasburg",
+      "openingHint": "RHP, 2010\u20132022",
+      "progressiveHints": [
+        "2019 WS MVP",
+        "Spent his whole career with one team",
+        "Was a National"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
