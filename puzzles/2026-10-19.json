@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-19",
+  "puzzleNumber": 137,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many runs does a grand slam score?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Called his shot during the 1932 World Series.",
+      "answer": "Babe Ruth",
+      "choices": [
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Joe DiMaggio",
+        "Mickey Mantle"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".353 / 38 HR / 101 RBI / 2 SB",
+      "answer": "Frank Thomas",
+      "openingHint": "Strike-shortened 1994 AL",
+      "progressiveHints": [
+        "AL Central team",
+        "First baseman / DH",
+        "Won back-to-back AL MVPs"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.8,
+            "usage": 51
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 81.3,
+            "usage": 20
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.5,
+            "usage": 19
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.0,
+            "usage": 9
+          }
+        ]
+      },
+      "answer": "Blake Snell",
+      "openingHint": "LHP, active 2016\u2013present",
+      "progressiveHints": [
+        "2018 AL Cy Young",
+        "Was a Ray at the time",
+        "Won a second Cy Young in 2023"
+      ],
+      "answerSeason": 2018
+    }
+  ]
+}
