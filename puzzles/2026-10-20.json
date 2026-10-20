@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-20",
+  "puzzleNumber": 138,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose consecutive-games-played streak did Cal Ripken break in 1995?",
+      "answer": "Lou Gehrig",
+      "choices": [
+        "Lou Gehrig",
+        "Pete Rose",
+        "Hank Aaron",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "4 straight Cy Youngs in the 1990s. Signature glasses on the mound. Braves dynasty.",
+      "answer": "Greg Maddux",
+      "choices": [
+        "Greg Maddux",
+        "Tom Glavine",
+        "John Smoltz",
+        "Steve Avery"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".333 / 44 HR / 165 RBI / 2 SB",
+      "answer": "Manny Ramirez",
+      "openingHint": "1999 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Outfielder",
+        "Set a then-modern record for RBIs"
+      ],
+      "answerSeason": 1999
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 86.0,
+            "usage": 35
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.6,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 81.9,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 90.0,
+            "usage": 9
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 95.2,
+            "usage": 9
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 79.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 92.7,
+            "usage": 4
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 72.3,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Yu Darvish",
+      "openingHint": "RHP, active 2012\u2013present",
+      "progressiveHints": [
+        "Massive pitch arsenal \u2014 6+ pitches",
+        "Japanese star",
+        "Was with the Cubs at the time"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
