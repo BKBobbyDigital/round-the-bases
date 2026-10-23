@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-23",
+  "puzzleNumber": 141,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What stadium is home to the Green Monster?",
+      "answer": "Fenway Park",
+      "choices": [
+        "Fenway Park",
+        "Wrigley Field",
+        "Camden Yards",
+        "Oracle Park"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
+      "answer": "Chipper Jones",
+      "choices": [
+        "Chipper Jones",
+        "Andruw Jones",
+        "Dale Murphy",
+        "David Justice"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".314 / 54 HR / 156 RBI / 24 SB",
+      "answer": "Alex Rodriguez",
+      "openingHint": "2007 AL season",
+      "progressiveHints": [
+        "AL East team at the time",
+        "Played the corner",
+        "Won AL MVP for the third time"
+      ],
+      "answerSeason": 2007
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 100.9,
+            "usage": 82
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.5,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.6,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Aroldis Chapman",
+      "openingHint": "LHP closer, active 2010\u2013present",
+      "progressiveHints": [
+        "Topped 105 mph that season",
+        "Cuban defector",
+        "Was with the Cubs for the postseason"
+      ],
+      "answerSeason": 2016
+    }
+  ]
+}
