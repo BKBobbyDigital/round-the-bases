@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-24",
+  "puzzleNumber": 142,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "All-time saves leader with 652. Wore #42, retired league-wide alongside his.",
+      "answer": "Mariano Rivera",
+      "choices": [
+        "Mariano Rivera",
+        "Trevor Hoffman",
+        "Lee Smith",
+        "Dennis Eckersley"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".368 / 39 HR / 116 RBI / 15 SB",
+      "answer": "Jeff Bagwell",
+      "openingHint": "Strike-shortened 1994 NL",
+      "progressiveHints": [
+        "NL Central team",
+        "First baseman",
+        "Won unanimous NL MVP"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.6,
+            "usage": 50
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 87.4,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 79.4,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 86.9,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Justin Verlander",
+      "openingHint": "RHP, active 2005\u2013present",
+      "progressiveHints": [
+        "3-time AL Cy Young",
+        "2011 AL MVP",
+        "Pitched for the Astros at the time"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
