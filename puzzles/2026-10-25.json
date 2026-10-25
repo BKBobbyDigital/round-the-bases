@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-25",
+  "puzzleNumber": 143,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What position is known as 'the hot corner'?",
+      "answer": "Third base",
+      "choices": [
+        "Third base",
+        "Shortstop",
+        "Catcher",
+        "Second base"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Played 20 seasons all with the Yankees. 3,465 hits. 5 rings.",
+      "answer": "Derek Jeter",
+      "choices": [
+        "Derek Jeter",
+        "Bernie Williams",
+        "Mariano Rivera",
+        "Jorge Posada"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stance",
+      "prompt": "Compact, crouched left-handed stance; line-drive hitter who won 8 batting titles.",
+      "answer": "Tony Gwynn",
+      "choices": [
+        "Tony Gwynn",
+        "Wade Boggs",
+        "Rod Carew",
+        "George Brett"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "silhouette",
+      "prompt": "5-foot-11 lefty with long hair and an exaggerated leg kick; San Francisco's ace, back-to-back NL Cy Youngs.",
+      "answer": "Tim Lincecum",
+      "choices": [
+        "Tim Lincecum",
+        "Barry Zito",
+        "Madison Bumgarner",
+        "Matt Cain"
+      ]
+    }
+  ]
+}
