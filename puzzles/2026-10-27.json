@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-27",
+  "puzzleNumber": 145,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many bases are there on a baseball diamond?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke MLB's color barrier in 1947 with the Brooklyn Dodgers.",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Larry Doby",
+        "Roy Campanella",
+        "Satchel Paige"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".355 / 39 HR / 123 RBI / 8 SB",
+      "answer": "Hank Aaron",
+      "openingHint": "1959 NL season",
+      "progressiveHints": [
+        "Played his whole prime in Milwaukee",
+        "Right fielder",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1959
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.9,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 86.4,
+            "usage": 27
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 96.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.5,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Tarik Skubal",
+      "openingHint": "LHP, active 2020\u2013present",
+      "progressiveHints": [
+        "2024 AL Cy Young",
+        "Tigers ace",
+        "First name starts with T"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
