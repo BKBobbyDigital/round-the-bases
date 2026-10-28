@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-28",
+  "puzzleNumber": 146,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Who holds the all-time strikeout record?",
+      "answer": "Nolan Ryan",
+      "choices": [
+        "Nolan Ryan",
+        "Randy Johnson",
+        "Roger Clemens",
+        "Steve Carlton"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Hit 762 home runs \u2014 the all-time record.",
+      "answer": "Barry Bonds",
+      "choices": [
+        "Barry Bonds",
+        "Hank Aaron",
+        "Babe Ruth",
+        "Alex Rodriguez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".260 / 53 HR / 120 RBI / 1 SB",
+      "answer": "Pete Alonso",
+      "openingHint": "2019 NL season",
+      "progressiveHints": [
+        "NL East team",
+        "First baseman",
+        "Set the rookie HR record"
+      ],
+      "answerSeason": 2019
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.5,
+            "usage": 46
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 84.9,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 80.5,
+            "usage": 18
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 79.7,
+            "usage": 15
+          }
+        ]
+      },
+      "answer": "Trevor Bauer",
+      "openingHint": "RHP, 2012\u20132021",
+      "progressiveHints": [
+        "2020 NL Cy Young",
+        "Won pitching the shortened season",
+        "Was a Red at the time"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
