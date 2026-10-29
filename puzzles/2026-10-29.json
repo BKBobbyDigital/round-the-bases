@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-29",
+  "puzzleNumber": 147,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Who holds the all-time hits record?",
+      "answer": "Pete Rose",
+      "choices": [
+        "Pete Rose",
+        "Ty Cobb",
+        "Hank Aaron",
+        "Derek Jeter"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Set the rookie home run record with 52 in 2017.",
+      "answer": "Aaron Judge",
+      "choices": [
+        "Aaron Judge",
+        "Cody Bellinger",
+        "Pete Alonso",
+        "Yordan Alvarez"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".346 / 24 HR / 81 RBI / 32 SB",
+      "answer": "Jose Altuve",
+      "openingHint": "2017 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Listed at 5'6\"",
+        "Won AL MVP"
+      ],
+      "answerSeason": 2017
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 98.8,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 94.0,
+            "usage": 28
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 83.0,
+            "usage": 11
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 84.7,
+            "usage": 10
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 86.6,
+            "usage": 6
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.3,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Paul Skenes",
+      "openingHint": "RHP rookie, active 2024\u2013present",
+      "progressiveHints": [
+        "2024 NL Rookie of the Year",
+        "Pirates' top pick",
+        "All-Star starter as a rookie"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
