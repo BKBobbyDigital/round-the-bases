@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-01",
+  "puzzleNumber": 150,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
+      "answer": "Mariners",
+      "choices": [
+        "Mariners",
+        "Reds",
+        "White Sox",
+        "Yankees"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "10 consecutive 200-hit seasons \u2014 set the record.",
+      "answer": "Ichiro Suzuki",
+      "choices": [
+        "Ichiro Suzuki",
+        "Pete Rose",
+        "Wade Boggs",
+        "Rod Carew"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Hit a walk-off HR off Dennis Eckersley in Game 1 of the 1988 World Series.",
+      "answer": "Kirk Gibson",
+      "choices": [
+        "Kirk Gibson",
+        "Joe Carter",
+        "Carlton Fisk",
+        "David Freese"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Threw 7 career no-hitters and pitched until age 46.",
+      "answer": "Nolan Ryan",
+      "choices": [
+        "Nolan Ryan",
+        "Randy Johnson",
+        "Roger Clemens",
+        "Sandy Koufax"
+      ]
+    }
+  ]
+}
