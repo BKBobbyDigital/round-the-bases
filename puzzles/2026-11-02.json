@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-02",
+  "puzzleNumber": 151,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2023 World Series?",
+      "answer": "Rangers",
+      "choices": [
+        "Rangers",
+        "Diamondbacks",
+        "Astros",
+        "Phillies"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Played 20 seasons all with the Yankees. 3,465 hits. 5 rings.",
+      "answer": "Derek Jeter",
+      "choices": [
+        "Derek Jeter",
+        "Bernie Williams",
+        "Mariano Rivera",
+        "Jorge Posada"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".372 / 42 HR / 147 RBI / 5 SB",
+      "answer": "Todd Helton",
+      "openingHint": "2000 season",
+      "progressiveHints": [
+        "NL West team",
+        "First baseman",
+        "Played his whole career at altitude"
+      ],
+      "answerSeason": 2000
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 98.8,
+            "usage": 48
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 92.5,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 91.7,
+            "usage": 8
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 83.4,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Jacob deGrom",
+      "openingHint": "RHP, active 2014\u2013present",
+      "progressiveHints": [
+        "Two-time NL Cy Young",
+        "Started his career with the Mets",
+        "Signed with Texas"
+      ],
+      "answerSeason": 2022
+    }
+  ]
+}
