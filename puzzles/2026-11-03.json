@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-03",
+  "puzzleNumber": 152,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team has won the most World Series titles?",
+      "answer": "Yankees",
+      "choices": [
+        "Yankees",
+        "Cardinals",
+        "Athletics",
+        "Red Sox"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke that rookie HR record with 53 in 2019.",
+      "answer": "Pete Alonso",
+      "choices": [
+        "Pete Alonso",
+        "Aaron Judge",
+        "Yordan Alvarez",
+        "Mark McGwire"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".330 / 44 HR / 139 RBI / 4 SB",
+      "answer": "Miguel Cabrera",
+      "openingHint": "2012 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Third baseman that year",
+        "Won the Triple Crown"
+      ],
+      "answerSeason": 2012
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.7,
+            "usage": 38
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.8,
+            "usage": 30
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.9,
+            "usage": 19
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 85.4,
+            "usage": 10
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 84.8,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Charlie Morton",
+      "openingHint": "RHP, 2008\u2013present",
+      "progressiveHints": [
+        "Career resurgence in his 30s",
+        "Curveball mastery",
+        "Was with the Rays at the time"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
