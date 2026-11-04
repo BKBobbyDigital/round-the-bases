@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-04",
+  "puzzleNumber": 153,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose number is that \u2014 retired league-wide?",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Ted Williams"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Called his shot during the 1932 World Series.",
+      "answer": "Babe Ruth",
+      "choices": [
+        "Babe Ruth",
+        "Lou Gehrig",
+        "Joe DiMaggio",
+        "Mickey Mantle"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".406 / 37 HR / 120 RBI / 2 SB",
+      "answer": "Ted Williams",
+      "openingHint": "1941 AL season",
+      "progressiveHints": [
+        "AL East team",
+        "Last player to bat .400",
+        "Outfielder"
+      ],
+      "answerSeason": 1941
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 92.8,
+            "usage": 44
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.6,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 76.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.4,
+            "usage": 7
+          }
+        ]
+      },
+      "answer": "Madison Bumgarner",
+      "openingHint": "LHP, active 2009\u20132024",
+      "progressiveHints": [
+        "3-time WS champion",
+        "Wrote himself into postseason lore",
+        "Was a Giant at the time"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}
