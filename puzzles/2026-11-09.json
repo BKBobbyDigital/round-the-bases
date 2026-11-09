@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-09",
+  "puzzleNumber": 158,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Who holds the all-time hits record?",
+      "answer": "Pete Rose",
+      "choices": [
+        "Pete Rose",
+        "Ty Cobb",
+        "Hank Aaron",
+        "Derek Jeter"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Last player to hit over .400 \u2014 batted .406 in 1941.",
+      "answer": "Ted Williams",
+      "choices": [
+        "Ted Williams",
+        "Joe DiMaggio",
+        "Stan Musial",
+        "Lou Gehrig"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".319 / 45 HR / 110 RBI / 25 SB",
+      "answer": "Chipper Jones",
+      "openingHint": "1999 NL season",
+      "progressiveHints": [
+        "Played his entire career with one team",
+        "Switch-hitting third baseman",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1999
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 98.8,
+            "usage": 39
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 94.0,
+            "usage": 28
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 83.0,
+            "usage": 11
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 84.7,
+            "usage": 10
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 86.6,
+            "usage": 6
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.3,
+            "usage": 5
+          }
+        ]
+      },
+      "answer": "Paul Skenes",
+      "openingHint": "RHP rookie, active 2024\u2013present",
+      "progressiveHints": [
+        "2024 NL Rookie of the Year",
+        "Pirates' top pick",
+        "All-Star starter as a rookie"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
