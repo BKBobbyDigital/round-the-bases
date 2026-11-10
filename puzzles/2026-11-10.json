@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-10",
+  "puzzleNumber": 159,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team won the 2016 World Series, ending a 108-year drought?",
+      "answer": "Cubs",
+      "choices": [
+        "Cubs",
+        "Indians",
+        "Dodgers",
+        "Royals"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won the AL Triple Crown in 2012 \u2014 first since Yastrzemski in '67.",
+      "answer": "Miguel Cabrera",
+      "choices": [
+        "Miguel Cabrera",
+        "Mike Trout",
+        "Robinson Cano",
+        "Albert Pujols"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".314 / 54 HR / 156 RBI / 24 SB",
+      "answer": "Alex Rodriguez",
+      "openingHint": "2007 AL season",
+      "progressiveHints": [
+        "AL East team at the time",
+        "Played the corner",
+        "Won AL MVP for the third time"
+      ],
+      "answerSeason": 2007
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.6,
+            "usage": 50
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 87.4,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 79.4,
+            "usage": 17
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 86.9,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Justin Verlander",
+      "openingHint": "RHP, active 2005\u2013present",
+      "progressiveHints": [
+        "3-time AL Cy Young",
+        "2011 AL MVP",
+        "Pitched for the Astros at the time"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
