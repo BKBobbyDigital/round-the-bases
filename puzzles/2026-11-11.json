@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-11",
+  "puzzleNumber": 160,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Dodger Stadium?",
+      "answer": "Dodgers",
+      "choices": [
+        "Dodgers",
+        "Angels",
+        "Giants",
+        "Padres"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Pitched a no-hitter at age 44, has the all-time strikeout record.",
+      "answer": "Nolan Ryan",
+      "choices": [
+        "Nolan Ryan",
+        "Randy Johnson",
+        "Roger Clemens",
+        "Bartolo Colon"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".346 / 24 HR / 81 RBI / 32 SB",
+      "answer": "Jose Altuve",
+      "openingHint": "2017 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Listed at 5'6\"",
+        "Won AL MVP"
+      ],
+      "answerSeason": 2017
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 91.4,
+            "usage": 89
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 92.5,
+            "usage": 10
+          }
+        ]
+      },
+      "answer": "Mariano Rivera",
+      "openingHint": "RHP closer, 1995\u20132013",
+      "progressiveHints": [
+        "All-time saves leader",
+        "Threw essentially one pitch",
+        "Final season with the Yankees"
+      ],
+      "answerSeason": 2013
+    }
+  ]
+}
