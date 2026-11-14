@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-14",
+  "puzzleNumber": 163,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team has won the most World Series titles?",
+      "answer": "Yankees",
+      "choices": [
+        "Yankees",
+        "Cardinals",
+        "Athletics",
+        "Red Sox"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke MLB's color barrier in 1947 with the Brooklyn Dodgers.",
+      "answer": "Jackie Robinson",
+      "choices": [
+        "Jackie Robinson",
+        "Larry Doby",
+        "Roy Campanella",
+        "Satchel Paige"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".406 / 37 HR / 120 RBI / 2 SB",
+      "answer": "Ted Williams",
+      "openingHint": "1941 AL season",
+      "progressiveHints": [
+        "AL East team",
+        "Last player to bat .400",
+        "Outfielder"
+      ],
+      "answerSeason": 1941
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.8,
+            "usage": 32
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 92.9,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 80.8,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.2,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.0,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Felix Hernandez",
+      "openingHint": "RHP, 2005\u20132019, AL West",
+      "progressiveHints": [
+        "2010 AL Cy Young",
+        "Nicknamed 'King'",
+        "Spent his whole career with one team"
+      ],
+      "answerSeason": 2014
+    }
+  ]
+}
