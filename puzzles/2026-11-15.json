@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-15",
+  "puzzleNumber": 164,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which jersey number is retired across all of MLB?",
+      "answer": "42",
+      "choices": [
+        "42",
+        "7",
+        "3",
+        "24"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Switch-hitter. 1999 NL MVP. Entire career in Atlanta.",
+      "answer": "Chipper Jones",
+      "choices": [
+        "Chipper Jones",
+        "Andruw Jones",
+        "Dale Murphy",
+        "David Justice"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "iconic_moment",
+      "prompt": "Hit two walk-off home runs in the 2011 World Series, including a Game 6 force-extra game blast.",
+      "answer": "David Freese",
+      "choices": [
+        "David Freese",
+        "Albert Pujols",
+        "Lance Berkman",
+        "Yadier Molina"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "iconic_moment",
+      "prompt": "Posted a 1.12 ERA in 1968 \u2014 the year MLB lowered the mound the following season.",
+      "answer": "Bob Gibson",
+      "choices": [
+        "Bob Gibson",
+        "Denny McLain",
+        "Don Drysdale",
+        "Juan Marichal"
+      ]
+    }
+  ]
+}
