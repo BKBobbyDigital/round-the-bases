@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-16",
+  "puzzleNumber": 165,
+  "theme": "Welcome to the Week",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
+      "answer": "Mariners",
+      "choices": [
+        "Mariners",
+        "Reds",
+        "White Sox",
+        "Yankees"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Pitched 5 scoreless relief innings in Game 7 of the 2014 World Series.",
+      "answer": "Madison Bumgarner",
+      "choices": [
+        "Madison Bumgarner",
+        "Tim Lincecum",
+        "Jeremy Affeldt",
+        "Hunter Strickland"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".359 / 43 HR / 124 RBI / 5 SB",
+      "answer": "Albert Pujols",
+      "openingHint": "2003 NL season",
+      "progressiveHints": [
+        "NL Central team at the time",
+        "First baseman",
+        "Finished 2nd in NL MVP voting"
+      ],
+      "answerSeason": 2003
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 96.9,
+            "usage": 33
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 86.4,
+            "usage": 27
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 96.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.8,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 78.5,
+            "usage": 4
+          }
+        ]
+      },
+      "answer": "Tarik Skubal",
+      "openingHint": "LHP, active 2020\u2013present",
+      "progressiveHints": [
+        "2024 AL Cy Young",
+        "Tigers ace",
+        "First name starts with T"
+      ],
+      "answerSeason": 2024
+    }
+  ]
+}
