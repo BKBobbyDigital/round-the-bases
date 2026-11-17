@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-17",
+  "puzzleNumber": 166,
+  "theme": "Pitcher's Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which league adopted the designated hitter first?",
+      "answer": "American League",
+      "choices": [
+        "American League",
+        "National League",
+        "Both at once",
+        "Neither uses it"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Stole 130 bases in a single season (1982).",
+      "answer": "Rickey Henderson",
+      "choices": [
+        "Rickey Henderson",
+        "Vince Coleman",
+        "Lou Brock",
+        "Tim Raines"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".372 / 8 HR / 60 RBI / 36 SB",
+      "answer": "Ichiro Suzuki",
+      "openingHint": "2004 AL season",
+      "progressiveHints": [
+        "AL West team",
+        "Outfielder",
+        "Set the single-season hits record (262)"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 81.4,
+            "usage": 31
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.9,
+            "usage": 27
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 87.7,
+            "usage": 21
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 93.8,
+            "usage": 21
+          }
+        ]
+      },
+      "answer": "Stephen Strasburg",
+      "openingHint": "RHP, 2010\u20132022",
+      "progressiveHints": [
+        "2019 WS MVP",
+        "Spent his whole career with one team",
+        "Was a National"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
