@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-18",
+  "puzzleNumber": 167,
+  "theme": "90s Nostalgia",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What stadium is home to the Green Monster?",
+      "answer": "Fenway Park",
+      "choices": [
+        "Fenway Park",
+        "Wrigley Field",
+        "Camden Yards",
+        "Oracle Park"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Broke Babe Ruth's career home run record in 1974.",
+      "answer": "Hank Aaron",
+      "choices": [
+        "Hank Aaron",
+        "Willie Mays",
+        "Frank Robinson",
+        "Roger Maris"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".319 / 45 HR / 110 RBI / 25 SB",
+      "answer": "Chipper Jones",
+      "openingHint": "1999 NL season",
+      "progressiveHints": [
+        "Played his entire career with one team",
+        "Switch-hitting third baseman",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1999
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 86.0,
+            "usage": 35
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 95.6,
+            "usage": 16
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 81.9,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83c\udf74",
+            "name": "Split-Finger",
+            "speed": 90.0,
+            "usage": 9
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 95.2,
+            "usage": 9
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 79.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 92.7,
+            "usage": 4
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 72.3,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Yu Darvish",
+      "openingHint": "RHP, active 2012\u2013present",
+      "progressiveHints": [
+        "Massive pitch arsenal \u2014 6+ pitches",
+        "Japanese star",
+        "Was with the Cubs at the time"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
