@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-20",
+  "puzzleNumber": 169,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "How many runs does a grand slam score?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Caught the final out of the 1986 World Series for the Mets.",
+      "answer": "Gary Carter",
+      "choices": [
+        "Gary Carter",
+        "Mike Scioscia",
+        "Tony Pena",
+        "Jody Davis"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".372 / 42 HR / 147 RBI / 5 SB",
+      "answer": "Todd Helton",
+      "openingHint": "2000 season",
+      "progressiveHints": [
+        "NL West team",
+        "First baseman",
+        "Played his whole career at altitude"
+      ],
+      "answerSeason": 2000
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 81.7,
+            "usage": 41
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 90.8,
+            "usage": 29
+          },
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 90.8,
+            "usage": 20
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 72.5,
+            "usage": 9
+          }
+        ]
+      },
+      "answer": "Patrick Corbin",
+      "openingHint": "LHP, active 2012\u2013present",
+      "progressiveHints": [
+        "Slider-heavy starter",
+        "Was a D-back at that point",
+        "Signed with the Nationals after this year"
+      ],
+      "answerSeason": 2018
+    }
+  ]
+}
