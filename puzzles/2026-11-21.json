@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-21",
+  "puzzleNumber": 170,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What does ERA stand for?",
+      "answer": "Earned Run Average",
+      "choices": [
+        "Earned Run Average",
+        "Earned Runs Allowed",
+        "Effective Run Average",
+        "Even Run Average"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Won AL MVP and AL Cy Young in the same season (2011).",
+      "answer": "Justin Verlander",
+      "choices": [
+        "Justin Verlander",
+        "CC Sabathia",
+        "Felix Hernandez",
+        "David Price"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".362 / 45 HR / 101 RBI / 6 SB",
+      "answer": "Barry Bonds",
+      "openingHint": "2004 NL season",
+      "progressiveHints": [
+        "NL West team",
+        "Outfielder",
+        "Walked an unprecedented amount of times",
+        "Won his 4th straight MVP"
+      ],
+      "answerSeason": 2004
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 100.9,
+            "usage": 82
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 88.5,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 89.6,
+            "usage": 3
+          }
+        ]
+      },
+      "answer": "Aroldis Chapman",
+      "openingHint": "LHP closer, active 2010\u2013present",
+      "progressiveHints": [
+        "Topped 105 mph that season",
+        "Cuban defector",
+        "Was with the Cubs for the postseason"
+      ],
+      "answerSeason": 2016
+    }
+  ]
+}
