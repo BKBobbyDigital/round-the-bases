@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-22",
+  "puzzleNumber": 171,
+  "theme": "Sunday Special",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team plays at Dodger Stadium?",
+      "answer": "Dodgers",
+      "choices": [
+        "Dodgers",
+        "Angels",
+        "Giants",
+        "Padres"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Played in 2,632 consecutive games \u2014 the streak Ripken broke.",
+      "answer": "Lou Gehrig",
+      "choices": [
+        "Lou Gehrig",
+        "Cal Ripken Jr.",
+        "Steve Garvey",
+        "Pete Rose"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stance",
+      "prompt": "Right-handed bat wag, aggressive timing-mechanism, pre-pitch routine widely imitated and parodied.",
+      "answer": "Gary Sheffield",
+      "choices": [
+        "Gary Sheffield",
+        "Manny Ramirez",
+        "Sammy Sosa",
+        "Alex Rodriguez"
+      ]
+    },
+    {
+      "tier": "HR",
+      "type": "silhouette",
+      "prompt": "RHP with a signature mustache and a two-pitch mix; Braves ace.",
+      "answer": "Spencer Strider",
+      "choices": [
+        "Spencer Strider",
+        "Charlie Morton",
+        "Max Fried",
+        "Kyle Wright"
+      ]
+    }
+  ]
+}
