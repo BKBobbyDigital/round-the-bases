@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-26",
+  "puzzleNumber": 175,
+  "theme": "Leather Day",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "What stadium is home to the Green Monster?",
+      "answer": "Fenway Park",
+      "choices": [
+        "Fenway Park",
+        "Wrigley Field",
+        "Camden Yards",
+        "Oracle Park"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Two-way player. AL MVP. Threw a no-hitter AND hit 40+ HRs in the same season.",
+      "answer": "Shohei Ohtani",
+      "choices": [
+        "Shohei Ohtani",
+        "Babe Ruth",
+        "Mike Trout",
+        "Bryce Harper"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".330 / 44 HR / 139 RBI / 4 SB",
+      "answer": "Miguel Cabrera",
+      "openingHint": "2012 AL season",
+      "progressiveHints": [
+        "AL Central team",
+        "Third baseman that year",
+        "Won the Triple Crown"
+      ],
+      "answerSeason": 2012
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 97.2,
+            "usage": 52
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 89.3,
+            "usage": 23
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 82.9,
+            "usage": 15
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 88.6,
+            "usage": 7
+          },
+          {
+            "emoji": "\u26a1",
+            "name": "Sinker",
+            "speed": 97.1,
+            "usage": 2
+          }
+        ]
+      },
+      "answer": "Gerrit Cole",
+      "openingHint": "RHP, active 2013\u2013present",
+      "progressiveHints": [
+        "2023 AL Cy Young",
+        "Yankees ace",
+        "Was with Houston in this season"
+      ],
+      "answerSeason": 2019
+    }
+  ]
+}
