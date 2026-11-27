@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-27",
+  "puzzleNumber": 176,
+  "theme": "Modern Era",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Which team did Ken Griffey Jr. debut with in 1989?",
+      "answer": "Mariners",
+      "choices": [
+        "Mariners",
+        "Reds",
+        "White Sox",
+        "Yankees"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Pitched 5 scoreless relief innings in Game 7 of the 2014 World Series.",
+      "answer": "Madison Bumgarner",
+      "choices": [
+        "Madison Bumgarner",
+        "Tim Lincecum",
+        "Jeremy Affeldt",
+        "Hunter Strickland"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".355 / 39 HR / 123 RBI / 8 SB",
+      "answer": "Hank Aaron",
+      "openingHint": "1959 NL season",
+      "progressiveHints": [
+        "Played his whole prime in Milwaukee",
+        "Right fielder",
+        "Won NL MVP"
+      ],
+      "answerSeason": 1959
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 94.0,
+            "usage": 49
+          },
+          {
+            "emoji": "\ud83e\ude84",
+            "name": "Slider",
+            "speed": 85.4,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83d\udca8",
+            "name": "Changeup",
+            "speed": 84.6,
+            "usage": 14
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Curveball",
+            "speed": 77.3,
+            "usage": 8
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 88.0,
+            "usage": 8
+          }
+        ]
+      },
+      "answer": "Max Scherzer",
+      "openingHint": "RHP, active 2008\u2013present",
+      "progressiveHints": [
+        "3-time Cy Young",
+        "Two different colored eyes",
+        "Was a National at the time"
+      ],
+      "answerSeason": 2017
+    }
+  ]
+}
