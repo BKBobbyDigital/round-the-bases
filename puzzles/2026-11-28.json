@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-28",
+  "puzzleNumber": 177,
+  "theme": "Weekend Warm-Up",
+  "pitches": [
+    {
+      "tier": "1B",
+      "type": "trivia",
+      "prompt": "Whose consecutive-games-played streak did Cal Ripken break in 1995?",
+      "answer": "Lou Gehrig",
+      "choices": [
+        "Lou Gehrig",
+        "Pete Rose",
+        "Hank Aaron",
+        "Babe Ruth"
+      ]
+    },
+    {
+      "tier": "2B",
+      "type": "career_arc",
+      "prompt": "Retired at age 30 with 3 Cy Youngs and a perfect game.",
+      "answer": "Sandy Koufax",
+      "choices": [
+        "Sandy Koufax",
+        "Warren Spahn",
+        "Don Drysdale",
+        "Whitey Ford"
+      ]
+    },
+    {
+      "tier": "3B",
+      "type": "stat_line",
+      "prompt": ".394 / 12 HR / 64 RBI / 5 SB",
+      "answer": "Tony Gwynn",
+      "openingHint": "Strike-shortened 1994",
+      "progressiveHints": [
+        "NL West team",
+        "Listed at 5'11\"",
+        "Made 15 All-Star teams"
+      ],
+      "answerSeason": 1994
+    },
+    {
+      "tier": "HR",
+      "type": "arsenal",
+      "prompt": {
+        "pitches": [
+          {
+            "emoji": "\ud83d\udd25",
+            "name": "4-Seam Fastball",
+            "speed": 93.5,
+            "usage": 46
+          },
+          {
+            "emoji": "\u2702\ufe0f",
+            "name": "Cutter",
+            "speed": 84.9,
+            "usage": 21
+          },
+          {
+            "emoji": "\ud83c\udf2a",
+            "name": "Sweeper",
+            "speed": 80.5,
+            "usage": 18
+          },
+          {
+            "emoji": "\ud83c\udf00",
+            "name": "Knuckle Curve",
+            "speed": 79.7,
+            "usage": 15
+          }
+        ]
+      },
+      "answer": "Trevor Bauer",
+      "openingHint": "RHP, 2012\u20132021",
+      "progressiveHints": [
+        "2020 NL Cy Young",
+        "Won pitching the shortened season",
+        "Was a Red at the time"
+      ],
+      "answerSeason": 2020
+    }
+  ]
+}
